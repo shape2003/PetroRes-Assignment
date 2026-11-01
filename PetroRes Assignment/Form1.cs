@@ -18,6 +18,19 @@ namespace PetroRes_Assignment
         public Form1()
         {
             InitializeComponent();
+
+            double[] gammaRay = { 40, 65, 80, 55, 100 };
+            double[] depth = { 100, 101, 102, 103, 104 };
+
+            formsPlot1.Plot.AddScatter(gammaRay, depth);
+
+            formsPlot1.Plot.Title("Gamma Ray Log");
+            formsPlot1.Plot.XLabel("Gamma Ray (API)");
+            formsPlot1.Plot.YLabel("Depth");
+
+            formsPlot1.Plot.AxisAuto();
+
+            formsPlot1.Refresh();
         }
 
         private async void btnLoadFiles_Click(object sender, EventArgs e)
@@ -68,6 +81,68 @@ namespace PetroRes_Assignment
                             List<CurveData> data = reader.ReadData(filePath);
                             WellInfo well = reader.ReadWellInfo(filePath);
                             List<CurveInfo> curves = reader.ReadCurves(filePath);
+                            CurveAliasMapper mapper = new CurveAliasMapper();
+
+                            string gammaRay = mapper.FindCurveName(curves, "GammaRay");
+                            string resistivity = mapper.FindCurveName(curves, "Resistivity");
+                            string density = mapper.FindCurveName(curves, "Density");
+                            string neutron = mapper.FindCurveName(curves, "Neutron");
+
+                            // Find the position of the Neutron curve
+                            int neutronIndex = curves.FindIndex(c =>
+                                string.Equals(
+                                    c.Mnemonic,
+                                    neutron,
+                                    StringComparison.OrdinalIgnoreCase
+                                )
+                            );
+
+                            double? neutronMin = null;
+                            double? neutronMax = null;
+
+                            // Index 0 is Depth, so Neutron must be after it
+                            if (neutron != null && neutronIndex > 0)
+                            {
+                                int valueIndex = neutronIndex - 1;
+
+                                foreach (CurveData row in data)
+                                {
+                                    if (row.Values == null || valueIndex >= row.Values.Count)
+                                        continue;
+
+                                    double? value = row.Values[valueIndex];
+
+                                    if (!value.HasValue ||
+                                        double.IsNaN(value.Value) ||
+                                        double.IsInfinity(value.Value))
+                                        continue;
+
+                                    if (!neutronMin.HasValue || value.Value < neutronMin.Value)
+                                        neutronMin = value.Value;
+
+                                    if (!neutronMax.HasValue || value.Value > neutronMax.Value)
+                                        neutronMax = value.Value;
+                                }
+                            }
+
+                            foreach (CurveInfo curve in curves)
+                            {
+                                if (curve.Mnemonic == gammaRay)
+                                    report.AppendLine("Gamma Ray unit: " +
+                                        mapper.CheckUnit(curve, "GammaRay"));
+
+                                if (curve.Mnemonic == resistivity)
+                                    report.AppendLine("Resistivity unit: " +
+                                        mapper.CheckUnit(curve, "Resistivity"));
+
+                                if (curve.Mnemonic == density)
+                                    report.AppendLine("Density unit: " +
+                                        mapper.CheckUnit(curve, "Density"));
+
+                                if (curve.Mnemonic == neutron)
+                                    report.AppendLine("Neutron unit: " +
+                                        mapper.CheckUnit(curve, "Neutron"));
+                            }
 
                             List<int> nullCounts =
                                 reader.CountNullValuesByCurve(data);
@@ -122,6 +197,30 @@ namespace PetroRes_Assignment
 
                             report.AppendLine();
                             report.AppendLine("NULL values by curve:");
+
+                            report.AppendLine("Curve mapping:");
+                            report.AppendLine("Gamma Ray: " + (gammaRay ?? "Not found"));
+                            report.AppendLine("Resistivity: " + (resistivity ?? "Not found"));
+                            report.AppendLine("Density: " + (density ?? "Not found"));
+                            report.AppendLine("Neutron: " + (neutron ?? "Not found"));
+                            report.AppendLine();
+                            report.AppendLine("Neutron value range:");
+
+                            report.AppendLine(
+                                "Minimum: " +
+                                (neutronMin.HasValue
+                                    ? neutronMin.Value.ToString("G")
+                                    : "N/A")
+                            );
+
+                            report.AppendLine(
+                                "Maximum: " +
+                                (neutronMax.HasValue
+                                    ? neutronMax.Value.ToString("G")
+                                    : "N/A")
+                            );
+
+                            report.AppendLine();
 
                             if (data.Count > 0)
                             {

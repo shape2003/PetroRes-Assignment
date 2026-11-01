@@ -223,18 +223,34 @@ namespace PetroRes_Assignment
 
                 curve.Mnemonic = curveText.Substring(0, dotIndex).Trim();
 
-                string remaining = curveText.Substring(dotIndex + 1).Trim();
+                string remaining = curveText.Substring(dotIndex + 1);
 
-                string[] columns = remaining.Split(
-                    new char[] { ' ', '\t' },
-                    StringSplitOptions.RemoveEmptyEntries
-                );
+                curve.Unit = "";
+                curve.ApiCode = "";
 
-                if (columns.Length > 0)
-                    curve.Unit = columns[0];
+                if (remaining.Length > 0)
+                {
+                    if (!char.IsWhiteSpace(remaining[0]))
+                    {
+                        int spaceIndex = remaining.IndexOfAny(
+                            new char[] { ' ', '\t' }
+                        );
 
-                if (columns.Length > 1)
-                    curve.ApiCode = columns[1];
+                        if (spaceIndex >= 0)
+                        {
+                            curve.Unit = remaining.Substring(0, spaceIndex);
+                            curve.ApiCode = remaining.Substring(spaceIndex).Trim();
+                        }
+                        else
+                        {
+                            curve.Unit = remaining;
+                        }
+                    }
+                    else
+                    {
+                        curve.ApiCode = remaining.Trim();
+                    }
+                }
 
                 if (parts.Length > 1)
                     curve.Description = parts[1].Trim();
