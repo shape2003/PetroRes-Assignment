@@ -356,7 +356,44 @@ namespace PetroRes_Assignment
 
             formsPlot3.Plot.Legend(location: ScottPlot.Alignment.UpperRight);
 
+            double densityMin, densityMax;
+            double neutronDebugMin, neutronDebugMax;
+
+            if (TryGetCurveRange(data, curves, densityName,
+                out densityMin, out densityMax))
+            {
+                Debug.WriteLine(
+                    $"PLOT 3 Density: {densityMin} to {densityMax}");
+            }
+
+            if (TryGetCurveRange(data, curves, neutronName,
+                out neutronDebugMin, out neutronDebugMax))
+            {
+                Debug.WriteLine(
+                    $"PLOT 3 Neutron: {neutronDebugMin} to {neutronDebugMax}");
+            }
+
             formsPlot3.Plot.AxisAuto();
+
+            double validDensityMin;
+            double validDensityMax;
+
+            if (TryGetValidDensityRange(
+                data,
+                curves,
+                densityName,
+                out validDensityMin,
+                out validDensityMax))
+            {
+                double padding = validDensityMin == validDensityMax
+                    ? Math.Max(Math.Abs(validDensityMin) * 0.05, 0.1)
+                    : (validDensityMax - validDensityMin) * 0.05;
+
+                formsPlot3.Plot.SetAxisLimits(
+                    xMin: validDensityMin - padding,
+                    xMax: validDensityMax + padding,
+                    xAxisIndex: 0);
+            }
 
             double neutronMin;
             double neutronMax;
@@ -491,6 +528,64 @@ namespace PetroRes_Assignment
 
         //========================================================================================================================================//
 
+        private bool TryGetValidDensityRange(
+            List<CurveData> data,
+            List<CurveInfo> curves,
+            string densityName,
+            out double minValue,
+            out double maxValue)
+        {
+            minValue = 0;
+            maxValue = 0;
+
+            if (data == null || curves == null ||
+                string.IsNullOrEmpty(densityName))
+                return false;
+
+            int curveIndex = curves.FindIndex(c =>
+                string.Equals(
+                    c.Mnemonic,
+                    densityName,
+                    StringComparison.OrdinalIgnoreCase));
+
+            if (curveIndex <= 0)
+                return false;
+
+            int valueIndex = curveIndex - 1;
+            bool found = false;
+
+            foreach (CurveData row in data)
+            {
+                if (row.Values == null ||
+                    valueIndex >= row.Values.Count)
+                    continue;
+
+                double? value = row.Values[valueIndex];
+
+                if (!value.HasValue ||
+                    double.IsNaN(value.Value) ||
+                    double.IsInfinity(value.Value) ||
+                    value.Value <= 0)
+                    continue;
+
+                if (!found)
+                {
+                    minValue = value.Value;
+                    maxValue = value.Value;
+                    found = true;
+                }
+                else
+                {
+                    minValue = Math.Min(minValue, value.Value);
+                    maxValue = Math.Max(maxValue, value.Value);
+                }
+            }
+
+            return found;
+        }
+
+        //========================================================================================================================================//
+
         private bool TryGetCurveRange(
             List<CurveData> data,
             List<CurveInfo> curves,
@@ -573,24 +668,16 @@ namespace PetroRes_Assignment
             double minDepth = depths.Min();
             double maxDepth = depths.Max();
 
-            // Prevent invalid axis limits
             if (minDepth == maxDepth)
             {
                 minDepth -= 0.5;
                 maxDepth += 0.5;
             }
 
-            // Both plots use the same depth range
             formsPlot1.Plot.SetAxisLimitsY(minDepth, maxDepth);
             formsPlot2.Plot.SetAxisLimitsY(minDepth, maxDepth);
             formsPlot3.Plot.SetAxisLimitsY(minDepth, maxDepth);
 
-            // Explicitly apply the same depth limits to all plots.
-            formsPlot1.Plot.AxisAutoX();
-            formsPlot2.Plot.AxisAutoX();
-            formsPlot3.Plot.AxisAutoX();
-
-            // Depth increases downward
             formsPlot1.Plot.YAxis.IsReverse = true;
             formsPlot2.Plot.YAxis.IsReverse = true;
             formsPlot3.Plot.YAxis.IsReverse = true;
@@ -1153,6 +1240,29 @@ namespace PetroRes_Assignment
 
                         Debug.WriteLine(errorMessage);
                     }
+                }
+
+                // Restore the selected preview after batch export.
+                // Batch export reuses the same three plot controls.
+                if (plotData != null)
+                {
+                    PlotGammaRay(
+                        plotData,
+                        plotCurves,
+                        plotGammaRay);
+
+                    PlotResistivity(
+                        plotData,
+                        plotCurves,
+                        plotResistivity);
+
+                    PlotDensityNeutron(
+                        plotData,
+                        plotCurves,
+                        plotDensity,
+                        plotNeutron);
+
+                    SetSharedDepthRange(plotData);
                 }
 
                 int pngCount = Directory.Exists(outputFolder)
