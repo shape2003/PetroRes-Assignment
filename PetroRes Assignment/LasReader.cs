@@ -38,6 +38,9 @@ namespace PetroRes_Assignment
 
             return sections;
         }
+
+        //========================================================================================================================================//
+
         public WellInfo ReadWellInfo(string filePath)
         {
             List<string> lines = ReadLines(filePath);
@@ -181,6 +184,9 @@ namespace PetroRes_Assignment
 
             return well;
         }
+
+        //========================================================================================================================================//
+
         public List<CurveInfo> ReadCurves(string filePath)
         {
             List<string> lines = ReadLines(filePath);
@@ -260,6 +266,9 @@ namespace PetroRes_Assignment
 
             return curves;
         }
+
+        //========================================================================================================================================//
+
         public List<CurveData> ReadData(string filePath)
         {
             List<string> lines = ReadLines(filePath);
@@ -371,6 +380,8 @@ namespace PetroRes_Assignment
             return allData;
         }
 
+        //========================================================================================================================================//
+
         private CurveData ParseDataRow(
             List<string> parts,
             WellInfo well)
@@ -417,6 +428,8 @@ namespace PetroRes_Assignment
             return row;
         }
 
+        //========================================================================================================================================//
+
         public int InvalidRowCount { get; private set; }
 
         public bool IsDepthAscending(List<CurveData> data)
@@ -430,6 +443,8 @@ namespace PetroRes_Assignment
             }
             return true;
         }
+
+        //========================================================================================================================================//
 
         public bool IsSamplingIntervalCorrect(
             List<CurveData> data,
@@ -459,6 +474,8 @@ namespace PetroRes_Assignment
             return true;
         }
 
+        //========================================================================================================================================//
+
         public int CountDuplicateDepths(List<CurveData> data)
         {
             int duplicateCount = 0;
@@ -473,6 +490,8 @@ namespace PetroRes_Assignment
 
             return duplicateCount;
         }
+
+        //========================================================================================================================================//
 
         public int CountNullValues(List<CurveData> data)
         {
@@ -491,6 +510,8 @@ namespace PetroRes_Assignment
 
             return nullCount;
         }
+
+        //========================================================================================================================================//
 
         public List<int> CountNullValuesByCurve(List<CurveData> data)
         {
@@ -520,6 +541,8 @@ namespace PetroRes_Assignment
             return counts;
         }
 
+        //========================================================================================================================================//
+
         public List<int> CountValidValuesByCurve(List<CurveData> data)
         {
             List<int> counts = new List<int>();
@@ -548,6 +571,8 @@ namespace PetroRes_Assignment
             return counts;
         }
 
+        //========================================================================================================================================//
+
         public void GetSamplingInfo(
             List<CurveData> data,
             out double minStep,
@@ -574,9 +599,15 @@ namespace PetroRes_Assignment
             }
         }
 
+        //========================================================================================================================================//
+
         public bool? IsWrapped { get; private set; }
 
+        //========================================================================================================================================//
+
         public bool UsedWrappedParsing { get; private set; }
+
+        //========================================================================================================================================//
 
         public bool? ReadWrapMode(string filePath)
         {
@@ -644,6 +675,8 @@ namespace PetroRes_Assignment
 
             return null;
         }
+
+        //========================================================================================================================================//
 
         private bool HasMultilineRecords(
             List<string> lines,

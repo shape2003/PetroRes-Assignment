@@ -18,20 +18,74 @@ namespace PetroRes_Assignment
         public Form1()
         {
             InitializeComponent();
+        }
 
-            double[] gammaRay = { 40, 65, 80, 55, 100 };
-            double[] depth = { 100, 101, 102, 103, 104 };
+        private void PlotGammaRay(
+            List<CurveData> data,
+            List<CurveInfo> curves,
+            string gammaRayName)
+        {
+            formsPlot1.Plot.Clear();
 
-            formsPlot1.Plot.AddScatter(gammaRay, depth);
+            if (string.IsNullOrEmpty(gammaRayName))
+                return;
 
-            formsPlot1.Plot.Title("Gamma Ray Log");
+            int curveIndex = curves.FindIndex(c =>
+                string.Equals(
+                    c.Mnemonic,
+                    gammaRayName,
+                    StringComparison.OrdinalIgnoreCase
+                )
+            );
+
+            // curves[0] is Depth, stored separately in row.Depth
+            if (curveIndex <= 0)
+                return;
+
+            int valueIndex = curveIndex - 1;
+
+            List<double> gammaValues = new List<double>();
+            List<double> depthValues = new List<double>();
+
+            foreach (CurveData row in data)
+            {
+                if (row.Values == null ||
+                    valueIndex >= row.Values.Count)
+                    continue;
+
+                double? value = row.Values[valueIndex];
+
+                if (!value.HasValue ||
+                    double.IsNaN(value.Value) ||
+                    double.IsInfinity(value.Value) ||
+                    double.IsNaN(row.Depth) ||
+                    double.IsInfinity(row.Depth))
+                    continue;
+
+                gammaValues.Add(value.Value);
+                depthValues.Add(row.Depth);
+            }
+
+            if (gammaValues.Count == 0)
+                return;
+
+            formsPlot1.Plot.AddScatter(
+                gammaValues.ToArray(),
+                depthValues.ToArray(),
+                markerSize: 0
+            );
+
+            formsPlot1.Plot.Title("Gamma Ray - " + gammaRayName);
             formsPlot1.Plot.XLabel("Gamma Ray (API)");
             formsPlot1.Plot.YLabel("Depth");
 
             formsPlot1.Plot.AxisAuto();
+            formsPlot1.Plot.YAxis.IsReverse = true;
 
             formsPlot1.Refresh();
         }
+
+        //========================================================================================================================================//
 
         private async void btnLoadFiles_Click(object sender, EventArgs e)
         {
@@ -53,6 +107,10 @@ namespace PetroRes_Assignment
                 lblProgress.Text = "Starting...";
 
                 StringBuilder report = new StringBuilder();
+
+                List<CurveData> plotData = null;
+                List<CurveInfo> plotCurves = null;
+                string plotGammaRay = null;
 
                 IProgress<int> progress = new Progress<int>(value =>
                 {
@@ -87,6 +145,15 @@ namespace PetroRes_Assignment
                             string resistivity = mapper.FindCurveName(curves, "Resistivity");
                             string density = mapper.FindCurveName(curves, "Density");
                             string neutron = mapper.FindCurveName(curves, "Neutron");
+
+                            if (plotData == null &&
+                                gammaRay != null &&
+                                data.Count > 0)
+                            {
+                                plotData = data;
+                                plotCurves = curves;
+                                plotGammaRay = gammaRay;
+                            }
 
                             // Find the position of the Neutron curve
                             int neutronIndex = curves.FindIndex(c =>
@@ -258,6 +325,16 @@ namespace PetroRes_Assignment
                         report.AppendLine();
                     }
                 });
+
+                if (plotData != null)
+                {
+                    PlotGammaRay(
+                        plotData,
+                        plotCurves,
+                        plotGammaRay
+                    );
+                }
+
                 btnLoadFiles.Enabled = true;
                 lblProgress.Text = "Finished reading all files.";
 
@@ -286,6 +363,8 @@ namespace PetroRes_Assignment
                 }
             }
         }
+
+        //========================================================================================================================================//
 
         private void lblProgress_Click(object sender, EventArgs e)
         {
