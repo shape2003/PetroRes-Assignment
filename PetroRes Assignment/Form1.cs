@@ -20,6 +20,8 @@ namespace PetroRes_Assignment
             InitializeComponent();
         }
 
+        //========================================================================================================================================//
+
         private void PlotGammaRay(
             List<CurveData> data,
             List<CurveInfo> curves,
@@ -84,6 +86,81 @@ namespace PetroRes_Assignment
 
             formsPlot1.Refresh();
         }
+        //========================================================================================================================================//
+
+        private void PlotResistivity(
+            List<CurveData> data,
+            List<CurveInfo> curves,
+            string resistivityName)
+        {
+            formsPlot2.Plot.Clear();
+
+            if (string.IsNullOrEmpty(resistivityName))
+                return;
+
+            int curveIndex = curves.FindIndex(c =>
+                string.Equals(
+                    c.Mnemonic,
+                    resistivityName,
+                    StringComparison.OrdinalIgnoreCase
+                )
+            );
+
+            if (curveIndex <= 0)
+                return;
+
+            int valueIndex = curveIndex - 1;
+
+            List<double> logValues = new List<double>();
+            List<double> depthValues = new List<double>();
+
+            foreach (CurveData row in data)
+            {
+                if (row.Values == null ||
+                    valueIndex >= row.Values.Count)
+                    continue;
+
+                double? value = row.Values[valueIndex];
+
+                if (!value.HasValue ||
+                    value.Value <= 0 ||
+                    double.IsNaN(value.Value) ||
+                    double.IsInfinity(value.Value) ||
+                    double.IsNaN(row.Depth) ||
+                    double.IsInfinity(row.Depth))
+                    continue;
+
+                logValues.Add(Math.Log10(value.Value));
+                depthValues.Add(row.Depth);
+            }
+
+            if (logValues.Count == 0)
+                return;
+
+            formsPlot2.Plot.AddScatter(
+                logValues.ToArray(),
+                depthValues.ToArray(),
+                markerSize: 0
+            );
+
+            formsPlot2.Plot.Title("Resistivity - " + resistivityName);
+            formsPlot2.Plot.XLabel("Resistivity (log scale, unit unverified)");
+            formsPlot2.Plot.YLabel("Depth");
+
+            // Show original resistivity values on the log-scaled axis
+            double[] tickPositions = { -2, -1, 0, 1, 2, 3, 4 };
+            string[] tickLabels = { "0.01", "0.1", "1", "10", "100", "1000", "10000" };
+
+            formsPlot2.Plot.XAxis.ManualTickPositions(
+                tickPositions,
+                tickLabels
+            );
+
+            formsPlot2.Plot.AxisAuto();
+            formsPlot2.Plot.YAxis.IsReverse = true;
+
+            formsPlot2.Refresh();
+        }
 
         //========================================================================================================================================//
 
@@ -111,6 +188,7 @@ namespace PetroRes_Assignment
                 List<CurveData> plotData = null;
                 List<CurveInfo> plotCurves = null;
                 string plotGammaRay = null;
+                string plotResistivity = null;
 
                 IProgress<int> progress = new Progress<int>(value =>
                 {
@@ -153,6 +231,7 @@ namespace PetroRes_Assignment
                                 plotData = data;
                                 plotCurves = curves;
                                 plotGammaRay = gammaRay;
+                                plotResistivity = resistivity;
                             }
 
                             // Find the position of the Neutron curve
@@ -332,6 +411,12 @@ namespace PetroRes_Assignment
                         plotData,
                         plotCurves,
                         plotGammaRay
+                    );
+
+                    PlotResistivity(
+                        plotData,
+                        plotCurves,
+                        plotResistivity
                     );
                 }
 
