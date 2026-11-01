@@ -36,11 +36,8 @@ namespace PetroRes_Assignment
                 string.Equals(
                     c.Mnemonic,
                     gammaRayName,
-                    StringComparison.OrdinalIgnoreCase
-                )
-            );
+                    StringComparison.OrdinalIgnoreCase));
 
-            // curves[0] is Depth, stored separately in row.Depth
             if (curveIndex <= 0)
                 return;
 
@@ -49,33 +46,50 @@ namespace PetroRes_Assignment
             List<double> gammaValues = new List<double>();
             List<double> depthValues = new List<double>();
 
+            // วาดเส้นเฉพาะช่วงที่ข้อมูลต่อเนื่องกัน
+            Action drawSegment = () =>
+            {
+                if (gammaValues.Count >= 2)
+                {
+                    formsPlot1.Plot.AddScatter(
+                        gammaValues.ToArray(),
+                        depthValues.ToArray(),
+                        markerSize: 0);
+                }
+
+                gammaValues.Clear();
+                depthValues.Clear();
+            };
+
             foreach (CurveData row in data)
             {
-                if (row.Values == null ||
-                    valueIndex >= row.Values.Count)
-                    continue;
+                double? value = null;
 
-                double? value = row.Values[valueIndex];
+                if (row.Values != null &&
+                    valueIndex < row.Values.Count)
+                {
+                    value = row.Values[valueIndex];
+                }
 
-                if (!value.HasValue ||
-                    double.IsNaN(value.Value) ||
-                    double.IsInfinity(value.Value) ||
-                    double.IsNaN(row.Depth) ||
-                    double.IsInfinity(row.Depth))
+                bool valid =
+                    value.HasValue &&
+                    !double.IsNaN(value.Value) &&
+                    !double.IsInfinity(value.Value) &&
+                    !double.IsNaN(row.Depth) &&
+                    !double.IsInfinity(row.Depth);
+
+                if (!valid)
+                {
+                    drawSegment();
                     continue;
+                }
 
                 gammaValues.Add(value.Value);
                 depthValues.Add(row.Depth);
             }
 
-            if (gammaValues.Count == 0)
-                return;
-
-            formsPlot1.Plot.AddScatter(
-                gammaValues.ToArray(),
-                depthValues.ToArray(),
-                markerSize: 0
-            );
+            // วาดช่วงสุดท้ายที่ยังเหลืออยู่
+            drawSegment();
 
             formsPlot1.Plot.Title("Gamma Ray - " + gammaRayName);
             formsPlot1.Plot.XLabel("Gamma Ray (API)");
@@ -86,6 +100,7 @@ namespace PetroRes_Assignment
 
             formsPlot1.Refresh();
         }
+
         //========================================================================================================================================//
 
         private void PlotResistivity(
@@ -102,9 +117,7 @@ namespace PetroRes_Assignment
                 string.Equals(
                     c.Mnemonic,
                     resistivityName,
-                    StringComparison.OrdinalIgnoreCase
-                )
-            );
+                    StringComparison.OrdinalIgnoreCase));
 
             if (curveIndex <= 0)
                 return;
@@ -114,47 +127,61 @@ namespace PetroRes_Assignment
             List<double> logValues = new List<double>();
             List<double> depthValues = new List<double>();
 
+            Action drawSegment = () =>
+            {
+                if (logValues.Count >= 2)
+                {
+                    formsPlot2.Plot.AddScatter(
+                        logValues.ToArray(),
+                        depthValues.ToArray(),
+                        markerSize: 0);
+                }
+
+                logValues.Clear();
+                depthValues.Clear();
+            };
+
             foreach (CurveData row in data)
             {
-                if (row.Values == null ||
-                    valueIndex >= row.Values.Count)
-                    continue;
+                double? value = null;
 
-                double? value = row.Values[valueIndex];
+                if (row.Values != null &&
+                    valueIndex < row.Values.Count)
+                {
+                    value = row.Values[valueIndex];
+                }
 
-                if (!value.HasValue ||
-                    value.Value <= 0 ||
-                    double.IsNaN(value.Value) ||
-                    double.IsInfinity(value.Value) ||
-                    double.IsNaN(row.Depth) ||
-                    double.IsInfinity(row.Depth))
+                bool valid =
+                    value.HasValue &&
+                    value.Value > 0 &&
+                    !double.IsNaN(value.Value) &&
+                    !double.IsInfinity(value.Value) &&
+                    !double.IsNaN(row.Depth) &&
+                    !double.IsInfinity(row.Depth);
+
+                if (!valid)
+                {
+                    drawSegment();
                     continue;
+                }
 
                 logValues.Add(Math.Log10(value.Value));
                 depthValues.Add(row.Depth);
             }
 
-            if (logValues.Count == 0)
-                return;
-
-            formsPlot2.Plot.AddScatter(
-                logValues.ToArray(),
-                depthValues.ToArray(),
-                markerSize: 0
-            );
+            drawSegment();
 
             formsPlot2.Plot.Title("Resistivity - " + resistivityName);
             formsPlot2.Plot.XLabel("Resistivity (log scale, unit unverified)");
             formsPlot2.Plot.YLabel("Depth");
 
-            // Show original resistivity values on the log-scaled axis
             double[] tickPositions = { -2, -1, 0, 1, 2, 3, 4 };
-            string[] tickLabels = { "0.01", "0.1", "1", "10", "100", "1000", "10000" };
+            string[] tickLabels =
+                { "0.01", "0.1", "1", "10", "100", "1000", "10000" };
 
             formsPlot2.Plot.XAxis.ManualTickPositions(
                 tickPositions,
-                tickLabels
-            );
+                tickLabels);
 
             formsPlot2.Plot.AxisAuto();
             formsPlot2.Plot.YAxis.IsReverse = true;
