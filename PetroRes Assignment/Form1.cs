@@ -2,22 +2,26 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.IO;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PetroRes_Assignment
 {
     public partial class Form1 : Form
     {
+        private string latestConditioningReport = null;
         public Form1()
         {
             InitializeComponent();
+
+            btnSaveReport.Enabled = false;
         }
 
         //========================================================================================================================================//
@@ -456,6 +460,50 @@ namespace PetroRes_Assignment
 
         //========================================================================================================================================//
 
+
+        private void SaveCurrentPlots(string outputFolder, string wellFileName)
+        {
+            // Create a separate folder for each well.
+            string baseName = Path.GetFileNameWithoutExtension(wellFileName);
+
+            string wellFolder = Path.Combine(outputFolder, baseName);
+
+            Directory.CreateDirectory(wellFolder);
+
+            // White backgrounds for all plots.
+            formsPlot1.Plot.Style(
+                figureBackground: Color.White,
+                dataBackground: Color.White
+            );
+
+            formsPlot2.Plot.Style(
+                figureBackground: Color.White,
+                dataBackground: Color.White
+            );
+
+            formsPlot3.Plot.Style(
+                figureBackground: Color.White,
+                dataBackground: Color.White
+            );
+
+            // Save three tracks inside the well folder.
+            formsPlot1.Plot.SaveFig(
+                Path.Combine(wellFolder, "GammaRay.png"),
+                600, 900);
+
+            formsPlot2.Plot.SaveFig(
+                Path.Combine(wellFolder, "Resistivity.png"),
+                600, 900);
+
+            formsPlot3.Plot.SaveFig(
+                Path.Combine(wellFolder, "DensityNeutron.png"),
+                600, 900);
+        }
+
+
+
+        //========================================================================================================================================//
+
         private async void btnLoadFiles_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
@@ -468,6 +516,7 @@ namespace PetroRes_Assignment
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 btnLoadFiles.Enabled = false;
+                latestConditioningReport = null;
 
                 progressBar1.Minimum = 0;
                 progressBar1.Maximum = dialog.FileNames.Length;
@@ -476,6 +525,8 @@ namespace PetroRes_Assignment
                 lblProgress.Text = "Starting...";
 
                 StringBuilder report = new StringBuilder();
+
+                List<WellPlotData> wellsToPlot = new List<WellPlotData>();
 
                 List<CurveData> plotData = null;
                 List<CurveInfo> plotCurves = null;
@@ -489,9 +540,16 @@ namespace PetroRes_Assignment
                     progressBar1.Value = value;
 
                     lblProgress.Text =
-                        "Reading " + value + " / " +
+                        "Loading " + value + " / " +
                         dialog.FileNames.Length + " files...";
                 });
+
+                Stopwatch stopwatch = Stopwatch.StartNew();
+
+                int successFiles = 0;
+                int failedFiles = 0;
+
+                List<string> failedFileDetails = new List<string>();
 
                 await Task.Run(() =>
                 {
@@ -512,6 +570,72 @@ namespace PetroRes_Assignment
                             WellInfo well = reader.ReadWellInfo(filePath);
                             List<CurveInfo> curves = reader.ReadCurves(filePath);
                             CurveAliasMapper mapper = new CurveAliasMapper();
+
+                            if (data == null || data.Count == 0)
+                            {
+                                throw new InvalidDataException(
+                                    "No valid data rows were parsed.");
+                            }
+
+                            if (curves == null || curves.Count < 2)
+                            {
+                                throw new InvalidDataException(
+                                    "No measurement curves were found.");
+                            }
+
+                            int expectedValueCount = curves.Count - 1;
+
+                            foreach (CurveData row in data)
+                            {
+                                if (row == null ||
+                                    row.Values == null ||
+                                    row.Values.Count != expectedValueCount)
+                                {
+                                    throw new InvalidDataException(
+                                        "Parsed data does not match the curve definitions.");
+                                }
+                            }
+
+                            // DATA CONDITIONING
+
+                            // Count duplicate depths across the entire dataset.
+                            int duplicateDepthCount = data.Count -
+                                data.Select(row => row.Depth).Distinct().Count();
+
+                            // Check original depth order before changing it.
+                            bool wasDepthAscending = reader.IsDepthAscending(data);
+
+                            // Sort only when depth is not ascending.
+                            if (!wasDepthAscending)
+                            {
+                                data = data.OrderBy(row => row.Depth).ToList();
+                            }
+
+                            // Record what was actually changed.
+                            report.AppendLine("DATA CONDITIONING:");
+                            report.AppendLine(
+                                "Depth sorting: " +
+                                (wasDepthAscending
+                                    ? "Not needed (already ascending)"
+                                    : "Applied (sorted ascending)"));
+
+                            report.AppendLine(
+                                "Duplicate depths detected: " + duplicateDepthCount);
+
+                            report.AppendLine(
+                                "Duplicate depth handling: Preserved (no automatic deletion)");
+
+                            report.AppendLine(
+                                "Missing value handling: LAS NULL values represented as null");
+
+                            report.AppendLine(
+                                "Resampling: Not applied (original depth samples preserved)");
+
+                            report.AppendLine(
+                                "Unit conversion: Not applied (original values preserved)");
+
+                            report.AppendLine();
+
 
                             string gammaRay = mapper.FindCurveName(curves, "GammaRay");
                             string resistivity = mapper.FindCurveName(curves, "Resistivity");
@@ -593,10 +717,10 @@ namespace PetroRes_Assignment
                                 reader.CountValidValuesByCurve(data);
 
                             int nullCount = reader.CountNullValues(data);
-                            int duplicateDepths = reader.CountDuplicateDepths(data);
+                            int duplicateDepths = duplicateDepthCount;
 
                             bool samplingCorrect =
-                                reader.IsSamplingIntervalCorrect(data, well.Step ??  0);
+                                reader.IsSamplingIntervalCorrect(data, well.Step ?? 0);
 
                             reader.GetSamplingInfo(
                                 data, out double minStep, out double maxStep);
@@ -627,7 +751,11 @@ namespace PetroRes_Assignment
                             );
 
                             report.AppendLine(
-                                "Depth ascending: " + reader.IsDepthAscending(data)
+                                "Original depth ascending: " + wasDepthAscending
+                            );
+
+                            report.AppendLine(
+                                "Conditioned depth ascending: " + reader.IsDepthAscending(data)
                             );
 
                             report.AppendLine(
@@ -685,9 +813,30 @@ namespace PetroRes_Assignment
                             {
                                 report.AppendLine("No valid data rows found.");
                             }
+
+                            wellsToPlot.Add(new WellPlotData
+                            {
+                                FileName = fileName,
+                                Data = data,
+                                Curves = curves,
+                                GammaRay = gammaRay,
+                                Resistivity = resistivity,
+                                Density = density,
+                                Neutron = neutron
+                            });
+
+
+                            successFiles++;
+                            report.AppendLine("Read status: SUCCESS");
                         }
                         catch (Exception ex)
                         {
+                            failedFiles++;
+
+                            string errorDetail = fileName + ": " + ex.Message;
+                            failedFileDetails.Add(errorDetail);
+
+                            report.AppendLine("Read status: FAILED");
                             report.AppendLine("Could not read this file.");
                             report.AppendLine("Reason: " + ex.Message);
                         }
@@ -700,6 +849,29 @@ namespace PetroRes_Assignment
                         report.AppendLine();
                     }
                 });
+
+                stopwatch.Stop();
+
+                string summary =
+                    $"Total files: {dialog.FileNames.Length}\n" +
+                    $"Successfully parsed: {successFiles}\n" +
+                    $"Failed: {failedFiles}\n" +
+                    $"Elapsed time: {stopwatch.Elapsed.TotalSeconds:F2} seconds";
+
+                if (failedFileDetails.Count > 0)
+                {
+                    summary += "\n\nFailed files:\n" +
+                        string.Join("\n", failedFileDetails);
+                }
+
+                MessageBox.Show(
+                    summary,
+                    "LAS Reader Test");
+
+                report.AppendLine("================================");
+                report.AppendLine("BATCH TEST SUMMARY");
+                report.AppendLine("================================");
+                report.AppendLine(summary);
 
                 if (plotData != null)
                 {
@@ -723,34 +895,100 @@ namespace PetroRes_Assignment
                     );
 
                     SetSharedDepthRange(plotData);
+
                 }
 
-                btnLoadFiles.Enabled = true;
-                lblProgress.Text = "Finished reading all files.";
+                string outputFolder = Path.Combine(
+                    Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
+                    "WellPlots"
+                );
 
-                SaveFileDialog saveDialog = new SaveFileDialog();
-                
-                saveDialog.Filter = "Text files (*.txt)|*.txt";
-                
-                saveDialog.FileName = "ConditioningReport.txt";
+                int exportedWells = 0;
+                int failedExports = 0;
 
-                if (saveDialog.ShowDialog() == DialogResult.OK)
+                foreach (WellPlotData wellPlot in wellsToPlot)
                 {
                     try
                     {
-                        File.WriteAllText(
-                            saveDialog.FileName,
-                            report.ToString(),
-                            Encoding.UTF8
+                        PlotGammaRay(
+                            wellPlot.Data,
+                            wellPlot.Curves,
+                            wellPlot.GammaRay);
+
+                        PlotResistivity(
+                            wellPlot.Data,
+                            wellPlot.Curves,
+                            wellPlot.Resistivity);
+
+                        PlotDensityNeutron(
+                            wellPlot.Data,
+                            wellPlot.Curves,
+                            wellPlot.Density,
+                            wellPlot.Neutron);
+
+                        SetSharedDepthRange(wellPlot.Data);
+
+                        SetSharedDepthRange(wellPlot.Data);
+
+                        // Save all three plots for this well.
+                        SaveCurrentPlots(
+                            outputFolder,
+                            wellPlot.FileName
                         );
 
-                        MessageBox.Show("Report saved successfully.");
+                        exportedWells++;
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Could not save the report:\n" + ex.Message);
+                        failedExports++;
+
+                        report.AppendLine(
+                            "Plot export failed: " +
+                            wellPlot.FileName + " - " + ex.Message);
+
+                        string errorMessage =
+                            "Plot export failed: " +
+                            wellPlot.FileName + " - " + ex.ToString();
+
+                        report.AppendLine(errorMessage);
+
+                        Debug.WriteLine(errorMessage);
                     }
                 }
+
+                int pngCount = Directory.Exists(outputFolder)
+                    ? Directory.GetFiles(
+                        outputFolder,
+                        "*.png",
+                        SearchOption.AllDirectories
+                        ).Length
+                    : 0;
+
+                MessageBox.Show(
+                    "Exported wells: " + exportedWells +
+                    "\nFailed exports: " + failedExports +
+                    "\nPNG files found: " + pngCount +
+                    "\nFolder: " + outputFolder,
+                    "Batch Plot Export");
+
+                if (Directory.Exists(outputFolder))
+                {
+                    Process.Start("explorer.exe", outputFolder);
+                }
+
+                // Store the completed report for manual saving.
+                latestConditioningReport = report.ToString();
+
+                // Enable the Save Report button.
+                btnSaveReport.Enabled = true;
+
+                // Reset progress bar after all work is finished.
+                progressBar1.Value = progressBar1.Minimum;
+
+                // Enable loading another batch.
+                btnLoadFiles.Enabled = true;
+
+                lblProgress.Text = "Complete";
             }
         }
 
@@ -760,5 +998,60 @@ namespace PetroRes_Assignment
         {
 
         }
+
+        //========================================================================================================================================//
+
+        private class WellPlotData
+        {
+            public string FileName { get; set; }
+            public List<CurveData> Data { get; set; }
+            public List<CurveInfo> Curves { get; set; }
+
+            public string GammaRay { get; set; }
+            public string Resistivity { get; set; }
+            public string Density { get; set; }
+            public string Neutron { get; set; }
+        }
+
+
+        private void btnSaveReport_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(latestConditioningReport))
+            {
+                MessageBox.Show("No conditioning report available.");
+                return;
+            }
+
+            using (SaveFileDialog saveDialog = new SaveFileDialog())
+            {
+                saveDialog.Filter = "Text files (*.txt)|*.txt";
+                saveDialog.FileName = "ConditioningReport.txt";
+
+                if (saveDialog.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        File.WriteAllText(
+                            saveDialog.FileName,
+                            latestConditioningReport,
+                            Encoding.UTF8
+                        );
+
+                        MessageBox.Show(
+                            "Report saved successfully.",
+                            "Save Report"
+                        );
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(
+                            "Could not save the report:\n" + ex.Message,
+                            "Save Error"
+                        );
+                    }
+                }
+            }
+        }
+
     }
 }

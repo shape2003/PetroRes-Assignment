@@ -34,6 +34,7 @@
             this.formsPlot1 = new ScottPlot.FormsPlot();
             this.formsPlot2 = new ScottPlot.FormsPlot();
             this.formsPlot3 = new ScottPlot.FormsPlot();
+            this.btnSaveReport = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLoadFiles
@@ -55,12 +56,15 @@
             // 
             // lblProgress
             // 
-            this.lblProgress.AutoSize = true;
-            this.lblProgress.Location = new System.Drawing.Point(38, 254);
+            this.lblProgress.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblProgress.Location = new System.Drawing.Point(-15, 227);
             this.lblProgress.Name = "lblProgress";
-            this.lblProgress.Size = new System.Drawing.Size(38, 13);
+            this.lblProgress.Size = new System.Drawing.Size(220, 36);
             this.lblProgress.TabIndex = 2;
             this.lblProgress.Text = "Ready";
+            this.lblProgress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblProgress.Click += new System.EventHandler(this.lblProgress_Click);
             // 
             // formsPlot1
@@ -84,10 +88,21 @@
             this.formsPlot3.Size = new System.Drawing.Size(320, 512);
             this.formsPlot3.TabIndex = 5;
             // 
+            // btnSaveReport
+            // 
+            this.btnSaveReport.Location = new System.Drawing.Point(41, 360);
+            this.btnSaveReport.Name = "btnSaveReport";
+            this.btnSaveReport.Size = new System.Drawing.Size(104, 49);
+            this.btnSaveReport.TabIndex = 6;
+            this.btnSaveReport.Text = "Save As";
+            this.btnSaveReport.UseVisualStyleBackColor = true;
+            this.btnSaveReport.Click += new System.EventHandler(this.btnSaveReport_Click);
+            // 
             // Form1
             // 
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1188, 567);
+            this.Controls.Add(this.btnSaveReport);
             this.Controls.Add(this.formsPlot3);
             this.Controls.Add(this.formsPlot2);
             this.Controls.Add(this.formsPlot1);
@@ -97,7 +112,6 @@
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -109,6 +123,7 @@
         private ScottPlot.FormsPlot formsPlot1;
         private ScottPlot.FormsPlot formsPlot2;
         private ScottPlot.FormsPlot formsPlot3;
+        private System.Windows.Forms.Button btnSaveReport;
     }
 }
 

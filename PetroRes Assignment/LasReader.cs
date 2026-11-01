@@ -75,7 +75,7 @@ namespace PetroRes_Assignment
                 );
 
                 string[] columns = parts[0].Split(
-                    new char[] { ' ', '\t' },
+                    new char[] { ' ', '\t'},
                     StringSplitOptions.RemoveEmptyEntries
                 );
 
@@ -268,9 +268,59 @@ namespace PetroRes_Assignment
         }
 
         //========================================================================================================================================//
+        private bool HasMultipleCurveOrAsciiSections(string filePath)
+        {
+            List<string> lines = ReadLines(filePath);
+
+            int curveSections = 0;
+            int asciiSections = 0;
+
+            foreach (string line in lines)
+            {
+                string trimmed = line.Trim();
+
+                if (!trimmed.StartsWith("~"))
+                    continue;
+
+                string section = trimmed.Substring(1).Trim();
+
+                string[] parts = section.Split(
+                    new char[] { ' ', '\t' },
+                    StringSplitOptions.RemoveEmptyEntries
+                );
+
+                if (parts.Length == 0)
+                    continue;
+
+                string name = parts[0];
+
+                if (name.Equals("C", StringComparison.OrdinalIgnoreCase) ||
+                    name.Equals("CURVE", StringComparison.OrdinalIgnoreCase))
+                {
+                    curveSections++;
+                }
+
+                if (name.Equals("A", StringComparison.OrdinalIgnoreCase) ||
+                    name.Equals("ASCII", StringComparison.OrdinalIgnoreCase))
+                {
+                    asciiSections++;
+                }
+            }
+
+            return curveSections > 1 || asciiSections > 1;
+        }
+
+        //========================================================================================================================================//
 
         public List<CurveData> ReadData(string filePath)
         {
+
+            if (HasMultipleCurveOrAsciiSections(filePath))
+            {
+                throw new NotSupportedException(
+                    "Multiple Curve or ASCII sections are not supported.");
+            }
+
             List<string> lines = ReadLines(filePath);
             List<CurveData> allData = new List<CurveData>();
 
@@ -308,9 +358,10 @@ namespace PetroRes_Assignment
                     string section = trimmed.Substring(1).Trim();
 
                     string[] sectionParts = section.Split(
-                        new char[] { ' ', '\t' },
+                        new char[] { ' ', '\t', ',' },
                         StringSplitOptions.RemoveEmptyEntries
                     );
+
 
                     if (sectionParts.Length == 0)
                     {
@@ -331,9 +382,19 @@ namespace PetroRes_Assignment
                     continue;
 
                 string[] parts = trimmed.Split(
-                    new char[] { ' ', '\t' },
+                    new char[] { ' ', '\t', ',' },
                     StringSplitOptions.RemoveEmptyEntries
                 );
+
+                if (insideDataSection && allData.Count == 0)
+{
+    System.Diagnostics.Debug.WriteLine(
+        "File: " + Path.GetFileName(filePath) +
+        " | Expected columns: " + expectedColumns +
+        " | Actual columns: " + parts.Length +
+        " | First value: " + (parts.Length > 0 ? parts[0] : "EMPTY")
+    );
+}
 
                 if (!useWrappedParsing)
                 {
