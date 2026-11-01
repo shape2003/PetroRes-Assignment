@@ -26,6 +26,26 @@ namespace PetroRes_Assignment
 
         //========================================================================================================================================//
 
+        private void ShowMissingGammaRay(string message)
+        {
+            formsPlot1.Plot.Clear();
+
+            formsPlot1.Plot.Title("Gamma Ray - " + message);
+            formsPlot1.Plot.XLabel("Gamma Ray (API)");
+            formsPlot1.Plot.YLabel("Depth");
+
+            formsPlot1.Plot.Style(
+                figureBackground: Color.White,
+                dataBackground: Color.White
+            );
+
+            formsPlot1.Plot.YAxis.IsReverse = true;
+
+            formsPlot1.Refresh();
+        }
+
+        //========================================================================================================================================//
+
         private void PlotGammaRay(
             List<CurveData> data,
             List<CurveInfo> curves,
@@ -34,7 +54,10 @@ namespace PetroRes_Assignment
             formsPlot1.Plot.Clear();
 
             if (string.IsNullOrEmpty(gammaRayName))
+            {
+                ShowMissingGammaRay("Curve not available");
                 return;
+            }
 
             int curveIndex = curves.FindIndex(c =>
                 string.Equals(
@@ -43,12 +66,16 @@ namespace PetroRes_Assignment
                     StringComparison.OrdinalIgnoreCase));
 
             if (curveIndex <= 0)
+            {
+                ShowMissingGammaRay("Curve not available");
                 return;
+            }
 
             int valueIndex = curveIndex - 1;
 
             List<double> gammaValues = new List<double>();
             List<double> depthValues = new List<double>();
+            int plottedSegments = 0;
 
             // วาดเส้นเฉพาะช่วงที่ข้อมูลต่อเนื่องกัน
             Action drawSegment = () =>
@@ -61,6 +88,8 @@ namespace PetroRes_Assignment
                         color: Color.FromArgb(35, 116, 217),
                         lineWidth: 1.5f,
                         markerSize: 0);
+
+                    plottedSegments++;
                 }
 
                 gammaValues.Clear();
@@ -88,6 +117,7 @@ namespace PetroRes_Assignment
                 {
                     drawSegment();
                     continue;
+                    
                 }
 
                 gammaValues.Add(value.Value);
@@ -96,6 +126,11 @@ namespace PetroRes_Assignment
 
             // วาดช่วงสุดท้ายที่ยังเหลืออยู่
             drawSegment();
+            if (plottedSegments == 0)
+            {
+                ShowMissingGammaRay("No valid data");
+                return;
+            }
 
             formsPlot1.Plot.Title("Gamma Ray - " + gammaRayName);
             formsPlot1.Plot.XLabel("Gamma Ray (API)");
@@ -109,6 +144,32 @@ namespace PetroRes_Assignment
 
         //========================================================================================================================================//
 
+        private void ShowMissingResistivity(string message)
+        {
+            formsPlot2.Plot.Clear();
+
+            formsPlot2.Plot.Title("Resistivity");
+            formsPlot2.Plot.XLabel("Resistivity");
+            formsPlot2.Plot.YLabel("Depth");
+
+            formsPlot2.Plot.XAxis.ManualTickPositions(
+                new double[] { 0, 1 },
+                new string[] { "", "" }
+            );
+
+            formsPlot2.Plot.SetAxisLimitsX(0, 1);
+            formsPlot2.Plot.YAxis.IsReverse = true;
+
+            formsPlot2.Plot.Style(
+                figureBackground: Color.White,
+                dataBackground: Color.White
+            );
+
+            formsPlot2.Refresh();
+        }
+
+        //========================================================================================================================================//
+
         private void PlotResistivity(
             List<CurveData> data,
             List<CurveInfo> curves,
@@ -117,7 +178,10 @@ namespace PetroRes_Assignment
             formsPlot2.Plot.Clear();
 
             if (string.IsNullOrEmpty(resistivityName))
+            {
+                ShowMissingResistivity("Curve not available");
                 return;
+            }
 
             int curveIndex = curves.FindIndex(c =>
                 string.Equals(
@@ -126,12 +190,16 @@ namespace PetroRes_Assignment
                     StringComparison.OrdinalIgnoreCase));
 
             if (curveIndex <= 0)
+            {
+                ShowMissingResistivity("Curve not available");
                 return;
+            }
 
             int valueIndex = curveIndex - 1;
 
             List<double> logValues = new List<double>();
             List<double> depthValues = new List<double>();
+            int plottedSegments = 0;
 
             Action drawSegment = () =>
             {
@@ -143,6 +211,8 @@ namespace PetroRes_Assignment
                         color: Color.FromArgb(217, 119, 6),
                         lineWidth: 1.5f,
                         markerSize: 0);
+
+                    plottedSegments++;
                 }
 
                 logValues.Clear();
@@ -179,6 +249,12 @@ namespace PetroRes_Assignment
 
             drawSegment();
 
+            if (plottedSegments == 0)
+            {
+                ShowMissingResistivity("No valid data");
+                return;
+            }
+
             formsPlot2.Plot.Title("Resistivity - " + resistivityName);
             formsPlot2.Plot.XLabel("Resistivity (log scale, unit unverified)");
             formsPlot2.Plot.YLabel("Depth");
@@ -199,6 +275,34 @@ namespace PetroRes_Assignment
 
         //========================================================================================================================================//
 
+        private void ShowMissingDensityNeutron(string message)
+        {
+            formsPlot3.Plot.Clear();
+
+            formsPlot3.Plot.Title("Density / Neutron");
+            formsPlot3.Plot.XLabel("Density / Neutron");
+            formsPlot3.Plot.YLabel("Depth");
+
+            formsPlot3.Plot.XAxis2.IsVisible = false;
+
+            formsPlot3.Plot.XAxis.ManualTickPositions(
+                new double[] { 0, 1 },
+                new string[] { "", "" }
+            );
+
+            formsPlot3.Plot.SetAxisLimitsX(0, 1);
+            formsPlot3.Plot.YAxis.IsReverse = true;
+
+            formsPlot3.Plot.Style(
+                figureBackground: Color.White,
+                dataBackground: Color.White
+            );
+
+            formsPlot3.Refresh();
+        }
+
+        //========================================================================================================================================//
+
         private void PlotDensityNeutron(
             List<CurveData> data,
             List<CurveInfo> curves,
@@ -207,13 +311,37 @@ namespace PetroRes_Assignment
         {
             formsPlot3.Plot.Clear();
 
+            bool hasDensity =
+                !string.IsNullOrEmpty(densityName) &&
+                curves.Any(c => string.Equals(
+                    c.Mnemonic,
+                    densityName,
+                    StringComparison.OrdinalIgnoreCase));
+
+            bool hasNeutron =
+                !string.IsNullOrEmpty(neutronName) &&
+                curves.Any(c => string.Equals(
+                    c.Mnemonic,
+                    neutronName,
+                    StringComparison.OrdinalIgnoreCase));
+
+            if (!hasDensity && !hasNeutron)
+            {
+                ShowMissingDensityNeutron("Curves not available");
+                return;
+            }
+
             // Bottom X axis: Density
             formsPlot3.Plot.XAxis.Label("Density (raw units)");
 
             // Top X axis: Neutron
-            formsPlot3.Plot.XAxis2.IsVisible = true;
-            formsPlot3.Plot.XAxis2.Ticks(true);
-            formsPlot3.Plot.XAxis2.Label("Neutron (raw units)");
+            formsPlot3.Plot.XAxis2.IsVisible = hasNeutron;
+
+            if (hasNeutron)
+            {
+                formsPlot3.Plot.XAxis2.Ticks(true);
+                formsPlot3.Plot.XAxis2.Label("Neutron (raw units)");
+            }
 
             // Temporarily omit Title to avoid overlapping top axis
             formsPlot3.Plot.YLabel("Depth");
@@ -339,6 +467,15 @@ namespace PetroRes_Assignment
                     !double.IsNaN(row.Depth) &&
                     !double.IsInfinity(row.Depth);
 
+                // Exclude non-positive bulk density values from plotting.
+                // Keep the original LAS data unchanged.
+                if (xAxisIndex == 0 &&
+                    value.HasValue &&
+                    value.Value <= 0)
+                {
+                    valid = false;
+                }
+
                 if (!valid)
                 {
                     drawSegment();
@@ -447,6 +584,11 @@ namespace PetroRes_Assignment
             formsPlot1.Plot.SetAxisLimitsY(minDepth, maxDepth);
             formsPlot2.Plot.SetAxisLimitsY(minDepth, maxDepth);
             formsPlot3.Plot.SetAxisLimitsY(minDepth, maxDepth);
+
+            // Explicitly apply the same depth limits to all plots.
+            formsPlot1.Plot.AxisAutoX();
+            formsPlot2.Plot.AxisAutoX();
+            formsPlot3.Plot.AxisAutoX();
 
             // Depth increases downward
             formsPlot1.Plot.YAxis.IsReverse = true;
@@ -910,6 +1052,65 @@ namespace PetroRes_Assignment
                 {
                     try
                     {
+                        System.Diagnostics.Debug.WriteLine(
+                            "Well: " + wellPlot.FileName +
+                            " | GR: " + (wellPlot.GammaRay ?? "MISSING") +
+                            " | RES: " + (wellPlot.Resistivity ?? "MISSING") +
+                            " | DEN: " + (wellPlot.Density ?? "MISSING") +
+                            " | NEU: " + (wellPlot.Neutron ?? "MISSING")
+                        );
+
+                        double densityMin;
+                        double densityMax;
+
+                        if (TryGetCurveRange(
+                            wellPlot.Data,
+                            wellPlot.Curves,
+                            wellPlot.Density,
+                            out densityMin,
+                            out densityMax))
+                        {
+                            Debug.WriteLine(
+                                "Density range: " +
+                                densityMin + " to " + densityMax);
+                        }
+
+                        int densityIndex = wellPlot.Curves.FindIndex(c =>
+                            string.Equals(
+                                c.Mnemonic,
+                                wellPlot.Density,
+                                StringComparison.OrdinalIgnoreCase));
+
+                        if (densityIndex > 0)
+                        {
+                            int valueIndex = densityIndex - 1;
+                            int negativeCount = 0;
+
+                            foreach (CurveData row in wellPlot.Data)
+                            {
+                                if (row.Values == null ||
+                                    valueIndex >= row.Values.Count)
+                                    continue;
+
+                                double? value = row.Values[valueIndex];
+
+                                if (value.HasValue && value.Value < 0)
+                                {
+                                    negativeCount++;
+
+                                    if (negativeCount <= 5)
+                                    {
+                                        Debug.WriteLine(
+                                            "Negative RHOZ | Depth: " + row.Depth +
+                                            " | Value: " + value.Value);
+                                    }
+                                }
+                            }
+
+                            Debug.WriteLine("Total negative RHOZ values: " + negativeCount);
+                        }
+
+
                         PlotGammaRay(
                             wellPlot.Data,
                             wellPlot.Curves,
@@ -925,8 +1126,6 @@ namespace PetroRes_Assignment
                             wellPlot.Curves,
                             wellPlot.Density,
                             wellPlot.Neutron);
-
-                        SetSharedDepthRange(wellPlot.Data);
 
                         SetSharedDepthRange(wellPlot.Data);
 

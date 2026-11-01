@@ -11,10 +11,21 @@ namespace PetroRes_Assignment
         private readonly Dictionary<string, string[]> aliases =
             new Dictionary<string, string[]>(StringComparer.OrdinalIgnoreCase)
             {
-                { "GammaRay", new[] { "GR", "GAPI", "GR_EDTC" } },
-                { "Resistivity", new[] { "RLLD", "ILD", "LLD", "RT" } },
-                { "Density", new[] { "RHOB" } },
-                { "Neutron", new[] { "NPHI" } }
+                { "GammaRay", new[] {
+                    "GR", "GR_EDTC", "ECGR", "GAPI", "HGR", "HCGR"
+                } },
+
+                { "Resistivity", new[] {
+                    "RT", "RT_HRLT", "RLLD", "ILD", "LLD"
+                } },
+    
+                { "Density", new[] {
+                    "RHOB", "RHOZ", "RHO8"
+                } },
+
+                { "Neutron", new[] {
+                    "NPHI", "TNPH", "NPOR"
+                } }
             };
 
         public string FindCurveName(
