@@ -33,13 +33,14 @@
             this.lblProgress = new System.Windows.Forms.Label();
             this.formsPlot1 = new ScottPlot.FormsPlot();
             this.formsPlot2 = new ScottPlot.FormsPlot();
+            this.formsPlot3 = new ScottPlot.FormsPlot();
             this.SuspendLayout();
             // 
             // btnLoadFiles
             // 
-            this.btnLoadFiles.Location = new System.Drawing.Point(12, 78);
+            this.btnLoadFiles.Location = new System.Drawing.Point(41, 305);
             this.btnLoadFiles.Name = "btnLoadFiles";
-            this.btnLoadFiles.Size = new System.Drawing.Size(104, 40);
+            this.btnLoadFiles.Size = new System.Drawing.Size(104, 49);
             this.btnLoadFiles.TabIndex = 0;
             this.btnLoadFiles.Text = "Load LAS File";
             this.btnLoadFiles.UseVisualStyleBackColor = true;
@@ -47,15 +48,15 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(12, 43);
+            this.progressBar1.Location = new System.Drawing.Point(17, 270);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(104, 29);
+            this.progressBar1.Size = new System.Drawing.Size(152, 29);
             this.progressBar1.TabIndex = 1;
             // 
             // lblProgress
             // 
             this.lblProgress.AutoSize = true;
-            this.lblProgress.Location = new System.Drawing.Point(37, 27);
+            this.lblProgress.Location = new System.Drawing.Point(38, 254);
             this.lblProgress.Name = "lblProgress";
             this.lblProgress.Size = new System.Drawing.Size(38, 13);
             this.lblProgress.TabIndex = 2;
@@ -64,22 +65,30 @@
             // 
             // formsPlot1
             // 
-            this.formsPlot1.Location = new System.Drawing.Point(12, 162);
+            this.formsPlot1.Location = new System.Drawing.Point(170, 43);
             this.formsPlot1.Name = "formsPlot1";
-            this.formsPlot1.Size = new System.Drawing.Size(320, 412);
+            this.formsPlot1.Size = new System.Drawing.Size(320, 512);
             this.formsPlot1.TabIndex = 3;
             // 
             // formsPlot2
             // 
-            this.formsPlot2.Location = new System.Drawing.Point(338, 162);
+            this.formsPlot2.Location = new System.Drawing.Point(496, 43);
             this.formsPlot2.Name = "formsPlot2";
-            this.formsPlot2.Size = new System.Drawing.Size(356, 412);
+            this.formsPlot2.Size = new System.Drawing.Size(320, 512);
             this.formsPlot2.TabIndex = 4;
+            // 
+            // formsPlot3
+            // 
+            this.formsPlot3.Location = new System.Drawing.Point(822, 43);
+            this.formsPlot3.Name = "formsPlot3";
+            this.formsPlot3.Size = new System.Drawing.Size(320, 512);
+            this.formsPlot3.TabIndex = 5;
             // 
             // Form1
             // 
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1195, 635);
+            this.ClientSize = new System.Drawing.Size(1188, 567);
+            this.Controls.Add(this.formsPlot3);
             this.Controls.Add(this.formsPlot2);
             this.Controls.Add(this.formsPlot1);
             this.Controls.Add(this.lblProgress);
@@ -99,6 +108,7 @@
         private System.Windows.Forms.Label lblProgress;
         private ScottPlot.FormsPlot formsPlot1;
         private ScottPlot.FormsPlot formsPlot2;
+        private ScottPlot.FormsPlot formsPlot3;
     }
 }
 

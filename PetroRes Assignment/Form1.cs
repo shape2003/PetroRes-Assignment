@@ -54,6 +54,8 @@ namespace PetroRes_Assignment
                     formsPlot1.Plot.AddScatter(
                         gammaValues.ToArray(),
                         depthValues.ToArray(),
+                        color: Color.FromArgb(35, 116, 217),
+                        lineWidth: 1.5f,
                         markerSize: 0);
                 }
 
@@ -134,6 +136,8 @@ namespace PetroRes_Assignment
                     formsPlot2.Plot.AddScatter(
                         logValues.ToArray(),
                         depthValues.ToArray(),
+                        color: Color.FromArgb(217, 119, 6),
+                        lineWidth: 1.5f,
                         markerSize: 0);
                 }
 
@@ -191,6 +195,267 @@ namespace PetroRes_Assignment
 
         //========================================================================================================================================//
 
+        private void PlotDensityNeutron(
+            List<CurveData> data,
+            List<CurveInfo> curves,
+            string densityName,
+            string neutronName)
+        {
+            formsPlot3.Plot.Clear();
+
+            // Bottom X axis: Density
+            formsPlot3.Plot.XAxis.Label("Density (raw units)");
+
+            // Top X axis: Neutron
+            formsPlot3.Plot.XAxis2.IsVisible = true;
+            formsPlot3.Plot.XAxis2.Ticks(true);
+            formsPlot3.Plot.XAxis2.Label("Neutron (raw units)");
+
+            // Temporarily omit Title to avoid overlapping top axis
+            formsPlot3.Plot.YLabel("Depth");
+
+            PlotOverlayCurve(
+                data, curves, densityName, 0,
+                Color.FromArgb(22, 128, 60));
+
+            PlotOverlayCurve(
+                data, curves, neutronName, 1,
+                Color.FromArgb(168, 85, 247));
+
+            formsPlot3.Plot.Legend(location: ScottPlot.Alignment.UpperRight);
+
+            formsPlot3.Plot.AxisAuto();
+
+            double neutronMin;
+            double neutronMax;
+
+            if (TryGetCurveRange(
+                data,
+                curves,
+                neutronName,
+                out neutronMin,
+                out neutronMax))
+            {
+                // Prevent zero-width axis
+                if (neutronMin == neutronMax)
+                {
+                    double padding = Math.Max(
+                        Math.Abs(neutronMin) * 0.05,
+                        0.1);
+
+                    neutronMin -= padding;
+                    neutronMax += padding;
+                }
+                else
+                {
+                    // Add 5% space on each side
+                    double padding = (neutronMax - neutronMin) * 0.05;
+
+                    neutronMin -= padding;
+                    neutronMax += padding;
+                }
+
+                formsPlot3.Plot.SetAxisLimits(
+                    xMin: neutronMin,
+                    xMax: neutronMax,
+                    xAxisIndex: 1);
+            }
+
+            formsPlot3.Plot.YAxis.IsReverse = true;
+
+            formsPlot3.Refresh();
+        }
+
+        //========================================================================================================================================//
+
+        private void PlotOverlayCurve(
+            List<CurveData> data,
+            List<CurveInfo> curves,
+            string curveName,
+            int xAxisIndex,
+            Color curveColor)
+        {
+            if (string.IsNullOrEmpty(curveName))
+                return;
+
+            int curveIndex = curves.FindIndex(c =>
+                string.Equals(
+                    c.Mnemonic,
+                    curveName,
+                    StringComparison.OrdinalIgnoreCase));
+
+            if (curveIndex <= 0)
+                return;
+
+            int valueIndex = curveIndex - 1;
+
+            List<double> xValues = new List<double>();
+            List<double> depthValues = new List<double>();
+
+            bool legendAdded = false;
+
+            Action drawSegment = () =>
+            {
+                if (xValues.Count >= 2)
+                {
+                    var scatter = formsPlot3.Plot.AddScatter(
+                        xValues.ToArray(),
+                        depthValues.ToArray(),
+                        color: curveColor,
+                        lineWidth: 1.5f,
+                        markerSize: 0);
+
+                    scatter.XAxisIndex = xAxisIndex;
+
+                    if (!legendAdded)
+                    {
+                        scatter.Label = curveName;
+                        legendAdded = true;
+                    }
+                }
+
+                xValues.Clear();
+                depthValues.Clear();
+            };
+
+            foreach (CurveData row in data)
+            {
+                double? value = null;
+
+                if (row.Values != null &&
+                    valueIndex < row.Values.Count)
+                {
+                    value = row.Values[valueIndex];
+                }
+
+                bool valid =
+                    value.HasValue &&
+                    !double.IsNaN(value.Value) &&
+                    !double.IsInfinity(value.Value) &&
+                    !double.IsNaN(row.Depth) &&
+                    !double.IsInfinity(row.Depth);
+
+                if (!valid)
+                {
+                    drawSegment();
+                    continue;
+                }
+
+                xValues.Add(value.Value);
+                depthValues.Add(row.Depth);
+            }
+
+            drawSegment();
+        }
+
+        //========================================================================================================================================//
+
+        private bool TryGetCurveRange(
+            List<CurveData> data,
+            List<CurveInfo> curves,
+            string curveName,
+            out double minValue,
+            out double maxValue)
+        {
+            minValue = 0;
+            maxValue = 0;
+
+            if (data == null || curves == null ||
+                string.IsNullOrEmpty(curveName))
+                return false;
+
+            int curveIndex = curves.FindIndex(c =>
+                string.Equals(
+                    c.Mnemonic,
+                    curveName,
+                    StringComparison.OrdinalIgnoreCase));
+
+            // Index 0 is Depth, not a value in row.Values
+            if (curveIndex <= 0)
+                return false;
+
+            int valueIndex = curveIndex - 1;
+            bool found = false;
+
+            foreach (CurveData row in data)
+            {
+                if (row.Values == null ||
+                    valueIndex >= row.Values.Count)
+                    continue;
+
+                double? value = row.Values[valueIndex];
+
+                if (!value.HasValue ||
+                    double.IsNaN(value.Value) ||
+                    double.IsInfinity(value.Value))
+                    continue;
+
+                double number = value.Value;
+
+                if (!found)
+                {
+                    minValue = number;
+                    maxValue = number;
+                    found = true;
+                }
+                else
+                {
+                    minValue = Math.Min(minValue, number);
+                    maxValue = Math.Max(maxValue, number);
+                }
+            }
+
+            return found;
+        }
+
+        //========================================================================================================================================//
+
+        private void SetSharedDepthRange(List<CurveData> data)
+        {
+            if (data == null || data.Count == 0)
+                return;
+
+            List<double> depths = new List<double>();
+
+            foreach (CurveData row in data)
+            {
+                if (!double.IsNaN(row.Depth) &&
+                    !double.IsInfinity(row.Depth))
+                {
+                    depths.Add(row.Depth);
+                }
+            }
+
+            if (depths.Count == 0)
+                return;
+
+            double minDepth = depths.Min();
+            double maxDepth = depths.Max();
+
+            // Prevent invalid axis limits
+            if (minDepth == maxDepth)
+            {
+                minDepth -= 0.5;
+                maxDepth += 0.5;
+            }
+
+            // Both plots use the same depth range
+            formsPlot1.Plot.SetAxisLimitsY(minDepth, maxDepth);
+            formsPlot2.Plot.SetAxisLimitsY(minDepth, maxDepth);
+            formsPlot3.Plot.SetAxisLimitsY(minDepth, maxDepth);
+
+            // Depth increases downward
+            formsPlot1.Plot.YAxis.IsReverse = true;
+            formsPlot2.Plot.YAxis.IsReverse = true;
+            formsPlot3.Plot.YAxis.IsReverse = true;
+
+            formsPlot1.Refresh();
+            formsPlot2.Refresh();
+            formsPlot3.Refresh();
+        }
+
+        //========================================================================================================================================//
+
         private async void btnLoadFiles_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
@@ -216,6 +481,8 @@ namespace PetroRes_Assignment
                 List<CurveInfo> plotCurves = null;
                 string plotGammaRay = null;
                 string plotResistivity = null;
+                string plotDensity = null;
+                string plotNeutron = null;
 
                 IProgress<int> progress = new Progress<int>(value =>
                 {
@@ -259,6 +526,8 @@ namespace PetroRes_Assignment
                                 plotCurves = curves;
                                 plotGammaRay = gammaRay;
                                 plotResistivity = resistivity;
+                                plotDensity = density;
+                                plotNeutron = neutron;
                             }
 
                             // Find the position of the Neutron curve
@@ -445,6 +714,15 @@ namespace PetroRes_Assignment
                         plotCurves,
                         plotResistivity
                     );
+
+                    PlotDensityNeutron(
+                        plotData,
+                        plotCurves,
+                        plotDensity,
+                        plotNeutron
+                    );
+
+                    SetSharedDepthRange(plotData);
                 }
 
                 btnLoadFiles.Enabled = true;
