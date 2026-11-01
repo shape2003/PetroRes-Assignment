@@ -10,7 +10,7 @@ namespace PetroRes_Assignment
     {
         public double StartDepth { get; set; }
         public double StopDepth { get; set; }
-        public double Step { get; set; }
+        public double? Step { get; set; }
         public double? NullValue { get; set; }
 
         public string Company { get; set; }

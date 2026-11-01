@@ -252,14 +252,23 @@ namespace PetroRes_Assignment
             WellInfo well = ReadWellInfo(filePath);
             int expectedColumns = ReadCurves(filePath).Count;
 
+            IsWrapped = ReadWrapMode(filePath);
             InvalidRowCount = 0;
+
+            bool useWrappedParsing = IsWrapped == true;
+
+            if (IsWrapped == false &&
+                HasMultilineRecords(lines, expectedColumns, well.Step))
+            {
+                useWrappedParsing = true;
+            }
+
+            UsedWrappedParsing = useWrappedParsing;
 
             if (expectedColumns == 0)
                 return allData;
 
             bool insideDataSection = false;
-
-            // เก็บค่าจากหลายบรรทัดจนกว่าจะครบหนึ่งแถว
             List<string> rowParts = new List<string>();
 
             foreach (string line in lines)
@@ -269,7 +278,6 @@ namespace PetroRes_Assignment
                 if (trimmed == "" || trimmed.StartsWith("#"))
                     continue;
 
-                // ตรวจสอบการเปลี่ยน Section
                 if (trimmed.StartsWith("~"))
                 {
                     string section = trimmed.Substring(1).Trim();
@@ -297,84 +305,100 @@ namespace PetroRes_Assignment
                 if (!insideDataSection)
                     continue;
 
-                // แยกค่าด้วยช่องว่างหรือ Tab
                 string[] parts = trimmed.Split(
                     new char[] { ' ', '\t' },
                     StringSplitOptions.RemoveEmptyEntries
                 );
 
-                foreach (string part in parts)
+                if (!useWrappedParsing)
                 {
-                    rowParts.Add(part);
-
-                    // เมื่อสะสมข้อมูลครบจำนวนคอลัมน์แล้ว
-                    if (rowParts.Count == expectedColumns)
+                    // WRAP.NO: หนึ่งบรรทัดต้องมีค่าครบหนึ่ง Record
+                    if (parts.Length != expectedColumns)
                     {
-                        CurveData row = new CurveData();
+                        InvalidRowCount++;
+                        continue;
+                    }
 
-                        double depth;
+                    CurveData row = ParseDataRow(
+                        new List<string>(parts), well);
 
-                        bool validRow = double.TryParse(
-                            rowParts[0],
-                            NumberStyles.Float,
-                            CultureInfo.InvariantCulture,
-                            out depth
-                        );
+                    if (row != null)
+                        allData.Add(row);
+                    else
+                        InvalidRowCount++;
+                }
+                else
+                {
+                    // WRAP.YES หรือไม่ระบุ: สะสมค่าข้ามบรรทัด
+                    foreach (string part in parts)
+                    {
+                        rowParts.Add(part);
 
-                        row.Values = new List<double?>();
-
-                        if (validRow)
+                        if (rowParts.Count == expectedColumns)
                         {
-                            row.Depth = depth;
+                            CurveData row = ParseDataRow(rowParts, well);
 
-                            for (int i = 1; i < rowParts.Count; i++)
-                            {
-                                double value;
+                            if (row != null)
+                                allData.Add(row);
+                            else
+                                InvalidRowCount++;
 
-                                if (!double.TryParse(
-                                    rowParts[i],
-                                    NumberStyles.Float,
-                                    CultureInfo.InvariantCulture,
-                                    out value))
-                                {
-                                    validRow = false;
-                                    break;
-                                }
-
-                                if (well.NullValue.HasValue &&
-                                    value == well.NullValue.Value)
-                                {
-                                    row.Values.Add(null);
-                                }
-                                else
-                                {
-                                    row.Values.Add(value);
-                                }
-                            }
+                            rowParts.Clear();
                         }
-
-                        if (validRow)
-                        {
-                            allData.Add(row);
-                        }
-                        else
-                        {
-                            InvalidRowCount++;
-                        }
-
-                        // เริ่มสะสมข้อมูลของแถวถัดไป
-                        rowParts.Clear();
                     }
                 }
             }
 
-            // ถ้าเหลือข้อมูลไม่ครบหนึ่งแถวเมื่อจบไฟล์
             if (rowParts.Count > 0)
-            {
                 InvalidRowCount++;
-            }
 
             return allData;
+        }
+
+        private CurveData ParseDataRow(
+            List<string> parts,
+            WellInfo well)
+        {
+            double depth;
+
+            if (!double.TryParse(
+                parts[0],
+                NumberStyles.Float,
+                CultureInfo.InvariantCulture,
+                out depth))
+            {
+                return null;
+            }
+
+            CurveData row = new CurveData();
+            row.Depth = depth;
+            row.Values = new List<double?>();
+
+            for (int i = 1; i < parts.Count; i++)
+            {
+                double value;
+
+                if (!double.TryParse(
+                    parts[i],
+                    NumberStyles.Float,
+                    CultureInfo.InvariantCulture,
+                    out value))
+                {
+                    return null;
+                }
+
+                if (well.NullValue.HasValue &&
+                    value == well.NullValue.Value)
+                {
+                    row.Values.Add(null);
+                }
+                else
+                {
+                    row.Values.Add(value);
+                }
+            }
+
+            return row;
         }
 
         public int InvalidRowCount { get; private set; }
@@ -532,6 +556,200 @@ namespace PetroRes_Assignment
                 if (actualStep > maxStep)
                     maxStep = actualStep;
             }
+        }
+
+        public bool? IsWrapped { get; private set; }
+
+        public bool UsedWrappedParsing { get; private set; }
+
+        public bool? ReadWrapMode(string filePath)
+        {
+            List<string> lines = ReadLines(filePath);
+
+            bool insideVersionSection = false;
+
+            foreach (string line in lines)
+            {
+                string trimmed = line.Trim();
+
+                if (trimmed == "" || trimmed.StartsWith("#"))
+                    continue;
+
+                if (trimmed.StartsWith("~"))
+                {
+                    string section = trimmed.Substring(1).Trim();
+
+                    string[] sectionParts = section.Split(
+                        new char[] { ' ', '\t' },
+                        StringSplitOptions.RemoveEmptyEntries
+                    );
+
+                    if (sectionParts.Length == 0)
+                    {
+                        insideVersionSection = false;
+                        continue;
+                    }
+
+                    string sectionName = sectionParts[0];
+
+                    insideVersionSection =
+                        sectionName.Equals("V", StringComparison.OrdinalIgnoreCase) ||
+                        sectionName.StartsWith("VERSION", StringComparison.OrdinalIgnoreCase);
+
+                    continue;
+                }
+
+                if (!insideVersionSection)
+                    continue;
+
+                // ตัด Description หลังเครื่องหมาย :
+                string[] parts = trimmed.Split(new char[] { ':' }, 2);
+
+                string headerText = parts[0].Trim();
+
+                int dotIndex = headerText.IndexOf('.');
+
+                if (dotIndex < 0)
+                    continue;
+
+                string mnemonic = headerText.Substring(0, dotIndex).Trim();
+
+                if (!mnemonic.Equals("WRAP", StringComparison.OrdinalIgnoreCase))
+                    continue;
+
+                string value = headerText.Substring(dotIndex + 1).Trim();
+
+                if (value.Equals("YES", StringComparison.OrdinalIgnoreCase))
+                    return true;
+
+                if (value.Equals("NO", StringComparison.OrdinalIgnoreCase))
+                    return false;
+            }
+
+            return null;
+        }
+
+        private bool HasMultilineRecords(
+            List<string> lines,
+            int expectedColumns,
+            double? headerStep)
+        {
+            if (expectedColumns <= 1 ||
+                !headerStep.HasValue ||
+                headerStep.Value == 0)
+            {
+                return false;
+            }
+
+            bool insideDataSection = false;
+            List<string[]> dataLines = new List<string[]>();
+
+            foreach (string line in lines)
+            {
+                string trimmed = line.Trim();
+
+                if (trimmed == "" || trimmed.StartsWith("#"))
+                    continue;
+
+                if (trimmed.StartsWith("~"))
+                {
+                    string section = trimmed.Substring(1).Trim();
+
+                    string[] sectionParts = section.Split(
+                        new char[] { ' ', '\t' },
+                        StringSplitOptions.RemoveEmptyEntries
+                    );
+
+                    if (sectionParts.Length == 0)
+                    {
+                        insideDataSection = false;
+                        continue;
+                    }
+
+                    string sectionName = sectionParts[0];
+
+                    insideDataSection =
+                        sectionName.Equals("A", StringComparison.OrdinalIgnoreCase) ||
+                        sectionName.StartsWith("ASCII", StringComparison.OrdinalIgnoreCase);
+
+                    continue;
+                }
+
+                if (!insideDataSection)
+                    continue;
+
+                string[] parts = trimmed.Split(
+                    new char[] { ' ', '\t' },
+                    StringSplitOptions.RemoveEmptyEntries
+                );
+
+                dataLines.Add(parts);
+
+                if (dataLines.Count >= 50)
+                    break;
+            }
+
+            // ต้องมีข้อมูลอย่างน้อย 2 Records ให้เปรียบเทียบ
+            if (dataLines.Count < 2)
+                return false;
+
+            int position = 0;
+            List<double> depths = new List<double>();
+
+            while (position < dataLines.Count)
+            {
+                // Depth ต้องอยู่บรรทัดเดียว
+                if (dataLines[position].Length != 1)
+                    break;
+
+                double depth;
+
+                if (!double.TryParse(
+                    dataLines[position][0],
+                    NumberStyles.Float,
+                    CultureInfo.InvariantCulture,
+                    out depth))
+                {
+                    break;
+                }
+
+                int totalColumns = 0;
+                int startPosition = position;
+
+                // สะสมค่าจนครบหนึ่ง Record
+                while (position < dataLines.Count &&
+                       totalColumns < expectedColumns)
+                {
+                    totalColumns += dataLines[position].Length;
+                    position++;
+                }
+
+                if (totalColumns != expectedColumns)
+                    break;
+
+                // ต้องมีข้อมูลกระจายมากกว่าหนึ่งบรรทัด
+                if (position - startPosition <= 1)
+                    break;
+
+                depths.Add(depth);
+
+                if (depths.Count >= 3)
+                    break;
+            }
+
+            if (depths.Count < 3)
+                return false;
+
+            // ตรวจ Depth ว่าตรงกับ STEP ใน Header
+            for (int i = 1; i < depths.Count; i++)
+            {
+                double actualStep = depths[i] - depths[i - 1];
+
+                if (Math.Abs(actualStep - headerStep.Value) > 0.0001)
+                    return false;
+            }
+
+            return true;
         }
     }
 }

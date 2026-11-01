@@ -79,10 +79,22 @@ namespace PetroRes_Assignment
                             int duplicateDepths = reader.CountDuplicateDepths(data);
 
                             bool samplingCorrect =
-                                reader.IsSamplingIntervalCorrect(data, well.Step);
+                                reader.IsSamplingIntervalCorrect(data, well.Step ??  0);
 
                             reader.GetSamplingInfo(
                                 data, out double minStep, out double maxStep);
+
+                            report.AppendLine(
+                                "WRAP mode: " +
+                                (reader.IsWrapped.HasValue
+                                    ? (reader.IsWrapped.Value ? "YES" : "NO")
+                                    : "Unknown")
+                            );
+
+                            report.AppendLine(
+                                "Actual parsing mode: " +
+                                (reader.UsedWrappedParsing ? "Wrapped" : "Non-wrapped")
+                            );
 
                             report.AppendLine("Header STEP: " + well.Step);
                             report.AppendLine("Minimum actual step: " + minStep);
