@@ -77,6 +77,12 @@ The unsupported file contained multiple Curve or ASCII sections. The application
 - Some LAS files do not contain all four required curve types. Missing curves are identified in the plot or report.
 - Density–Neutron plots may have scaling or display issues with certain datasets, particularly when values or units vary significantly.
 
+### AI Usage
+
+ChatGPT was used during the development of this assignment to support learning C# and Windows Forms, generating and refining code, troubleshooting errors, and improving LAS parsing, data conditioning, and plotting functionality.
+
+I worked iteratively with AI-generated suggestions, integrated the code into the application, tested it using the provided LAS files, investigated errors, and evaluated the results.
+
 ## Notes
 
 The application is intended as a coding-assignment implementation demonstrating LAS parsing, data validation, batch processing, reporting, and visualization. It is not intended as a fully featured commercial well log interpretation system.
