@@ -1,0 +1,3841 @@
+﻿FILE: D3RR-00028_OccidentalPermianLtd_UniversityDC-1H_Run1BMain2_CMR.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 4070
+Invalid rows: 0
+Values per row: 27
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 4431
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR_EDTC
+Resistivity: Not found
+Density: Not found
+Neutron: Not found
+
+Neutron value range:
+Minimum: N/A
+Maximum: N/A
+
+BFV: 4049 valid values, 21 NULL values
+CBP1: 4048 valid values, 22 NULL values
+CBP2: 4049 valid values, 21 NULL values
+CBP3: 4049 valid values, 21 NULL values
+CBP4: 4049 valid values, 21 NULL values
+CBP5: 4049 valid values, 21 NULL values
+CBP6: 4049 valid values, 21 NULL values
+CBP7: 4049 valid values, 21 NULL values
+CBP8: 4049 valid values, 21 NULL values
+CDF: 4070 valid values, 0 NULL values
+CMFF: 4049 valid values, 21 NULL values
+CMFF_SIG: 4048 valid values, 22 NULL values
+CMR_PHI_CONV: 4048 valid values, 22 NULL values
+CMRP_3MS: 4049 valid values, 21 NULL values
+CTEM: 4070 valid values, 0 NULL values
+DCAL: 4070 valid values, 0 NULL values
+ED: 4070 valid values, 0 NULL values
+GR_EDTC: 4070 valid values, 0 NULL values
+GTEM: 4070 valid values, 0 NULL values
+KSDR: 4049 valid values, 21 NULL values
+KTIM: 4049 valid values, 21 NULL values
+ND: 4070 valid values, 0 NULL values
+STIT: 4070 valid values, 0 NULL values
+T2LM: 4048 valid values, 22 NULL values
+T2LM_SIG: 0 valid values, 4070 NULL values
+TCMR: 4049 valid values, 21 NULL values
+TENS: 4070 valid values, 0 NULL values
+Read status: SUCCESS
+
+
+FILE: D3RR-00028_OccidentalPermianLtd_UniversityDC-1H_Run1BMain2_CMR-GenericV12.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 4179
+Invalid rows: 0
+Values per row: 27
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 4553
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR_EDTC
+Resistivity: Not found
+Density: Not found
+Neutron: Not found
+
+Neutron value range:
+Minimum: N/A
+Maximum: N/A
+
+BFV: 4157 valid values, 22 NULL values
+CBP1: 4157 valid values, 22 NULL values
+CBP2: 4157 valid values, 22 NULL values
+CBP3: 4157 valid values, 22 NULL values
+CBP4: 4157 valid values, 22 NULL values
+CBP5: 4157 valid values, 22 NULL values
+CBP6: 4157 valid values, 22 NULL values
+CBP7: 4157 valid values, 22 NULL values
+CBP8: 4157 valid values, 22 NULL values
+CDF: 4179 valid values, 0 NULL values
+CMFF: 4157 valid values, 22 NULL values
+CMFF_SIG: 4157 valid values, 22 NULL values
+CMR_PHI_CONV: 4157 valid values, 22 NULL values
+CMRP_3MS: 4157 valid values, 22 NULL values
+CTEM: 4179 valid values, 0 NULL values
+DCAL: 4179 valid values, 0 NULL values
+ED: 4179 valid values, 0 NULL values
+GR_EDTC: 4179 valid values, 0 NULL values
+GTEM: 4179 valid values, 0 NULL values
+KSDR: 4157 valid values, 22 NULL values
+KTIM: 4157 valid values, 22 NULL values
+ND: 4179 valid values, 0 NULL values
+STIT: 4179 valid values, 0 NULL values
+T2LM: 4157 valid values, 22 NULL values
+T2LM_SIG: 0 valid values, 4179 NULL values
+TCMR: 4157 valid values, 22 NULL values
+TENS: 4179 valid values, 0 NULL values
+Read status: SUCCESS
+
+
+FILE: D3RR-00028_OccidentalPermianLtd_UniversityDC-1H_Run1BMainComposite_CMR-GenericV12.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 6538
+Invalid rows: 0
+Values per row: 27
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 6538
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR_EDTC
+Resistivity: Not found
+Density: Not found
+Neutron: Not found
+
+Neutron value range:
+Minimum: N/A
+Maximum: N/A
+
+BFV: 6538 valid values, 0 NULL values
+CBP1: 6538 valid values, 0 NULL values
+CBP2: 6538 valid values, 0 NULL values
+CBP3: 6538 valid values, 0 NULL values
+CBP4: 6538 valid values, 0 NULL values
+CBP5: 6538 valid values, 0 NULL values
+CBP6: 6538 valid values, 0 NULL values
+CBP7: 6538 valid values, 0 NULL values
+CBP8: 6538 valid values, 0 NULL values
+CDF: 6538 valid values, 0 NULL values
+CMFF: 6538 valid values, 0 NULL values
+CMFF_SIG: 6538 valid values, 0 NULL values
+CMR_PHI_CONV: 6538 valid values, 0 NULL values
+CMRP_3MS: 6538 valid values, 0 NULL values
+CTEM: 6538 valid values, 0 NULL values
+DCAL: 6538 valid values, 0 NULL values
+ED: 6538 valid values, 0 NULL values
+GR_EDTC: 6538 valid values, 0 NULL values
+GTEM: 6538 valid values, 0 NULL values
+KSDR: 6538 valid values, 0 NULL values
+KTIM: 6538 valid values, 0 NULL values
+ND: 6538 valid values, 0 NULL values
+STIT: 6538 valid values, 0 NULL values
+T2LM: 6538 valid values, 0 NULL values
+T2LM_SIG: 0 valid values, 6538 NULL values
+TCMR: 6538 valid values, 0 NULL values
+TENS: 6538 valid values, 0 NULL values
+Read status: SUCCESS
+
+
+FILE: D9DC_00003_University_DC_1H_Main_Pass_Run2A.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+Neutron unit: Unknown or unsupported unit: CFCF
+Density unit: Valid
+Resistivity unit: Valid
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 8016
+Invalid rows: 0
+Values per row: 75
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 10321
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR
+Resistivity: RT_HRLT
+Density: RHOZ
+Neutron: NPHI
+
+Neutron value range:
+Minimum: -0.0009
+Maximum: 0.6966
+
+BFV: 8011 valid values, 5 NULL values
+CBP1: 8011 valid values, 5 NULL values
+CBP2: 8011 valid values, 5 NULL values
+CBP3: 8011 valid values, 5 NULL values
+CBP4: 8011 valid values, 5 NULL values
+CBP5: 8011 valid values, 5 NULL values
+CBP6: 8011 valid values, 5 NULL values
+CBP7: 8011 valid values, 5 NULL values
+CBP8: 8011 valid values, 5 NULL values
+CDF: 8016 valid values, 0 NULL values
+CFTC: 7898 valid values, 118 NULL values
+CMFF: 8011 valid values, 5 NULL values
+CMFF_SIG: 8011 valid values, 5 NULL values
+CMR_PHI_CONV: 8011 valid values, 5 NULL values
+CMRP_3MS: 8011 valid values, 5 NULL values
+CNTC: 8016 valid values, 0 NULL values
+CTEM: 8016 valid values, 0 NULL values
+DCAL: 8016 valid values, 0 NULL values
+DI_HRLT: 8016 valid values, 0 NULL values
+DNPH: 8016 valid values, 0 NULL values
+DPHZ: 7913 valid values, 103 NULL values
+DPH8: 7913 valid values, 103 NULL values
+DSOZ: 7913 valid values, 103 NULL values
+ECGR: 8016 valid values, 0 NULL values
+ED: 8016 valid values, 0 NULL values
+GDEV: 7952 valid values, 64 NULL values
+GR: 8016 valid values, 0 NULL values
+GR_EDTC: 8016 valid values, 0 NULL values
+GTEM: 8016 valid values, 0 NULL values
+HCAL: 8016 valid values, 0 NULL values
+HCGR: 8016 valid values, 0 NULL values
+HDRA: 7913 valid values, 103 NULL values
+HDRB: 7913 valid values, 103 NULL values
+HFK: 8016 valid values, 0 NULL values
+HGR: 8016 valid values, 0 NULL values
+HMIN: 8016 valid values, 0 NULL values
+HMNO: 8016 valid values, 0 NULL values
+HNPO: 7897 valid values, 119 NULL values
+HPRA: 7913 valid values, 103 NULL values
+HSGR: 8016 valid values, 0 NULL values
+HTHO: 8016 valid values, 0 NULL values
+HTNP: 7897 valid values, 119 NULL values
+HURA: 8016 valid values, 0 NULL values
+KSDR: 8011 valid values, 5 NULL values
+KTIM: 8011 valid values, 5 NULL values
+ND: 8016 valid values, 0 NULL values
+NPHI: 8016 valid values, 0 NULL values
+NPOR: 7898 valid values, 118 NULL values
+PEF8: 7913 valid values, 103 NULL values
+PEFZ: 7913 valid values, 103 NULL values
+PXND_HILT: 7898 valid values, 118 NULL values
+RHO8: 7913 valid values, 103 NULL values
+RHOZ: 7913 valid values, 103 NULL values
+RLA0: 8016 valid values, 0 NULL values
+RLA1: 8016 valid values, 0 NULL values
+RLA2: 8016 valid values, 0 NULL values
+RLA3: 8016 valid values, 0 NULL values
+RLA4: 8016 valid values, 0 NULL values
+RLA5: 8016 valid values, 0 NULL values
+RM_HRLT: 8016 valid values, 0 NULL values
+RSOZ: 8016 valid values, 0 NULL values
+RT_HRLT: 8016 valid values, 0 NULL values
+RWA_HILT: 7886 valid values, 130 NULL values
+RXO8: 8016 valid values, 0 NULL values
+RXO: 7952 valid values, 64 NULL values
+RXO_HRLT: 8016 valid values, 0 NULL values
+RXOZ: 8016 valid values, 0 NULL values
+STIT: 8016 valid values, 0 NULL values
+T2LM: 8011 valid values, 5 NULL values
+T2LM_SIG: 0 valid values, 8016 NULL values
+TCMR: 8011 valid values, 5 NULL values
+TENS: 8016 valid values, 0 NULL values
+TNPH: 7898 valid values, 118 NULL values
+HTNP_SAN: 7897 valid values, 119 NULL values
+HDPH_SAN: 7913 valid values, 103 NULL values
+Read status: SUCCESS
+
+
+FILE: D9DC_00003_University_DC_1H_Main_Pass_Run2A-GenericV12.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+Neutron unit: Unknown or unsupported unit: CFCF
+Density unit: Valid
+Resistivity unit: Valid
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 8016
+Invalid rows: 0
+Values per row: 75
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 10321
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR
+Resistivity: RT_HRLT
+Density: RHOZ
+Neutron: NPHI
+
+Neutron value range:
+Minimum: -0.0009
+Maximum: 0.6966
+
+BFV: 8011 valid values, 5 NULL values
+CBP1: 8011 valid values, 5 NULL values
+CBP2: 8011 valid values, 5 NULL values
+CBP3: 8011 valid values, 5 NULL values
+CBP4: 8011 valid values, 5 NULL values
+CBP5: 8011 valid values, 5 NULL values
+CBP6: 8011 valid values, 5 NULL values
+CBP7: 8011 valid values, 5 NULL values
+CBP8: 8011 valid values, 5 NULL values
+CDF: 8016 valid values, 0 NULL values
+CFTC: 7898 valid values, 118 NULL values
+CMFF: 8011 valid values, 5 NULL values
+CMFF_SIG: 8011 valid values, 5 NULL values
+CMR_PHI_CONV: 8011 valid values, 5 NULL values
+CMRP_3MS: 8011 valid values, 5 NULL values
+CNTC: 8016 valid values, 0 NULL values
+CTEM: 8016 valid values, 0 NULL values
+DCAL: 8016 valid values, 0 NULL values
+DI_HRLT: 8016 valid values, 0 NULL values
+DNPH: 8016 valid values, 0 NULL values
+DPHZ: 7913 valid values, 103 NULL values
+DPH8: 7913 valid values, 103 NULL values
+DSOZ: 7913 valid values, 103 NULL values
+ECGR: 8016 valid values, 0 NULL values
+ED: 8016 valid values, 0 NULL values
+GDEV: 7952 valid values, 64 NULL values
+GR: 8016 valid values, 0 NULL values
+GR_EDTC: 8016 valid values, 0 NULL values
+GTEM: 8016 valid values, 0 NULL values
+HCAL: 8016 valid values, 0 NULL values
+HCGR: 8016 valid values, 0 NULL values
+HDRA: 7913 valid values, 103 NULL values
+HDRB: 7913 valid values, 103 NULL values
+HFK: 8016 valid values, 0 NULL values
+HGR: 8016 valid values, 0 NULL values
+HMIN: 8016 valid values, 0 NULL values
+HMNO: 8016 valid values, 0 NULL values
+HNPO: 7897 valid values, 119 NULL values
+HPRA: 7913 valid values, 103 NULL values
+HSGR: 8016 valid values, 0 NULL values
+HTHO: 8016 valid values, 0 NULL values
+HTNP: 7897 valid values, 119 NULL values
+HURA: 8016 valid values, 0 NULL values
+KSDR: 8011 valid values, 5 NULL values
+KTIM: 8011 valid values, 5 NULL values
+ND: 8016 valid values, 0 NULL values
+NPHI: 8016 valid values, 0 NULL values
+NPOR: 7898 valid values, 118 NULL values
+PEF8: 7913 valid values, 103 NULL values
+PEFZ: 7913 valid values, 103 NULL values
+PXND_HILT: 7898 valid values, 118 NULL values
+RHO8: 7913 valid values, 103 NULL values
+RHOZ: 7913 valid values, 103 NULL values
+RLA0: 8016 valid values, 0 NULL values
+RLA1: 8016 valid values, 0 NULL values
+RLA2: 8016 valid values, 0 NULL values
+RLA3: 8016 valid values, 0 NULL values
+RLA4: 8016 valid values, 0 NULL values
+RLA5: 8016 valid values, 0 NULL values
+RM_HRLT: 8016 valid values, 0 NULL values
+RSOZ: 8016 valid values, 0 NULL values
+RT_HRLT: 8016 valid values, 0 NULL values
+RWA_HILT: 7886 valid values, 130 NULL values
+RXO8: 8016 valid values, 0 NULL values
+RXO: 7952 valid values, 64 NULL values
+RXO_HRLT: 8016 valid values, 0 NULL values
+RXOZ: 8016 valid values, 0 NULL values
+STIT: 8016 valid values, 0 NULL values
+T2LM: 8011 valid values, 5 NULL values
+T2LM_SIG: 0 valid values, 8016 NULL values
+TCMR: 8011 valid values, 5 NULL values
+TENS: 8016 valid values, 0 NULL values
+TNPH: 7898 valid values, 118 NULL values
+HTNP_SAN: 7897 valid values, 119 NULL values
+HDPH_SAN: 7913 valid values, 103 NULL values
+Read status: SUCCESS
+
+
+FILE: D9DC_00003_University_DC_1H_Main_Pass_Run2B.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 7142
+Invalid rows: 0
+Values per row: 23
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 460
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR_EDTC
+Resistivity: Not found
+Density: Not found
+Neutron: Not found
+
+Neutron value range:
+Minimum: N/A
+Maximum: N/A
+
+C1: 7142 valid values, 0 NULL values
+C2: 7142 valid values, 0 NULL values
+CDF: 7142 valid values, 0 NULL values
+CTEM: 7142 valid values, 0 NULL values
+DCAL: 7142 valid values, 0 NULL values
+DEVI: 7140 valid values, 2 NULL values
+DTCO: 7058 valid values, 84 NULL values
+DTSM: 7039 valid values, 103 NULL values
+ED: 7142 valid values, 0 NULL values
+GR_EDTC: 7142 valid values, 0 NULL values
+GTEM: 7142 valid values, 0 NULL values
+HAZI: 7142 valid values, 0 NULL values
+HAZIM: 7142 valid values, 0 NULL values
+ITT: 7142 valid values, 0 NULL values
+ND: 7142 valid values, 0 NULL values
+P1AZ: 7142 valid values, 0 NULL values
+PR: 6955 valid values, 187 NULL values
+RB: 7142 valid values, 0 NULL values
+SDEV: 7142 valid values, 0 NULL values
+SDEVM: 7142 valid values, 0 NULL values
+SPHI: 7058 valid values, 84 NULL values
+STIT: 7142 valid values, 0 NULL values
+TENS: 7142 valid values, 0 NULL values
+Read status: SUCCESS
+
+
+FILE: D9DC_00003_University_DC_1H_Main_Pass_Run2B-GenericV12.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 7142
+Invalid rows: 0
+Values per row: 24
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 460
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR_EDTC
+Resistivity: Not found
+Density: Not found
+Neutron: Not found
+
+Neutron value range:
+Minimum: N/A
+Maximum: N/A
+
+C1: 7142 valid values, 0 NULL values
+C2: 7142 valid values, 0 NULL values
+CDF: 7142 valid values, 0 NULL values
+CTEM: 7142 valid values, 0 NULL values
+DCAL: 7142 valid values, 0 NULL values
+DEVI: 7140 valid values, 2 NULL values
+DEVIM: 7142 valid values, 0 NULL values
+DTCO: 7058 valid values, 84 NULL values
+DTSM: 7039 valid values, 103 NULL values
+ED: 7142 valid values, 0 NULL values
+GR_EDTC: 7142 valid values, 0 NULL values
+GTEM: 7142 valid values, 0 NULL values
+HAZI: 7142 valid values, 0 NULL values
+HAZIM: 7142 valid values, 0 NULL values
+ITT: 7142 valid values, 0 NULL values
+ND: 7142 valid values, 0 NULL values
+P1AZ: 7142 valid values, 0 NULL values
+PR: 6955 valid values, 187 NULL values
+RB: 7142 valid values, 0 NULL values
+SDEV: 7142 valid values, 0 NULL values
+SDEVM: 7142 valid values, 0 NULL values
+SPHI: 7058 valid values, 84 NULL values
+STIT: 7142 valid values, 0 NULL values
+TENS: 7142 valid values, 0 NULL values
+Read status: SUCCESS
+
+
+FILE: Oxy_University_McFarland_8_1H_Main_Pass_ThruBit_018PUP.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+Density unit: Valid
+Neutron unit: Needs conversion
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 18606
+Invalid rows: 0
+Values per row: 28
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 0
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR
+Resistivity: Not found
+Density: RHOB
+Neutron: TNPH
+
+Neutron value range:
+Minimum: -0.2196
+Maximum: 41.6846
+
+GR: 18606 valid values, 0 NULL values
+CALI: 18606 valid values, 0 NULL values
+DCAL: 18606 valid values, 0 NULL values
+ICV: 18606 valid values, 0 NULL values
+IHV: 18606 valid values, 0 NULL values
+DRHO: 18606 valid values, 0 NULL values
+RHOB: 18606 valid values, 0 NULL values
+DPHI: 18606 valid values, 0 NULL values
+RHOL: 18606 valid values, 0 NULL values
+PEF: 18606 valid values, 0 NULL values
+PHIX: 18606 valid values, 0 NULL values
+TNPH: 18606 valid values, 0 NULL values
+WTEP: 18606 valid values, 0 NULL values
+ATCO90: 18606 valid values, 0 NULL values
+TBIT10: 18606 valid values, 0 NULL values
+TBIT20: 18606 valid values, 0 NULL values
+TBIT30: 18606 valid values, 0 NULL values
+TBIT60: 18606 valid values, 0 NULL values
+TBIT90: 18606 valid values, 0 NULL values
+RMUD: 18606 valid values, 0 NULL values
+SGR: 18606 valid values, 0 NULL values
+TGR: 18606 valid values, 0 NULL values
+CGR: 18606 valid values, 0 NULL values
+POTA: 18606 valid values, 0 NULL values
+THOR: 18606 valid values, 0 NULL values
+URAN: 18606 valid values, 0 NULL values
+CS: 18606 valid values, 0 NULL values
+TENS: 18606 valid values, 0 NULL values
+Read status: SUCCESS
+
+
+FILE: Oxy_USA_University_McFarland_8_Unit_1H_ThruBit_PnS.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 18606
+Invalid rows: 0
+Values per row: 14
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 0
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR
+Resistivity: Not found
+Density: Not found
+Neutron: Not found
+
+Neutron value range:
+Minimum: N/A
+Maximum: N/A
+
+DTCO: 18606 valid values, 0 NULL values
+DTSM: 18606 valid values, 0 NULL values
+E_DYN: 18606 valid values, 0 NULL values
+G_DYN: 18606 valid values, 0 NULL values
+GR: 18606 valid values, 0 NULL values
+PR: 18606 valid values, 0 NULL values
+VPVS: 18606 valid values, 0 NULL values
+ITT_VALUE: 18606 valid values, 0 NULL values
+K_DYN: 18606 valid values, 0 NULL values
+SPHI: 18606 valid values, 0 NULL values
+CH_DTCO_STC: 18606 valid values, 0 NULL values
+CH_DTSM_STC: 18606 valid values, 0 NULL values
+VP: 18606 valid values, 0 NULL values
+VS: 18606 valid values, 0 NULL values
+Read status: SUCCESS
+
+
+FILE: s_1e95aa3fbeb17f98a969ce83d5962c1c.las
+------------------------------
+Read status: FAILED
+Could not read this file.
+Reason: Multiple Curve or ASCII sections are not supported.
+
+
+FILE: s_7eec8ccf38a0378c41a61b611c4bf6d6.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+Neutron unit: Unknown or unsupported unit: CFCF
+Density unit: Valid
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 4482
+Invalid rows: 0
+Values per row: 55
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 1554
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR
+Resistivity: Not found
+Density: RHOZ
+Neutron: NPHI
+
+Neutron value range:
+Minimum: 0.0013
+Maximum: 0.581
+
+AF10: 4482 valid values, 0 NULL values
+AF20: 4482 valid values, 0 NULL values
+AF30: 4482 valid values, 0 NULL values
+AF60: 4482 valid values, 0 NULL values
+AF90: 4482 valid values, 0 NULL values
+AO10: 4482 valid values, 0 NULL values
+AO20: 4482 valid values, 0 NULL values
+AO30: 4482 valid values, 0 NULL values
+AO60: 4482 valid values, 0 NULL values
+AO90: 4482 valid values, 0 NULL values
+AT10: 4482 valid values, 0 NULL values
+AT20: 4482 valid values, 0 NULL values
+AT30: 4482 valid values, 0 NULL values
+AT60: 4482 valid values, 0 NULL values
+AT90: 4482 valid values, 0 NULL values
+AORT: 4482 valid values, 0 NULL values
+AORX: 4482 valid values, 0 NULL values
+CDF: 4482 valid values, 0 NULL values
+CFTC: 4417 valid values, 65 NULL values
+CNTC: 4482 valid values, 0 NULL values
+CTEM: 4482 valid values, 0 NULL values
+DCAL: 4482 valid values, 0 NULL values
+DNPH: 4417 valid values, 65 NULL values
+DPHZ: 4432 valid values, 50 NULL values
+DSOZ: 4432 valid values, 50 NULL values
+ECGR: 4482 valid values, 0 NULL values
+ED: 4482 valid values, 0 NULL values
+GDEV: 4393 valid values, 89 NULL values
+GR: 4482 valid values, 0 NULL values
+GTEM: 4482 valid values, 0 NULL values
+HCAL: 4482 valid values, 0 NULL values
+HDRA: 4432 valid values, 50 NULL values
+HDRB: 4432 valid values, 50 NULL values
+HGR: 4482 valid values, 0 NULL values
+HMIN: 4394 valid values, 88 NULL values
+HMNO: 4394 valid values, 88 NULL values
+HNPO: 4416 valid values, 66 NULL values
+HPRA: 4432 valid values, 50 NULL values
+HTNP: 4416 valid values, 66 NULL values
+ND: 4482 valid values, 0 NULL values
+NPHI: 4457 valid values, 25 NULL values
+NPOR: 4417 valid values, 65 NULL values
+PEFZ: 4432 valid values, 50 NULL values
+PXND_HILT: 4417 valid values, 65 NULL values
+RHOZ: 4432 valid values, 50 NULL values
+RSOZ: 4394 valid values, 88 NULL values
+RWA_HILT: 4405 valid values, 77 NULL values
+RXO8: 4394 valid values, 88 NULL values
+RXOZ: 4394 valid values, 88 NULL values
+SP: 4482 valid values, 0 NULL values
+SPAR: 4432 valid values, 50 NULL values
+STIT: 4482 valid values, 0 NULL values
+TENS: 4482 valid values, 0 NULL values
+TNPH: 4417 valid values, 65 NULL values
+HTNP_SAN: 4416 valid values, 66 NULL values
+Read status: SUCCESS
+
+
+FILE: s_54bbb6b7fadee6b59ea7e9370c320a53.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 23446
+Invalid rows: 0
+Values per row: 29
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 304248
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR
+Resistivity: Not found
+Density: Not found
+Neutron: Not found
+
+Neutron value range:
+Minimum: N/A
+Maximum: N/A
+
+BVOL: 11504 valid values, 11942 NULL values
+CALX: 11350 valid values, 12096 NULL values
+CNC: 23097 valid values, 349 NULL values
+CPPZC: 11167 valid values, 12279 NULL values
+CVOL: 11504 valid values, 11942 NULL values
+DT24: 11372 valid values, 12074 NULL values
+DTC: 11373 valid values, 12073 NULL values
+DTS: 10865 valid values, 12581 NULL values
+GR: 23244 valid values, 202 NULL values
+K: 11121 valid values, 12325 NULL values
+KTH: 11121 valid values, 12325 NULL values
+KTHC: 11121 valid values, 12325 NULL values
+LSN: 11327 valid values, 12119 NULL values
+MLR2C: 11423 valid values, 12023 NULL values
+MLR4C: 11423 valid values, 12023 NULL values
+PE: 11347 valid values, 12099 NULL values
+PORA: 11372 valid values, 12074 NULL values
+PORZC: 11348 valid values, 12098 NULL values
+RMLL: 11506 valid values, 11940 NULL values
+SSN: 11327 valid values, 12119 NULL values
+TEN: 23443 valid values, 3 NULL values
+TH: 11121 valid values, 12325 NULL values
+TTEN: 23443 valid values, 3 NULL values
+TT: 11372 valid values, 12074 NULL values
+U: 11121 valid values, 12325 NULL values
+WRM: 11289 valid values, 12157 NULL values
+WTBH: 11289 valid values, 12157 NULL values
+ZCOR: 11348 valid values, 12098 NULL values
+ZDNC: 11348 valid values, 12098 NULL values
+Read status: SUCCESS
+
+
+FILE: s_586d9398c9e59ad22ad9ee2252c09e9d.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+Neutron unit: Unknown or unsupported unit: CFCF
+Density unit: Valid
+Resistivity unit: Valid
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 25485
+Invalid rows: 0
+Values per row: 48
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 27214
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR
+Resistivity: RT_HRLT
+Density: RHOZ
+Neutron: NPHI
+
+Neutron value range:
+Minimum: -0.0054
+Maximum: 1.0528
+
+CDF: 25485 valid values, 0 NULL values
+CFTC: 25485 valid values, 0 NULL values
+CNTC: 25485 valid values, 0 NULL values
+CTEM: 25485 valid values, 0 NULL values
+DCAL: 25485 valid values, 0 NULL values
+DI_HRLT: 25485 valid values, 0 NULL values
+DNPH: 25396 valid values, 89 NULL values
+DPHZ: 25467 valid values, 18 NULL values
+DSOZ: 25467 valid values, 18 NULL values
+ECGR: 25485 valid values, 0 NULL values
+ED: 25485 valid values, 0 NULL values
+GDEV: 0 valid values, 25485 NULL values
+GR: 25485 valid values, 0 NULL values
+GR_EDTC: 25485 valid values, 0 NULL values
+GTEM: 25485 valid values, 0 NULL values
+HCAL: 25485 valid values, 0 NULL values
+HDRA: 25467 valid values, 18 NULL values
+HDRB: 25467 valid values, 18 NULL values
+HGR: 25485 valid values, 0 NULL values
+HMIN: 25334 valid values, 151 NULL values
+HMNO: 25334 valid values, 151 NULL values
+HNPO: 25395 valid values, 90 NULL values
+HPRA: 25467 valid values, 18 NULL values
+HTNP: 25395 valid values, 90 NULL values
+ND: 25485 valid values, 0 NULL values
+NPHI: 25466 valid values, 19 NULL values
+NPOR: 25396 valid values, 89 NULL values
+PEFZ: 25467 valid values, 18 NULL values
+PXND_HILT: 25391 valid values, 94 NULL values
+RHOZ: 25467 valid values, 18 NULL values
+RLA0: 25432 valid values, 53 NULL values
+RLA1: 25432 valid values, 53 NULL values
+RLA2: 25432 valid values, 53 NULL values
+RLA3: 25432 valid values, 53 NULL values
+RLA4: 25432 valid values, 53 NULL values
+RLA5: 25432 valid values, 53 NULL values
+RM_HRLT: 25485 valid values, 0 NULL values
+RSOZ: 25433 valid values, 52 NULL values
+RT_HRLT: 25485 valid values, 0 NULL values
+RWA_HILT: 25359 valid values, 126 NULL values
+RXO8: 25433 valid values, 52 NULL values
+RXO: 25434 valid values, 51 NULL values
+RXO_HRLT: 25485 valid values, 0 NULL values
+RXOZ: 25433 valid values, 52 NULL values
+STIT: 25485 valid values, 0 NULL values
+TENS: 25485 valid values, 0 NULL values
+TNPH: 25396 valid values, 89 NULL values
+HTNP_SAN: 25395 valid values, 90 NULL values
+Read status: SUCCESS
+
+
+FILE: s_b080a52a6437d8989146ff25fdd6e124.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+Neutron unit: Unknown or unsupported unit: CFCF
+Density unit: Valid
+Resistivity unit: Valid
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 23649
+Invalid rows: 0
+Values per row: 68
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 41933
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR
+Resistivity: RT_HRLT
+Density: RHOZ
+Neutron: NPHI
+
+Neutron value range:
+Minimum: -0.003
+Maximum: 1.091
+
+BFV: 21224 valid values, 2425 NULL values
+CBP1: 21224 valid values, 2425 NULL values
+CBP2: 21224 valid values, 2425 NULL values
+CBP3: 21224 valid values, 2425 NULL values
+CBP4: 21224 valid values, 2425 NULL values
+CBP5: 21224 valid values, 2425 NULL values
+CBP6: 21224 valid values, 2425 NULL values
+CBP7: 21224 valid values, 2425 NULL values
+CBP8: 21224 valid values, 2425 NULL values
+CDF: 23649 valid values, 0 NULL values
+CFTC: 23512 valid values, 137 NULL values
+CMFF: 21224 valid values, 2425 NULL values
+CMR_PHI_CONV: 21224 valid values, 2425 NULL values
+CMRP_3MS: 21224 valid values, 2425 NULL values
+CNTC: 23649 valid values, 0 NULL values
+CTEM: 23649 valid values, 0 NULL values
+DCAL: 23649 valid values, 0 NULL values
+DI_HRLT: 23649 valid values, 0 NULL values
+DNPH: 23512 valid values, 137 NULL values
+DPHZ: 23527 valid values, 122 NULL values
+DPH8: 23527 valid values, 122 NULL values
+DSOZ: 23527 valid values, 122 NULL values
+ECGR: 23649 valid values, 0 NULL values
+ED: 23649 valid values, 0 NULL values
+GDEV: 23622 valid values, 27 NULL values
+GR: 23649 valid values, 0 NULL values
+GR_EDTC: 23649 valid values, 0 NULL values
+GTEM: 23649 valid values, 0 NULL values
+HCAL: 23649 valid values, 0 NULL values
+HDRA: 23527 valid values, 122 NULL values
+HDRB: 23527 valid values, 122 NULL values
+HGR: 23649 valid values, 0 NULL values
+HMIN: 23649 valid values, 0 NULL values
+HMNO: 23649 valid values, 0 NULL values
+HNPO: 23511 valid values, 138 NULL values
+HPRA: 23527 valid values, 122 NULL values
+HTNP: 23511 valid values, 138 NULL values
+KSDR: 21224 valid values, 2425 NULL values
+KTIM: 21224 valid values, 2425 NULL values
+ND: 23649 valid values, 0 NULL values
+NPHI: 23649 valid values, 0 NULL values
+NPOR: 23512 valid values, 137 NULL values
+PEF8: 23527 valid values, 122 NULL values
+PEFZ: 23527 valid values, 122 NULL values
+PXND_HILT: 23512 valid values, 137 NULL values
+RHO8: 23527 valid values, 122 NULL values
+RHOZ: 23527 valid values, 122 NULL values
+RLA0: 23649 valid values, 0 NULL values
+RLA1: 23649 valid values, 0 NULL values
+RLA2: 23649 valid values, 0 NULL values
+RLA3: 23649 valid values, 0 NULL values
+RLA4: 23649 valid values, 0 NULL values
+RLA5: 23649 valid values, 0 NULL values
+RM_HRLT: 23649 valid values, 0 NULL values
+RSOZ: 23649 valid values, 0 NULL values
+RT_HRLT: 23649 valid values, 0 NULL values
+RWA_HILT: 23241 valid values, 408 NULL values
+RXO8: 23649 valid values, 0 NULL values
+RXO: 23392 valid values, 257 NULL values
+RXO_HRLT: 23649 valid values, 0 NULL values
+RXOZ: 23649 valid values, 0 NULL values
+STIT: 23649 valid values, 0 NULL values
+T2LM: 21224 valid values, 2425 NULL values
+TCMR: 21224 valid values, 2425 NULL values
+TENS: 23649 valid values, 0 NULL values
+TNPH: 23512 valid values, 137 NULL values
+HTNP_SAN: 23511 valid values, 138 NULL values
+HDPH_SAN: 23527 valid values, 122 NULL values
+Read status: SUCCESS
+
+
+FILE: s_f729e898a62aed00d0e7de2a8d2ed241.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 22334
+Invalid rows: 1
+Values per row: 20
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 71749
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR
+Resistivity: Not found
+Density: Not found
+Neutron: Not found
+
+Neutron value range:
+Minimum: N/A
+Maximum: N/A
+
+GR: 22187 valid values, 147 NULL values
+CALX: 21563 valid values, 771 NULL values
+SP: 22191 valid values, 143 NULL values
+CNC: 22065 valid values, 269 NULL values
+CPZC: 21437 valid values, 897 NULL values
+PRZC: 21552 valid values, 782 NULL values
+ZDNC: 21552 valid values, 782 NULL values
+ZCOR: 21552 valid values, 782 NULL values
+PE: 21555 valid values, 779 NULL values
+RNML: 21522 valid values, 812 NULL values
+RLML: 21522 valid values, 812 NULL values
+M2R1: 11620 valid values, 10714 NULL values
+M2R2: 11620 valid values, 10714 NULL values
+M2R3: 11620 valid values, 10714 NULL values
+M2R6: 11620 valid values, 10714 NULL values
+M2R9: 11620 valid values, 10714 NULL values
+M2RX: 11620 valid values, 10714 NULL values
+TEN: 22190 valid values, 144 NULL values
+WRM: 22162 valid values, 172 NULL values
+WTBH: 22161 valid values, 173 NULL values
+Read status: SUCCESS
+
+
+FILE: THRUBIT_OXY_UNIVERSITY_DC_1H_9MAR2015_DLIS-GenericV12.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+Density unit: Valid
+Neutron unit: Unknown or unsupported unit: CFCF
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 11284
+Invalid rows: 0
+Values per row: 18
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 0
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR
+Resistivity: Not found
+Density: RHOB
+Neutron: TNPH
+
+Neutron value range:
+Minimum: 0.0207
+Maximum: 0.7422
+
+CALI: 11284 valid values, 0 NULL values
+CGR: 11284 valid values, 0 NULL values
+DCAL: 11284 valid values, 0 NULL values
+DEVI: 11284 valid values, 0 NULL values
+DPHI: 11284 valid values, 0 NULL values
+DRHO: 11284 valid values, 0 NULL values
+GR: 11284 valid values, 0 NULL values
+GTEM: 11284 valid values, 0 NULL values
+PEF: 11284 valid values, 0 NULL values
+POTA: 11284 valid values, 0 NULL values
+RB: 11284 valid values, 0 NULL values
+RHOB: 11284 valid values, 0 NULL values
+SGR: 11284 valid values, 0 NULL values
+TENS: 11284 valid values, 0 NULL values
+THOR: 11284 valid values, 0 NULL values
+TNPH: 11284 valid values, 0 NULL values
+URAN: 11284 valid values, 0 NULL values
+WTEP: 11284 valid values, 0 NULL values
+Read status: SUCCESS
+
+
+FILE: THRUBIT_OXY_UNIVERSITY_DC_1H_9MAR2015_TCOM.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+Density unit: Valid
+Neutron unit: Needs conversion
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 11284
+Invalid rows: 0
+Values per row: 35
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 0
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR
+Resistivity: Not found
+Density: RHOB
+Neutron: TNPH
+
+Neutron value range:
+Minimum: 2.0779
+Maximum: 73.6456
+
+ATCO90: 11284 valid values, 0 NULL values
+CALI: 11284 valid values, 0 NULL values
+CGR: 11284 valid values, 0 NULL values
+CS: 11284 valid values, 0 NULL values
+DCAL: 11284 valid values, 0 NULL values
+DPHI: 11284 valid values, 0 NULL values
+DRHO: 11284 valid values, 0 NULL values
+GR: 11284 valid values, 0 NULL values
+ICV: 11284 valid values, 0 NULL values
+IHV: 11284 valid values, 0 NULL values
+PEF: 11284 valid values, 0 NULL values
+POTA: 11284 valid values, 0 NULL values
+RHOB: 11284 valid values, 0 NULL values
+RHOL: 11284 valid values, 0 NULL values
+RMUD: 11284 valid values, 0 NULL values
+SGR: 11284 valid values, 0 NULL values
+TBIF10: 11284 valid values, 0 NULL values
+TBIF20: 11284 valid values, 0 NULL values
+TBIF30: 11284 valid values, 0 NULL values
+TBIF60: 11284 valid values, 0 NULL values
+TBIF90: 11284 valid values, 0 NULL values
+TBIT10: 11284 valid values, 0 NULL values
+TBIT20: 11284 valid values, 0 NULL values
+TBIT30: 11284 valid values, 0 NULL values
+TBIT60: 11284 valid values, 0 NULL values
+TBIT90: 11284 valid values, 0 NULL values
+TENS: 11284 valid values, 0 NULL values
+TGR: 11284 valid values, 0 NULL values
+THOR: 11284 valid values, 0 NULL values
+TNPH: 11284 valid values, 0 NULL values
+TNPH_DOL: 11284 valid values, 0 NULL values
+TNPH_LIM: 11284 valid values, 0 NULL values
+TNPH_SAN: 11284 valid values, 0 NULL values
+URAN: 11284 valid values, 0 NULL values
+WTEP: 11284 valid values, 0 NULL values
+Read status: SUCCESS
+
+
+FILE: THRUBIT_OXY_UNIVERSITY_DC_1H_9MAR2015_TCOM-GenericV12.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+Density unit: Valid
+Neutron unit: Unknown or unsupported unit: CFCF
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 11285
+Invalid rows: 0
+Values per row: 18
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 0
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR
+Resistivity: Not found
+Density: RHOB
+Neutron: TNPH
+
+Neutron value range:
+Minimum: 0.0208
+Maximum: 0.7365
+
+CALI: 11285 valid values, 0 NULL values
+CGR: 11285 valid values, 0 NULL values
+DCAL: 11285 valid values, 0 NULL values
+DEVI: 11285 valid values, 0 NULL values
+DPHI: 11285 valid values, 0 NULL values
+DRHO: 11285 valid values, 0 NULL values
+GR: 11285 valid values, 0 NULL values
+GTEM: 11285 valid values, 0 NULL values
+PEF: 11285 valid values, 0 NULL values
+POTA: 11285 valid values, 0 NULL values
+RB: 11285 valid values, 0 NULL values
+RHOB: 11285 valid values, 0 NULL values
+SGR: 11285 valid values, 0 NULL values
+TENS: 11285 valid values, 0 NULL values
+THOR: 11285 valid values, 0 NULL values
+TNPH: 11285 valid values, 0 NULL values
+URAN: 11285 valid values, 0 NULL values
+WTEP: 11285 valid values, 0 NULL values
+Read status: SUCCESS
+
+
+FILE: 4246137956_UNIV_NG_5021H_PEX_HRLA_HNGS_MAIN_GenericV20.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+Neutron unit: Unknown or unsupported unit: CFCF
+Density unit: Valid
+Resistivity unit: Valid
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 16554
+Invalid rows: 0
+Values per row: 55
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 2060
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR
+Resistivity: RT_HRLT
+Density: RHOZ
+Neutron: NPHI
+
+Neutron value range:
+Minimum: 0.0042
+Maximum: 0.998
+
+CDF: 16554 valid values, 0 NULL values
+CFTC: 16554 valid values, 0 NULL values
+CNTC: 16554 valid values, 0 NULL values
+CTEM: 16554 valid values, 0 NULL values
+DCAL: 16554 valid values, 0 NULL values
+DI_HRLT: 16554 valid values, 0 NULL values
+DNPH: 16554 valid values, 0 NULL values
+DPHZ: 16539 valid values, 15 NULL values
+DPH8: 16539 valid values, 15 NULL values
+DSOZ: 16539 valid values, 15 NULL values
+ECGR: 16554 valid values, 0 NULL values
+ED: 16554 valid values, 0 NULL values
+GDEV: 16409 valid values, 145 NULL values
+GR: 16554 valid values, 0 NULL values
+GR_EDTC: 16554 valid values, 0 NULL values
+GTEM: 16409 valid values, 145 NULL values
+HCAL: 16554 valid values, 0 NULL values
+HCGR: 16521 valid values, 33 NULL values
+HDRA: 16539 valid values, 15 NULL values
+HDRB: 16539 valid values, 15 NULL values
+HFK: 16521 valid values, 33 NULL values
+HGR: 16554 valid values, 0 NULL values
+HMIN: 16315 valid values, 239 NULL values
+HMNO: 16315 valid values, 239 NULL values
+HNPO: 16453 valid values, 101 NULL values
+HPRA: 16539 valid values, 15 NULL values
+HSGR: 16521 valid values, 33 NULL values
+HTHO: 16521 valid values, 33 NULL values
+HTNP: 16453 valid values, 101 NULL values
+HURA: 16521 valid values, 33 NULL values
+ND: 16554 valid values, 0 NULL values
+NPHI: 16495 valid values, 59 NULL values
+NPOR: 16454 valid values, 100 NULL values
+PEF8: 16539 valid values, 15 NULL values
+PEFZ: 16539 valid values, 15 NULL values
+PXND_HILT: 16454 valid values, 100 NULL values
+RHO8: 16539 valid values, 15 NULL values
+RHOZ: 16539 valid values, 15 NULL values
+RLA0: 16554 valid values, 0 NULL values
+RLA1: 16554 valid values, 0 NULL values
+RLA2: 16554 valid values, 0 NULL values
+RLA3: 16554 valid values, 0 NULL values
+RLA4: 16554 valid values, 0 NULL values
+RLA5: 16554 valid values, 0 NULL values
+RM_HRLT: 16554 valid values, 0 NULL values
+RSOZ: 16454 valid values, 100 NULL values
+RT_HRLT: 16554 valid values, 0 NULL values
+RXO8: 16454 valid values, 100 NULL values
+RXO_HRLT: 16554 valid values, 0 NULL values
+RXOZ: 16454 valid values, 100 NULL values
+STIT: 16554 valid values, 0 NULL values
+TENS: 16554 valid values, 0 NULL values
+TNPH: 16454 valid values, 100 NULL values
+HTNP_SAN: 16453 valid values, 101 NULL values
+HDPH_SAN: 16539 valid values, 15 NULL values
+Read status: SUCCESS
+
+
+FILE: 4246137956_UNIV_NG_5021H_PEX_HRLA_HNGS_PORO.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Neutron unit: Unknown or unsupported unit: ft3/ft3
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 16535
+Invalid rows: 0
+Values per row: 10
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 1437
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: Not found
+Resistivity: Not found
+Density: Not found
+Neutron: TNPH
+
+Neutron value range:
+Minimum: 0.00498
+Maximum: 1.87269
+
+PEFZ: 16397 valid values, 138 NULL values
+SGR: 16400 valid values, 135 NULL values
+PXND: 16307 valid values, 228 NULL values
+CALI: 16407 valid values, 128 NULL values
+DPHZ: 16397 valid values, 138 NULL values
+CGR: 16400 valid values, 135 NULL values
+GR_CAL: 16407 valid values, 128 NULL values
+TENS: 16408 valid values, 127 NULL values
+HDRA: 16397 valid values, 138 NULL values
+TNPH: 16393 valid values, 142 NULL values
+Read status: SUCCESS
+
+
+FILE: 4246137956_UNIV_NG_5021H_PEX_HRLA_HNGS_REP_GenericV20.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+Neutron unit: Unknown or unsupported unit: CFCF
+Density unit: Valid
+Resistivity unit: Valid
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 987
+Invalid rows: 0
+Values per row: 51
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 2753
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR
+Resistivity: RT_HRLT
+Density: RHOZ
+Neutron: NPHI
+
+Neutron value range:
+Minimum: 0.0032
+Maximum: 0.2921
+
+CDF: 987 valid values, 0 NULL values
+CFTC: 905 valid values, 82 NULL values
+CNTC: 987 valid values, 0 NULL values
+CTEM: 987 valid values, 0 NULL values
+DCAL: 987 valid values, 0 NULL values
+DI_HRLT: 987 valid values, 0 NULL values
+DNPH: 987 valid values, 0 NULL values
+DPHZ: 976 valid values, 11 NULL values
+DSOZ: 976 valid values, 11 NULL values
+ECGR: 941 valid values, 46 NULL values
+ED: 987 valid values, 0 NULL values
+GDEV: 842 valid values, 145 NULL values
+GR: 941 valid values, 46 NULL values
+GR_EDTC: 968 valid values, 19 NULL values
+GTEM: 848 valid values, 139 NULL values
+HCAL: 849 valid values, 138 NULL values
+HCGR: 955 valid values, 32 NULL values
+HDRA: 976 valid values, 11 NULL values
+HDRB: 976 valid values, 11 NULL values
+HFK: 955 valid values, 32 NULL values
+HGR: 942 valid values, 45 NULL values
+HMIN: 754 valid values, 233 NULL values
+HMNO: 754 valid values, 233 NULL values
+HNPO: 833 valid values, 154 NULL values
+HPRA: 976 valid values, 11 NULL values
+HSGR: 955 valid values, 32 NULL values
+HTHO: 955 valid values, 32 NULL values
+HTNP: 833 valid values, 154 NULL values
+HURA: 955 valid values, 32 NULL values
+ND: 987 valid values, 0 NULL values
+NPHI: 929 valid values, 58 NULL values
+NPOR: 892 valid values, 95 NULL values
+PEFZ: 976 valid values, 11 NULL values
+PXND_HILT: 892 valid values, 95 NULL values
+RHOZ: 976 valid values, 11 NULL values
+RLA0: 937 valid values, 50 NULL values
+RLA1: 937 valid values, 50 NULL values
+RLA2: 937 valid values, 50 NULL values
+RLA3: 937 valid values, 50 NULL values
+RLA4: 937 valid values, 50 NULL values
+RLA5: 937 valid values, 50 NULL values
+RM_HRLT: 987 valid values, 0 NULL values
+RSOZ: 892 valid values, 95 NULL values
+RT_HRLT: 987 valid values, 0 NULL values
+RXO8: 892 valid values, 95 NULL values
+RXO_HRLT: 987 valid values, 0 NULL values
+RXOZ: 892 valid values, 95 NULL values
+STIT: 987 valid values, 0 NULL values
+TENS: 987 valid values, 0 NULL values
+TNPH: 892 valid values, 95 NULL values
+HTNP_SAN: 833 valid values, 154 NULL values
+Read status: SUCCESS
+
+
+FILE: 4246137956_UNIV_NG_5021H_PEX_HRLA_HNGS_RES.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 6028
+Invalid rows: 0
+Values per row: 9
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 573
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: Not found
+Resistivity: Not found
+Density: Not found
+Neutron: Not found
+
+Neutron value range:
+Minimum: N/A
+Maximum: N/A
+
+CALI: 6022 valid values, 6 NULL values
+RXOZ: 5928 valid values, 100 NULL values
+CGR: 5907 valid values, 121 NULL values
+SGR: 5907 valid values, 121 NULL values
+TENS: 6027 valid values, 1 NULL values
+RLA3: 5972 valid values, 56 NULL values
+RLA4: 5972 valid values, 56 NULL values
+RLA5: 5972 valid values, 56 NULL values
+MRES: 5972 valid values, 56 NULL values
+Read status: SUCCESS
+
+
+FILE: 4246137956_UNIV_NG_5021H_PEX_HRLA_HNGS_SPECTRAL.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 16521
+Invalid rows: 0
+Values per row: 7
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 833
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: Not found
+Resistivity: Not found
+Density: Not found
+Neutron: Not found
+
+Neutron value range:
+Minimum: N/A
+Maximum: N/A
+
+URAN: 16400 valid values, 121 NULL values
+CALI: 16407 valid values, 114 NULL values
+THOR: 16400 valid values, 121 NULL values
+TENS: 16407 valid values, 114 NULL values
+POTA: 16400 valid values, 121 NULL values
+CGR: 16400 valid values, 121 NULL values
+SGR: 16400 valid values, 121 NULL values
+Read status: SUCCESS
+
+
+FILE: 4246137956_UNIV_NG_5021H_SS.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 6048
+Invalid rows: 0
+Values per row: 4
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 46
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR
+Resistivity: Not found
+Density: Not found
+Neutron: Not found
+
+Neutron value range:
+Minimum: N/A
+Maximum: N/A
+
+DTCO: 6048 valid values, 0 NULL values
+DTSM: 6048 valid values, 0 NULL values
+SPHI: 6048 valid values, 0 NULL values
+GR: 6002 valid values, 46 NULL values
+Read status: SUCCESS
+
+
+FILE: 4246138181_UNIV_4_23_1_Mudlog.LAS
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 1
+Minimum actual step: 1
+Maximum actual step: 1
+Rows: 8286
+Invalid rows: 0
+Values per row: 37
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 0
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: Not found
+Resistivity: Not found
+Density: Not found
+Neutron: Not found
+
+Neutron value range:
+Minimum: N/A
+Maximum: N/A
+
+ROP: 8286 valid values, 0 NULL values
+Slide: 8286 valid values, 0 NULL values
+Gamma: 8286 valid values, 0 NULL values
+POR: 8286 valid values, 0 NULL values
+FLOR: 8286 valid values, 0 NULL values
+WCUT: 8286 valid values, 0 NULL values
+DCUT: 8286 valid values, 0 NULL values
+TotalGas: 8286 valid values, 0 NULL values
+C1: 8286 valid values, 0 NULL values
+C2: 8286 valid values, 0 NULL values
+C3: 8286 valid values, 0 NULL values
+C4: 8286 valid values, 0 NULL values
+C5: 8286 valid values, 0 NULL values
+FLARE: 8286 valid values, 0 NULL values
+LOSS: 8286 valid values, 0 NULL values
+WT: 8286 valid values, 0 NULL values
+ANHY: 8286 valid values, 0 NULL values
+BENT: 8286 valid values, 0 NULL values
+CALC: 8286 valid values, 0 NULL values
+CHAL: 8286 valid values, 0 NULL values
+CHER: 8286 valid values, 0 NULL values
+COAL: 8286 valid values, 0 NULL values
+CONG: 8286 valid values, 0 NULL values
+DOLO: 8286 valid values, 0 NULL values
+FOSS: 8286 valid values, 0 NULL values
+FRAC: 8286 valid values, 0 NULL values
+GRAN: 8286 valid values, 0 NULL values
+LIME: 8286 valid values, 0 NULL values
+META: 8286 valid values, 0 NULL values
+NONE: 8286 valid values, 0 NULL values
+PYRT: 8286 valid values, 0 NULL values
+QRTZ: 8286 valid values, 0 NULL values
+SALT: 8286 valid values, 0 NULL values
+SAND: 8286 valid values, 0 NULL values
+SHAL: 8286 valid values, 0 NULL values
+SILT: 8286 valid values, 0 NULL values
+VOLC: 8286 valid values, 0 NULL values
+Read status: SUCCESS
+
+
+FILE: 4246138181_UNIV_4_23_1_R1A_Main_DSLT_HNGC_HNGS_HGNS_LEH_GenericV12.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+Neutron unit: Unknown or unsupported unit: CFCF
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 17635
+Invalid rows: 0
+Values per row: 30
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 96742
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR
+Resistivity: Not found
+Density: Not found
+Neutron: NPHI
+
+Neutron value range:
+Minimum: -4224.77
+Maximum: 6.894
+
+CDF: 17635 valid values, 0 NULL values
+CFTC: 17565 valid values, 70 NULL values
+CNTC: 17635 valid values, 0 NULL values
+CTEM: 17635 valid values, 0 NULL values
+DCAL: 17635 valid values, 0 NULL values
+DNPH: 17635 valid values, 0 NULL values
+DT: 17635 valid values, 0 NULL values
+ECGR: 17635 valid values, 0 NULL values
+ED: 17635 valid values, 0 NULL values
+GDEV: 17524 valid values, 111 NULL values
+GR: 17635 valid values, 0 NULL values
+GR_EDTC: 17635 valid values, 0 NULL values
+GTEM: 17525 valid values, 110 NULL values
+HCGR: 17579 valid values, 56 NULL values
+HFK: 17579 valid values, 56 NULL values
+HGR: 17635 valid values, 0 NULL values
+HNPO: 0 valid values, 17635 NULL values
+HSGR: 17579 valid values, 56 NULL values
+HTHO: 17579 valid values, 56 NULL values
+HTNP: 0 valid values, 17635 NULL values
+HURA: 17579 valid values, 56 NULL values
+ITT: 17635 valid values, 0 NULL values
+ND: 17635 valid values, 0 NULL values
+NPHI: 9639 valid values, 7996 NULL values
+NPOR: 0 valid values, 17635 NULL values
+SPHI: 17635 valid values, 0 NULL values
+STIT: 17635 valid values, 0 NULL values
+TENS: 17635 valid values, 0 NULL values
+TNPH: 0 valid values, 17635 NULL values
+HTNP_SAN: 0 valid values, 17635 NULL values
+Read status: SUCCESS
+
+
+FILE: 4246138181_UNIV_4_23_1_R1A_Repeat_DSLT_HNGC_HNGS_HGNS_LEH_GenericV12.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+Neutron unit: Unknown or unsupported unit: CFCF
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 865
+Invalid rows: 0
+Values per row: 30
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 5686
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR
+Resistivity: Not found
+Density: Not found
+Neutron: NPHI
+
+Neutron value range:
+Minimum: -4223.1389
+Maximum: 0.9538
+
+CDF: 865 valid values, 0 NULL values
+CFTC: 794 valid values, 71 NULL values
+CNTC: 865 valid values, 0 NULL values
+CTEM: 865 valid values, 0 NULL values
+DCAL: 865 valid values, 0 NULL values
+DNPH: 865 valid values, 0 NULL values
+DT: 766 valid values, 99 NULL values
+ECGR: 836 valid values, 29 NULL values
+ED: 865 valid values, 0 NULL values
+GDEV: 754 valid values, 111 NULL values
+GR: 836 valid values, 29 NULL values
+GR_EDTC: 840 valid values, 25 NULL values
+GTEM: 754 valid values, 111 NULL values
+HCGR: 808 valid values, 57 NULL values
+HFK: 808 valid values, 57 NULL values
+HGR: 837 valid values, 28 NULL values
+HNPO: 0 valid values, 865 NULL values
+HSGR: 808 valid values, 57 NULL values
+HTHO: 808 valid values, 57 NULL values
+HTNP: 0 valid values, 865 NULL values
+HURA: 808 valid values, 57 NULL values
+ITT: 865 valid values, 0 NULL values
+ND: 865 valid values, 0 NULL values
+NPHI: 391 valid values, 474 NULL values
+NPOR: 0 valid values, 865 NULL values
+SPHI: 766 valid values, 99 NULL values
+STIT: 865 valid values, 0 NULL values
+TENS: 865 valid values, 0 NULL values
+TNPH: 0 valid values, 865 NULL values
+HTNP_SAN: 0 valid values, 865 NULL values
+Read status: SUCCESS
+
+
+FILE: 4246138181_UNIV_4_23_1_R1B_Main_Pass_HDRS_HRLT_HGNS_LEH_GenericV12.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+Neutron unit: Unknown or unsupported unit: CFCF
+Density unit: Valid
+Resistivity unit: Valid
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 19554
+Invalid rows: 0
+Values per row: 48
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 3223
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR
+Resistivity: RT_HRLT
+Density: RHOZ
+Neutron: NPHI
+
+Neutron value range:
+Minimum: -0.0121
+Maximum: 0.7369
+
+CDF: 19554 valid values, 0 NULL values
+CFTC: 19554 valid values, 0 NULL values
+CNTC: 19554 valid values, 0 NULL values
+CTEM: 19554 valid values, 0 NULL values
+DCAL: 19554 valid values, 0 NULL values
+DI_HRLT: 19554 valid values, 0 NULL values
+DNPH: 19554 valid values, 0 NULL values
+DPHZ: 19520 valid values, 34 NULL values
+DSOZ: 19521 valid values, 33 NULL values
+ECGR: 19554 valid values, 0 NULL values
+ED: 19554 valid values, 0 NULL values
+GDEV: 19434 valid values, 120 NULL values
+GR: 19554 valid values, 0 NULL values
+GR_EDTC: 19554 valid values, 0 NULL values
+GTEM: 19253 valid values, 301 NULL values
+HCAL: 19554 valid values, 0 NULL values
+HDRA: 19521 valid values, 33 NULL values
+HDRB: 19521 valid values, 33 NULL values
+HGR: 19554 valid values, 0 NULL values
+HMIN: 19307 valid values, 247 NULL values
+HMNO: 19307 valid values, 247 NULL values
+HNPO: 19367 valid values, 187 NULL values
+HPRA: 19521 valid values, 33 NULL values
+HTNP: 19367 valid values, 187 NULL values
+ND: 19554 valid values, 0 NULL values
+NPHI: 19513 valid values, 41 NULL values
+NPOR: 19367 valid values, 187 NULL values
+PEFZ: 19521 valid values, 33 NULL values
+PXND_HILT: 19280 valid values, 274 NULL values
+RHOZ: 19521 valid values, 33 NULL values
+RLA0: 19554 valid values, 0 NULL values
+RLA1: 19554 valid values, 0 NULL values
+RLA2: 19554 valid values, 0 NULL values
+RLA3: 19554 valid values, 0 NULL values
+RLA4: 19554 valid values, 0 NULL values
+RLA5: 19554 valid values, 0 NULL values
+RM_HRLT: 19554 valid values, 0 NULL values
+RSOZ: 19418 valid values, 136 NULL values
+RT_HRLT: 19554 valid values, 0 NULL values
+RWA_HILT: 19280 valid values, 274 NULL values
+RXO8: 19419 valid values, 135 NULL values
+RXO: 19409 valid values, 145 NULL values
+RXO_HRLT: 19554 valid values, 0 NULL values
+RXOZ: 19418 valid values, 136 NULL values
+STIT: 19554 valid values, 0 NULL values
+TENS: 19554 valid values, 0 NULL values
+TNPH: 19367 valid values, 187 NULL values
+HTNP_SAN: 19367 valid values, 187 NULL values
+Read status: SUCCESS
+
+
+FILE: 4246138181_UNIV_4_23_1_R1B_Repeat_Pass_HDRS_HRLT_HGNS_LEH_GenericV12.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+Neutron unit: Unknown or unsupported unit: CFCF
+Density unit: Valid
+Resistivity unit: Valid
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 1063
+Invalid rows: 0
+Values per row: 48
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 2042
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR
+Resistivity: RT_HRLT
+Density: RHOZ
+Neutron: NPHI
+
+Neutron value range:
+Minimum: 0.0049
+Maximum: 0.3119
+
+CDF: 1063 valid values, 0 NULL values
+CFTC: 984 valid values, 79 NULL values
+CNTC: 1063 valid values, 0 NULL values
+CTEM: 1063 valid values, 0 NULL values
+DCAL: 1063 valid values, 0 NULL values
+DI_HRLT: 1063 valid values, 0 NULL values
+DNPH: 1063 valid values, 0 NULL values
+DPHZ: 1047 valid values, 16 NULL values
+DSOZ: 1047 valid values, 16 NULL values
+ECGR: 1034 valid values, 29 NULL values
+ED: 1063 valid values, 0 NULL values
+GDEV: 944 valid values, 119 NULL values
+GR: 1034 valid values, 29 NULL values
+GR_EDTC: 1063 valid values, 0 NULL values
+GTEM: 944 valid values, 119 NULL values
+HCAL: 1063 valid values, 0 NULL values
+HDRA: 1047 valid values, 16 NULL values
+HDRB: 1047 valid values, 16 NULL values
+HGR: 1063 valid values, 0 NULL values
+HMIN: 900 valid values, 163 NULL values
+HMNO: 900 valid values, 163 NULL values
+HNPO: 902 valid values, 161 NULL values
+HPRA: 1047 valid values, 16 NULL values
+HTNP: 902 valid values, 161 NULL values
+ND: 1063 valid values, 0 NULL values
+NPHI: 1022 valid values, 41 NULL values
+NPOR: 902 valid values, 161 NULL values
+PEFZ: 1047 valid values, 16 NULL values
+PXND_HILT: 971 valid values, 92 NULL values
+RHOZ: 1047 valid values, 16 NULL values
+RLA0: 1063 valid values, 0 NULL values
+RLA1: 1063 valid values, 0 NULL values
+RLA2: 1063 valid values, 0 NULL values
+RLA3: 1063 valid values, 0 NULL values
+RLA4: 1063 valid values, 0 NULL values
+RLA5: 1063 valid values, 0 NULL values
+RM_HRLT: 1063 valid values, 0 NULL values
+RSOZ: 1013 valid values, 50 NULL values
+RT_HRLT: 1063 valid values, 0 NULL values
+RWA_HILT: 971 valid values, 92 NULL values
+RXO8: 1013 valid values, 50 NULL values
+RXO: 1014 valid values, 49 NULL values
+RXO_HRLT: 1063 valid values, 0 NULL values
+RXOZ: 1013 valid values, 50 NULL values
+STIT: 1063 valid values, 0 NULL values
+TENS: 1063 valid values, 0 NULL values
+TNPH: 902 valid values, 161 NULL values
+HTNP_SAN: 902 valid values, 161 NULL values
+Read status: SUCCESS
+
+
+FILE: 4246138787_UNIV_4_29_2_Mudlog.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 1
+Minimum actual step: 1
+Maximum actual step: 1
+Rows: 7891
+Invalid rows: 0
+Values per row: 60
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 13416
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: Not found
+Resistivity: Not found
+Density: Not found
+Neutron: Not found
+
+Neutron value range:
+Minimum: N/A
+Maximum: N/A
+
+TVD: 7891 valid values, 0 NULL values
+INCL: 7891 valid values, 0 NULL values
+AZM: 7891 valid values, 0 NULL values
+VS: 7891 valid values, 0 NULL values
+DRILLRATE: 7891 valid values, 0 NULL values
+FTPERHR: 7891 valid values, 0 NULL values
+10FTRATE: 789 valid values, 7102 NULL values
+5FTRATE: 1577 valid values, 6314 NULL values
+GAMMA: 7891 valid values, 0 NULL values
+ANHY: 7891 valid values, 0 NULL values
+CHERT: 7891 valid values, 0 NULL values
+LIME: 7891 valid values, 0 NULL values
+DOLO: 7891 valid values, 0 NULL values
+SS: 7891 valid values, 0 NULL values
+SILT: 7891 valid values, 0 NULL values
+CONG: 7891 valid values, 0 NULL values
+SHALE: 7891 valid values, 0 NULL values
+COAL: 7891 valid values, 0 NULL values
+SALT: 7891 valid values, 0 NULL values
+GRAN: 7891 valid values, 0 NULL values
+GRANWSH: 7891 valid values, 0 NULL values
+QTZWSH: 7891 valid values, 0 NULL values
+CARBWSH: 7891 valid values, 0 NULL values
+BEN: 7891 valid values, 0 NULL values
+REDSH: 7891 valid values, 0 NULL values
+GNSH: 7891 valid values, 0 NULL values
+ORGSH: 7891 valid values, 0 NULL values
+CARBSH: 7891 valid values, 0 NULL values
+CON: 7891 valid values, 0 NULL values
+C1: 7891 valid values, 0 NULL values
+C2: 7891 valid values, 0 NULL values
+C3: 7891 valid values, 0 NULL values
+IC4: 7891 valid values, 0 NULL values
+NC4: 7891 valid values, 0 NULL values
+IC5: 7891 valid values, 0 NULL values
+NC5: 7891 valid values, 0 NULL values
+TOT: 7891 valid values, 0 NULL values
+CO2: 7891 valid values, 0 NULL values
+POR: 7891 valid values, 0 NULL values
+FLU: 7891 valid values, 0 NULL values
+FLUQUAL: 7891 valid values, 0 NULL values
+CUT: 7891 valid values, 0 NULL values
+FLARE: 7891 valid values, 0 NULL values
+MUDWTOUT: 7891 valid values, 0 NULL values
+MUDWTIN: 7891 valid values, 0 NULL values
+GAIN: 7891 valid values, 0 NULL values
+FLOW: 7891 valid values, 0 NULL values
+DHP: 7891 valid values, 0 NULL values
+DXC: 7891 valid values, 0 NULL values
+HARD: 7891 valid values, 0 NULL values
+TEMP: 7891 valid values, 0 NULL values
+LAGTIME: 7891 valid values, 0 NULL values
+SG: 7891 valid values, 0 NULL values
+WRAT: 7891 valid values, 0 NULL values
+BRAT: 7891 valid values, 0 NULL values
+RPM: 7891 valid values, 0 NULL values
+CUST: 7891 valid values, 0 NULL values
+CUST: 7891 valid values, 0 NULL values
+CUST: 7891 valid values, 0 NULL values
+CUST: 7891 valid values, 0 NULL values
+Read status: SUCCESS
+
+
+FILE: 4246138787_UNIV_4_29_2_Run 1A_Main_Pass.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+Neutron unit: Unknown or unsupported unit: CFCF
+Density unit: Valid
+Resistivity unit: Valid
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 20274
+Invalid rows: 0
+Values per row: 62
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 9074
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR
+Resistivity: RT_HRLT
+Density: RHOZ
+Neutron: NPHI
+
+Neutron value range:
+Minimum: -0.0171
+Maximum: 0.9522
+
+CDF: 20274 valid values, 0 NULL values
+CFTC: 20274 valid values, 0 NULL values
+CNTC: 20274 valid values, 0 NULL values
+CTEM: 20274 valid values, 0 NULL values
+DCAL: 20274 valid values, 0 NULL values
+DI_HRLT: 20274 valid values, 0 NULL values
+DNPH: 20274 valid values, 0 NULL values
+DPHZ: 20091 valid values, 183 NULL values
+DPH8: 20091 valid values, 183 NULL values
+DSOZ: 20091 valid values, 183 NULL values
+DTCO: 20216 valid values, 58 NULL values
+DTSM: 18563 valid values, 1711 NULL values
+ECGR: 20274 valid values, 0 NULL values
+ED: 20274 valid values, 0 NULL values
+GDEV: 20018 valid values, 256 NULL values
+GR: 20274 valid values, 0 NULL values
+GR_EDTC: 20274 valid values, 0 NULL values
+GTEM: 20019 valid values, 255 NULL values
+HCAL: 20274 valid values, 0 NULL values
+HCGR: 20243 valid values, 31 NULL values
+HDRA: 20091 valid values, 183 NULL values
+HDRB: 20091 valid values, 183 NULL values
+HFK: 20243 valid values, 31 NULL values
+HGR: 20274 valid values, 0 NULL values
+HMIN: 20163 valid values, 111 NULL values
+HMNO: 20163 valid values, 111 NULL values
+HNPO: 19952 valid values, 322 NULL values
+HPRA: 20091 valid values, 183 NULL values
+HSGR: 20243 valid values, 31 NULL values
+HTHO: 20243 valid values, 31 NULL values
+HTNP: 19952 valid values, 322 NULL values
+HURA: 20243 valid values, 31 NULL values
+ITT: 20274 valid values, 0 NULL values
+ND: 20274 valid values, 0 NULL values
+NPHI: 20216 valid values, 58 NULL values
+NPOR: 19952 valid values, 322 NULL values
+PEF8: 20091 valid values, 183 NULL values
+PEFZ: 20091 valid values, 183 NULL values
+PR: 18524 valid values, 1750 NULL values
+PXND_HILT: 20063 valid values, 211 NULL values
+RHO8: 20091 valid values, 183 NULL values
+RHOZ: 20091 valid values, 183 NULL values
+RLA0: 20274 valid values, 0 NULL values
+RLA1: 20274 valid values, 0 NULL values
+RLA2: 20274 valid values, 0 NULL values
+RLA3: 20274 valid values, 0 NULL values
+RLA4: 20274 valid values, 0 NULL values
+RLA5: 20274 valid values, 0 NULL values
+RM_HRLT: 20274 valid values, 0 NULL values
+RSOZ: 20163 valid values, 111 NULL values
+RT_HRLT: 20274 valid values, 0 NULL values
+RWA_HILT: 20063 valid values, 211 NULL values
+RXO8: 20163 valid values, 111 NULL values
+RXO: 20101 valid values, 173 NULL values
+RXO_HRLT: 20274 valid values, 0 NULL values
+RXOZ: 20163 valid values, 111 NULL values
+SPHI: 20216 valid values, 58 NULL values
+STIT: 20274 valid values, 0 NULL values
+TENS: 20274 valid values, 0 NULL values
+TNPH: 19952 valid values, 322 NULL values
+HTNP_SAN: 19952 valid values, 322 NULL values
+HDPH_SAN: 20091 valid values, 183 NULL values
+Read status: SUCCESS
+
+
+FILE: 4246138787_UNIV_4_29_2_Run 1A_Main_Pass_GenericV12.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+Neutron unit: Unknown or unsupported unit: CFCF
+Density unit: Valid
+Resistivity unit: Valid
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 20274
+Invalid rows: 0
+Values per row: 62
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 9074
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR
+Resistivity: RT_HRLT
+Density: RHOZ
+Neutron: NPHI
+
+Neutron value range:
+Minimum: -0.0171
+Maximum: 0.9522
+
+CDF: 20274 valid values, 0 NULL values
+CFTC: 20274 valid values, 0 NULL values
+CNTC: 20274 valid values, 0 NULL values
+CTEM: 20274 valid values, 0 NULL values
+DCAL: 20274 valid values, 0 NULL values
+DI_HRLT: 20274 valid values, 0 NULL values
+DNPH: 20274 valid values, 0 NULL values
+DPHZ: 20091 valid values, 183 NULL values
+DPH8: 20091 valid values, 183 NULL values
+DSOZ: 20091 valid values, 183 NULL values
+DTCO: 20216 valid values, 58 NULL values
+DTSM: 18563 valid values, 1711 NULL values
+ECGR: 20274 valid values, 0 NULL values
+ED: 20274 valid values, 0 NULL values
+GDEV: 20018 valid values, 256 NULL values
+GR: 20274 valid values, 0 NULL values
+GR_EDTC: 20274 valid values, 0 NULL values
+GTEM: 20019 valid values, 255 NULL values
+HCAL: 20274 valid values, 0 NULL values
+HCGR: 20243 valid values, 31 NULL values
+HDRA: 20091 valid values, 183 NULL values
+HDRB: 20091 valid values, 183 NULL values
+HFK: 20243 valid values, 31 NULL values
+HGR: 20274 valid values, 0 NULL values
+HMIN: 20163 valid values, 111 NULL values
+HMNO: 20163 valid values, 111 NULL values
+HNPO: 19952 valid values, 322 NULL values
+HPRA: 20091 valid values, 183 NULL values
+HSGR: 20243 valid values, 31 NULL values
+HTHO: 20243 valid values, 31 NULL values
+HTNP: 19952 valid values, 322 NULL values
+HURA: 20243 valid values, 31 NULL values
+ITT: 20274 valid values, 0 NULL values
+ND: 20274 valid values, 0 NULL values
+NPHI: 20216 valid values, 58 NULL values
+NPOR: 19952 valid values, 322 NULL values
+PEF8: 20091 valid values, 183 NULL values
+PEFZ: 20091 valid values, 183 NULL values
+PR: 18524 valid values, 1750 NULL values
+PXND_HILT: 20063 valid values, 211 NULL values
+RHO8: 20091 valid values, 183 NULL values
+RHOZ: 20091 valid values, 183 NULL values
+RLA0: 20274 valid values, 0 NULL values
+RLA1: 20274 valid values, 0 NULL values
+RLA2: 20274 valid values, 0 NULL values
+RLA3: 20274 valid values, 0 NULL values
+RLA4: 20274 valid values, 0 NULL values
+RLA5: 20274 valid values, 0 NULL values
+RM_HRLT: 20274 valid values, 0 NULL values
+RSOZ: 20163 valid values, 111 NULL values
+RT_HRLT: 20274 valid values, 0 NULL values
+RWA_HILT: 20063 valid values, 211 NULL values
+RXO8: 20163 valid values, 111 NULL values
+RXO: 20101 valid values, 173 NULL values
+RXO_HRLT: 20274 valid values, 0 NULL values
+RXOZ: 20163 valid values, 111 NULL values
+SPHI: 20216 valid values, 58 NULL values
+STIT: 20274 valid values, 0 NULL values
+TENS: 20274 valid values, 0 NULL values
+TNPH: 19952 valid values, 322 NULL values
+HTNP_SAN: 19952 valid values, 322 NULL values
+HDPH_SAN: 20091 valid values, 183 NULL values
+Read status: SUCCESS
+
+
+FILE: CSL900057_SMEnergy_UL_6_21_Unit_6H_Run1A_PEX_HRLA_HNGS_ECS_CMR_Main-GenericV12.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+Neutron unit: Unknown or unsupported unit: CFCF
+Density unit: Valid
+Resistivity unit: Valid
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 20417
+Invalid rows: 0
+Values per row: 92
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 23382
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR
+Resistivity: RT_HRLT
+Density: RHOZ
+Neutron: NPHI
+
+Neutron value range:
+Minimum: -0.0184
+Maximum: 0.9654
+
+BFV: 20417 valid values, 0 NULL values
+CBP1: 20417 valid values, 0 NULL values
+CBP2: 20417 valid values, 0 NULL values
+CBP3: 20417 valid values, 0 NULL values
+CBP4: 20417 valid values, 0 NULL values
+CBP5: 20417 valid values, 0 NULL values
+CBP6: 20417 valid values, 0 NULL values
+CBP7: 20417 valid values, 0 NULL values
+CBP8: 20417 valid values, 0 NULL values
+CDF: 20417 valid values, 0 NULL values
+CFTC: 20417 valid values, 0 NULL values
+CMFF: 20417 valid values, 0 NULL values
+CMFF_SIG: 20417 valid values, 0 NULL values
+CMR_PHI_CONV: 20417 valid values, 0 NULL values
+CMRP_3MS: 20417 valid values, 0 NULL values
+CNTC: 20417 valid values, 0 NULL values
+CTEM: 20417 valid values, 0 NULL values
+DCAL: 20417 valid values, 0 NULL values
+DI_HRLT: 20417 valid values, 0 NULL values
+DNPH: 20414 valid values, 3 NULL values
+DPHZ: 20298 valid values, 119 NULL values
+DPH8: 20298 valid values, 119 NULL values
+DSOZ: 20298 valid values, 119 NULL values
+DWAL_WALK2: 20417 valid values, 0 NULL values
+DWCA_WALK2: 20417 valid values, 0 NULL values
+DWFE_WALK2: 20417 valid values, 0 NULL values
+DWGD_WALK2: 20417 valid values, 0 NULL values
+DWSI_WALK2: 20417 valid values, 0 NULL values
+DWSU_WALK2: 20417 valid values, 0 NULL values
+DWTI_WALK2: 20417 valid values, 0 NULL values
+ECGR: 20417 valid values, 0 NULL values
+ECST: 20417 valid values, 0 NULL values
+ED: 20417 valid values, 0 NULL values
+ESUF_WALK2: 20417 valid values, 0 NULL values
+GDEV: 20205 valid values, 212 NULL values
+GR: 20417 valid values, 0 NULL values
+GR_EDTC: 20417 valid values, 0 NULL values
+GTEM: 20417 valid values, 0 NULL values
+HCAL: 20417 valid values, 0 NULL values
+HCGR: 20386 valid values, 31 NULL values
+HDRA: 20298 valid values, 119 NULL values
+HDRB: 20298 valid values, 119 NULL values
+HFK: 20386 valid values, 31 NULL values
+HGR: 20417 valid values, 0 NULL values
+HMIN: 20286 valid values, 131 NULL values
+HMNO: 20286 valid values, 131 NULL values
+HNPO: 20280 valid values, 137 NULL values
+HPRA: 20298 valid values, 119 NULL values
+HSGR: 20386 valid values, 31 NULL values
+HTHO: 20386 valid values, 31 NULL values
+HTNP: 20280 valid values, 137 NULL values
+HURA: 20386 valid values, 31 NULL values
+KSDR: 20417 valid values, 0 NULL values
+KTIM: 20417 valid values, 0 NULL values
+ND: 20417 valid values, 0 NULL values
+NPHI: 20339 valid values, 78 NULL values
+NPOR: 20414 valid values, 3 NULL values
+PEF8: 20298 valid values, 119 NULL values
+PEFZ: 20298 valid values, 119 NULL values
+PXND_HILT: 20281 valid values, 136 NULL values
+QCPMT: 20417 valid values, 0 NULL values
+RHGE_WALK2: 20417 valid values, 0 NULL values
+RHO8: 20298 valid values, 119 NULL values
+RHOZ: 20298 valid values, 119 NULL values
+RLA0: 20417 valid values, 0 NULL values
+RLA1: 20417 valid values, 0 NULL values
+RLA2: 20417 valid values, 0 NULL values
+RLA3: 20417 valid values, 0 NULL values
+RLA4: 20417 valid values, 0 NULL values
+RLA5: 20417 valid values, 0 NULL values
+RM_HRLT: 20417 valid values, 0 NULL values
+RSOZ: 20286 valid values, 131 NULL values
+RT_HRLT: 20417 valid values, 0 NULL values
+RXO8: 20286 valid values, 131 NULL values
+RXO_HRLT: 20417 valid values, 0 NULL values
+RXOZ: 20286 valid values, 131 NULL values
+STIT: 20417 valid values, 0 NULL values
+T2LM: 20417 valid values, 0 NULL values
+T2LM_SIG: 0 valid values, 20417 NULL values
+TCMR: 20417 valid values, 0 NULL values
+TENS: 20417 valid values, 0 NULL values
+TNPH: 20414 valid values, 3 NULL values
+WANH_WALK2: 20417 valid values, 0 NULL values
+WCAR_WALK2: 20417 valid values, 0 NULL values
+WCLA_WALK2: 20417 valid values, 0 NULL values
+WCOA_WALK2: 20417 valid values, 0 NULL values
+WEVA_WALK2: 20417 valid values, 0 NULL values
+WPYR_WALK2: 20417 valid values, 0 NULL values
+WQFM_WALK2: 20417 valid values, 0 NULL values
+WSID_WALK2: 20417 valid values, 0 NULL values
+HTNP_SAN: 20280 valid values, 137 NULL values
+HDPH_SAN: 20298 valid values, 119 NULL values
+Read status: SUCCESS
+
+
+FILE: D3RR-00028_OccidentalPermianLtd_UniversityDC-1H_Run1AMain_PEX-HRLA-HNGS-SS.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+Neutron unit: Unknown or unsupported unit: CFCF
+Density unit: Valid
+Resistivity unit: Valid
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 17538
+Invalid rows: 0
+Values per row: 68
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 5422
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR
+Resistivity: RT_HRLT
+Density: RHOZ
+Neutron: NPHI
+
+Neutron value range:
+Minimum: -0.0198
+Maximum: 1.0135
+
+CDF: 17538 valid values, 0 NULL values
+CFTC: 17538 valid values, 0 NULL values
+CNTC: 17538 valid values, 0 NULL values
+CTEM: 17538 valid values, 0 NULL values
+DCAL: 17538 valid values, 0 NULL values
+DI_HRLT: 17538 valid values, 0 NULL values
+DNPH: 17538 valid values, 0 NULL values
+DPHZ: 17343 valid values, 195 NULL values
+DPH8: 17343 valid values, 195 NULL values
+DSOZ: 17343 valid values, 195 NULL values
+DTCO: 17282 valid values, 256 NULL values
+DTSM: 17457 valid values, 81 NULL values
+ECGR: 17538 valid values, 0 NULL values
+ED: 17538 valid values, 0 NULL values
+GDEV: 17286 valid values, 252 NULL values
+GR: 17538 valid values, 0 NULL values
+GR_EDTC: 17538 valid values, 0 NULL values
+GTEM: 17538 valid values, 0 NULL values
+HAZI: 17538 valid values, 0 NULL values
+HAZIM: 17538 valid values, 0 NULL values
+HCAL: 17538 valid values, 0 NULL values
+HCGR: 17522 valid values, 16 NULL values
+HDRA: 17343 valid values, 195 NULL values
+HDRB: 17343 valid values, 195 NULL values
+HFK: 17522 valid values, 16 NULL values
+HGR: 17538 valid values, 0 NULL values
+HMIN: 17538 valid values, 0 NULL values
+HMNO: 17538 valid values, 0 NULL values
+HNPO: 17327 valid values, 211 NULL values
+HPRA: 17343 valid values, 195 NULL values
+HSGR: 17522 valid values, 16 NULL values
+HTHO: 17522 valid values, 16 NULL values
+HTNP: 17327 valid values, 211 NULL values
+HURA: 17522 valid values, 16 NULL values
+ITT: 17538 valid values, 0 NULL values
+ND: 17538 valid values, 0 NULL values
+NPHI: 17496 valid values, 42 NULL values
+NPOR: 17328 valid values, 210 NULL values
+P1AZ: 17538 valid values, 0 NULL values
+PEF8: 17343 valid values, 195 NULL values
+PEFZ: 17343 valid values, 195 NULL values
+PR: 17203 valid values, 335 NULL values
+PXND_HILT: 17328 valid values, 210 NULL values
+RB: 17538 valid values, 0 NULL values
+RHO8: 17343 valid values, 195 NULL values
+RHOZ: 17343 valid values, 195 NULL values
+RLA0: 17538 valid values, 0 NULL values
+RLA1: 17538 valid values, 0 NULL values
+RLA2: 17538 valid values, 0 NULL values
+RLA3: 17538 valid values, 0 NULL values
+RLA4: 17538 valid values, 0 NULL values
+RLA5: 17538 valid values, 0 NULL values
+RM_HRLT: 17538 valid values, 0 NULL values
+RSOZ: 17538 valid values, 0 NULL values
+RT_HRLT: 17538 valid values, 0 NULL values
+RWA_HILT: 17145 valid values, 393 NULL values
+RXO8: 17538 valid values, 0 NULL values
+RXO: 17219 valid values, 319 NULL values
+RXO_HRLT: 17538 valid values, 0 NULL values
+RXOZ: 17538 valid values, 0 NULL values
+SDEV: 17538 valid values, 0 NULL values
+SDEVM: 17538 valid values, 0 NULL values
+SPHI: 17282 valid values, 256 NULL values
+STIT: 17538 valid values, 0 NULL values
+TENS: 17538 valid values, 0 NULL values
+TNPH: 17328 valid values, 210 NULL values
+HTNP_SAN: 17327 valid values, 211 NULL values
+HDPH_SAN: 17343 valid values, 195 NULL values
+Read status: SUCCESS
+
+
+FILE: D3RR-00028_OccidentalPermianLtd_UniversityDC-1H_Run1AMain_PEX-HRLA-HNGS-SS-GenericV12.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+Neutron unit: Unknown or unsupported unit: CFCF
+Density unit: Valid
+Resistivity unit: Valid
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 17538
+Invalid rows: 0
+Values per row: 68
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 5422
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR
+Resistivity: RT_HRLT
+Density: RHOZ
+Neutron: NPHI
+
+Neutron value range:
+Minimum: -0.0198
+Maximum: 1.0135
+
+CDF: 17538 valid values, 0 NULL values
+CFTC: 17538 valid values, 0 NULL values
+CNTC: 17538 valid values, 0 NULL values
+CTEM: 17538 valid values, 0 NULL values
+DCAL: 17538 valid values, 0 NULL values
+DI_HRLT: 17538 valid values, 0 NULL values
+DNPH: 17538 valid values, 0 NULL values
+DPHZ: 17343 valid values, 195 NULL values
+DPH8: 17343 valid values, 195 NULL values
+DSOZ: 17343 valid values, 195 NULL values
+DTCO: 17282 valid values, 256 NULL values
+DTSM: 17457 valid values, 81 NULL values
+ECGR: 17538 valid values, 0 NULL values
+ED: 17538 valid values, 0 NULL values
+GDEV: 17286 valid values, 252 NULL values
+GR: 17538 valid values, 0 NULL values
+GR_EDTC: 17538 valid values, 0 NULL values
+GTEM: 17538 valid values, 0 NULL values
+HAZI: 17538 valid values, 0 NULL values
+HAZIM: 17538 valid values, 0 NULL values
+HCAL: 17538 valid values, 0 NULL values
+HCGR: 17522 valid values, 16 NULL values
+HDRA: 17343 valid values, 195 NULL values
+HDRB: 17343 valid values, 195 NULL values
+HFK: 17522 valid values, 16 NULL values
+HGR: 17538 valid values, 0 NULL values
+HMIN: 17538 valid values, 0 NULL values
+HMNO: 17538 valid values, 0 NULL values
+HNPO: 17327 valid values, 211 NULL values
+HPRA: 17343 valid values, 195 NULL values
+HSGR: 17522 valid values, 16 NULL values
+HTHO: 17522 valid values, 16 NULL values
+HTNP: 17327 valid values, 211 NULL values
+HURA: 17522 valid values, 16 NULL values
+ITT: 17538 valid values, 0 NULL values
+ND: 17538 valid values, 0 NULL values
+NPHI: 17496 valid values, 42 NULL values
+NPOR: 17328 valid values, 210 NULL values
+P1AZ: 17538 valid values, 0 NULL values
+PEF8: 17343 valid values, 195 NULL values
+PEFZ: 17343 valid values, 195 NULL values
+PR: 17203 valid values, 335 NULL values
+PXND_HILT: 17328 valid values, 210 NULL values
+RB: 17538 valid values, 0 NULL values
+RHO8: 17343 valid values, 195 NULL values
+RHOZ: 17343 valid values, 195 NULL values
+RLA0: 17538 valid values, 0 NULL values
+RLA1: 17538 valid values, 0 NULL values
+RLA2: 17538 valid values, 0 NULL values
+RLA3: 17538 valid values, 0 NULL values
+RLA4: 17538 valid values, 0 NULL values
+RLA5: 17538 valid values, 0 NULL values
+RM_HRLT: 17538 valid values, 0 NULL values
+RSOZ: 17538 valid values, 0 NULL values
+RT_HRLT: 17538 valid values, 0 NULL values
+RWA_HILT: 17145 valid values, 393 NULL values
+RXO8: 17538 valid values, 0 NULL values
+RXO: 17219 valid values, 319 NULL values
+RXO_HRLT: 17538 valid values, 0 NULL values
+RXOZ: 17538 valid values, 0 NULL values
+SDEV: 17538 valid values, 0 NULL values
+SDEVM: 17538 valid values, 0 NULL values
+SPHI: 17282 valid values, 256 NULL values
+STIT: 17538 valid values, 0 NULL values
+TENS: 17538 valid values, 0 NULL values
+TNPH: 17328 valid values, 210 NULL values
+HTNP_SAN: 17327 valid values, 211 NULL values
+HDPH_SAN: 17343 valid values, 195 NULL values
+Read status: SUCCESS
+
+
+FILE: 4246135952_AQZO-00038_Henry_Univ4_Dannette_33-5_Main_004PUP-GenericV12.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+Neutron unit: Unknown or unsupported unit: CFCF
+Density unit: Valid
+Resistivity unit: Valid
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 19971
+Invalid rows: 0
+Values per row: 55
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 222
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR
+Resistivity: RT_HRLT
+Density: RHOZ
+Neutron: NPHI
+
+Neutron value range:
+Minimum: -0.0161
+Maximum: 0.7324
+
+CFTC: 19971 valid values, 0 NULL values
+CNTC: 19971 valid values, 0 NULL values
+CTEM: 19971 valid values, 0 NULL values
+DCAL: 19971 valid values, 0 NULL values
+DI_HRLT: 19971 valid values, 0 NULL values
+DNPH: 19971 valid values, 0 NULL values
+DPHZ: 19971 valid values, 0 NULL values
+DPH8: 19971 valid values, 0 NULL values
+DPOR: 19971 valid values, 0 NULL values
+DSOZ: 19961 valid values, 10 NULL values
+DT: 19971 valid values, 0 NULL values
+ECGR: 19971 valid values, 0 NULL values
+GDEV: 19829 valid values, 142 NULL values
+GR: 19971 valid values, 0 NULL values
+GR_EDTC: 19971 valid values, 0 NULL values
+GTEM: 19971 valid values, 0 NULL values
+HCAL: 19971 valid values, 0 NULL values
+HCGR: 19971 valid values, 0 NULL values
+HDRA: 19961 valid values, 10 NULL values
+HDRB: 19961 valid values, 10 NULL values
+HFK: 19971 valid values, 0 NULL values
+HGR: 19971 valid values, 0 NULL values
+HMIN: 19971 valid values, 0 NULL values
+HMNO: 19971 valid values, 0 NULL values
+HNPO: 19971 valid values, 0 NULL values
+HPRA: 19961 valid values, 10 NULL values
+HSGR: 19971 valid values, 0 NULL values
+HTHO: 19971 valid values, 0 NULL values
+HTNP: 19971 valid values, 0 NULL values
+HURA: 19971 valid values, 0 NULL values
+ITT: 19971 valid values, 0 NULL values
+NPHI: 19971 valid values, 0 NULL values
+NPOR: 19971 valid values, 0 NULL values
+PEF8: 19961 valid values, 10 NULL values
+PEFZ: 19961 valid values, 10 NULL values
+PXND_HILT: 19971 valid values, 0 NULL values
+RHO8: 19961 valid values, 10 NULL values
+RHOZ: 19961 valid values, 10 NULL values
+RLA0: 19971 valid values, 0 NULL values
+RLA1: 19971 valid values, 0 NULL values
+RLA2: 19971 valid values, 0 NULL values
+RLA3: 19971 valid values, 0 NULL values
+RLA4: 19971 valid values, 0 NULL values
+RLA5: 19971 valid values, 0 NULL values
+RM_HRLT: 19971 valid values, 0 NULL values
+RSOZ: 19971 valid values, 0 NULL values
+RT_HRLT: 19971 valid values, 0 NULL values
+RWA: 19971 valid values, 0 NULL values
+RXO8: 19971 valid values, 0 NULL values
+RXO_HRLT: 19971 valid values, 0 NULL values
+RXOZ: 19971 valid values, 0 NULL values
+SPHI: 19971 valid values, 0 NULL values
+STIT: 19971 valid values, 0 NULL values
+TENS: 19971 valid values, 0 NULL values
+TNPH: 19971 valid values, 0 NULL values
+Read status: SUCCESS
+
+
+FILE: 4246136455_EOG_Univ_15_17_1_MainPass_027LUP-GenericV12.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+Neutron unit: Unknown or unsupported unit: CFCF
+Density unit: Valid
+Resistivity unit: Valid
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 19570
+Invalid rows: 0
+Values per row: 55
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 219
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR
+Resistivity: RT_HRLT
+Density: RHOZ
+Neutron: NPHI
+
+Neutron value range:
+Minimum: -0.0087
+Maximum: 0.9583
+
+CDF: 19570 valid values, 0 NULL values
+CFTC: 19570 valid values, 0 NULL values
+CNTC: 19570 valid values, 0 NULL values
+CTEM: 19570 valid values, 0 NULL values
+DCAL: 19570 valid values, 0 NULL values
+DI_HRLT: 19570 valid values, 0 NULL values
+DNPH: 19570 valid values, 0 NULL values
+DPHZ: 19570 valid values, 0 NULL values
+DPH8: 19570 valid values, 0 NULL values
+DSOZ: 19560 valid values, 10 NULL values
+DT: 19570 valid values, 0 NULL values
+ECGR: 19570 valid values, 0 NULL values
+GDEV: 19431 valid values, 139 NULL values
+GR: 19570 valid values, 0 NULL values
+GR_EDTC: 19570 valid values, 0 NULL values
+GTEM: 19570 valid values, 0 NULL values
+HCAL: 19570 valid values, 0 NULL values
+HCGR: 19570 valid values, 0 NULL values
+HDRA: 19560 valid values, 10 NULL values
+HDRB: 19560 valid values, 10 NULL values
+HFK: 19570 valid values, 0 NULL values
+HGR: 19570 valid values, 0 NULL values
+HMIN: 19570 valid values, 0 NULL values
+HMNO: 19570 valid values, 0 NULL values
+HNPO: 19570 valid values, 0 NULL values
+HPRA: 19560 valid values, 10 NULL values
+HSGR: 19570 valid values, 0 NULL values
+HTHO: 19570 valid values, 0 NULL values
+HTNP: 19570 valid values, 0 NULL values
+HURA: 19570 valid values, 0 NULL values
+ITT: 19570 valid values, 0 NULL values
+NPHI: 19570 valid values, 0 NULL values
+NPOR: 19570 valid values, 0 NULL values
+PEF8: 19560 valid values, 10 NULL values
+PEFZ: 19560 valid values, 10 NULL values
+PXND_HILT: 19570 valid values, 0 NULL values
+RHO8: 19560 valid values, 10 NULL values
+RHOZ: 19560 valid values, 10 NULL values
+RLA0: 19570 valid values, 0 NULL values
+RLA1: 19570 valid values, 0 NULL values
+RLA2: 19570 valid values, 0 NULL values
+RLA3: 19570 valid values, 0 NULL values
+RLA4: 19570 valid values, 0 NULL values
+RLA5: 19570 valid values, 0 NULL values
+RM_HRLT: 19570 valid values, 0 NULL values
+RSOZ: 19570 valid values, 0 NULL values
+RT_HRLT: 19570 valid values, 0 NULL values
+RWA_HILT: 19570 valid values, 0 NULL values
+RXO8: 19570 valid values, 0 NULL values
+RXO_HRLT: 19570 valid values, 0 NULL values
+RXOZ: 19570 valid values, 0 NULL values
+SPHI: 19570 valid values, 0 NULL values
+STIT: 19570 valid values, 0 NULL values
+TENS: 19570 valid values, 0 NULL values
+TNPH: 19570 valid values, 0 NULL values
+Read status: SUCCESS
+
+
+FILE: 4246136455_EOG_Univ_15_17_1_MUDLOG_FINAL.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 1
+Minimum actual step: 1
+Maximum actual step: 1
+Rows: 9015
+Invalid rows: 0
+Values per row: 38
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 24343
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: Not found
+Resistivity: Not found
+Density: Not found
+Neutron: Not found
+
+Neutron value range:
+Minimum: N/A
+Maximum: N/A
+
+TVD: 9015 valid values, 0 NULL values
+INCL: 9015 valid values, 0 NULL values
+AZM: 9015 valid values, 0 NULL values
+VS: 9015 valid values, 0 NULL values
+DRILLRATE: 9015 valid values, 0 NULL values
+FTPERHR: 9015 valid values, 0 NULL values
+10FTRATE: 901 valid values, 8114 NULL values
+5FTRATE: 1801 valid values, 7214 NULL values
+GAMMA: 0 valid values, 9015 NULL values
+ANHY: 9015 valid values, 0 NULL values
+CHERT: 9015 valid values, 0 NULL values
+LIME: 9015 valid values, 0 NULL values
+DOLO: 9015 valid values, 0 NULL values
+SS: 9015 valid values, 0 NULL values
+SILT: 9015 valid values, 0 NULL values
+CONG: 9015 valid values, 0 NULL values
+SHALE: 9015 valid values, 0 NULL values
+COAL: 9015 valid values, 0 NULL values
+SALT: 9015 valid values, 0 NULL values
+GRAN: 9015 valid values, 0 NULL values
+GRANWSH: 9015 valid values, 0 NULL values
+QTZWSH: 9015 valid values, 0 NULL values
+C1: 9015 valid values, 0 NULL values
+C2: 9015 valid values, 0 NULL values
+C3: 9015 valid values, 0 NULL values
+IC4: 9015 valid values, 0 NULL values
+NC4: 9015 valid values, 0 NULL values
+IC5: 9015 valid values, 0 NULL values
+NC5: 9015 valid values, 0 NULL values
+TOT: 9015 valid values, 0 NULL values
+CO2: 9015 valid values, 0 NULL values
+POR: 9015 valid values, 0 NULL values
+FLU: 9015 valid values, 0 NULL values
+FLUQUAL: 9015 valid values, 0 NULL values
+CUT: 9015 valid values, 0 NULL values
+FLARE: 9015 valid values, 0 NULL values
+MUDWT: 9015 valid values, 0 NULL values
+GAIN: 9015 valid values, 0 NULL values
+Read status: SUCCESS
+
+
+FILE: 4246137183_PURE_UNIV_58_1_1_MainPass_020LUP.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+Neutron unit: Unknown or unsupported unit: CFCF
+Density unit: Valid
+Resistivity unit: Valid
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 18915
+Invalid rows: 0
+Values per row: 53
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 203
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR
+Resistivity: RT_HRLT
+Density: RHOZ
+Neutron: NPHI
+
+Neutron value range:
+Minimum: -0.0113
+Maximum: 0.7829
+
+CFTC: 18915 valid values, 0 NULL values
+CNTC: 18915 valid values, 0 NULL values
+CTEM: 18915 valid values, 0 NULL values
+DCAL: 18915 valid values, 0 NULL values
+DI_HRLT: 18915 valid values, 0 NULL values
+DNPH: 18915 valid values, 0 NULL values
+DPHZ: 18915 valid values, 0 NULL values
+DPH8: 18915 valid values, 0 NULL values
+DSOZ: 18907 valid values, 8 NULL values
+DT: 18915 valid values, 0 NULL values
+ECGR: 18915 valid values, 0 NULL values
+GDEV: 18776 valid values, 139 NULL values
+GR: 18915 valid values, 0 NULL values
+GTEM: 18915 valid values, 0 NULL values
+HCAL: 18915 valid values, 0 NULL values
+HCGR: 18915 valid values, 0 NULL values
+HDRA: 18907 valid values, 8 NULL values
+HDRB: 18907 valid values, 8 NULL values
+HFK: 18915 valid values, 0 NULL values
+HGR: 18915 valid values, 0 NULL values
+HMIN: 18915 valid values, 0 NULL values
+HMNO: 18915 valid values, 0 NULL values
+HNPO: 18915 valid values, 0 NULL values
+HPRA: 18907 valid values, 8 NULL values
+HSGR: 18915 valid values, 0 NULL values
+HTHO: 18915 valid values, 0 NULL values
+HTNP: 18915 valid values, 0 NULL values
+HURA: 18915 valid values, 0 NULL values
+ITT: 18915 valid values, 0 NULL values
+NPHI: 18915 valid values, 0 NULL values
+NPOR: 18915 valid values, 0 NULL values
+PEF8: 18907 valid values, 8 NULL values
+PEFZ: 18907 valid values, 8 NULL values
+PXND_HILT: 18915 valid values, 0 NULL values
+RHO8: 18907 valid values, 8 NULL values
+RHOZ: 18907 valid values, 8 NULL values
+RLA0: 18915 valid values, 0 NULL values
+RLA1: 18915 valid values, 0 NULL values
+RLA2: 18915 valid values, 0 NULL values
+RLA3: 18915 valid values, 0 NULL values
+RLA4: 18915 valid values, 0 NULL values
+RLA5: 18915 valid values, 0 NULL values
+RM_HRLT: 18915 valid values, 0 NULL values
+RSOZ: 18915 valid values, 0 NULL values
+RT_HRLT: 18915 valid values, 0 NULL values
+RXO8: 18915 valid values, 0 NULL values
+RXO_HRLT: 18915 valid values, 0 NULL values
+RXOZ: 18915 valid values, 0 NULL values
+SPHI: 18915 valid values, 0 NULL values
+STIT: 18915 valid values, 0 NULL values
+TENS: 18915 valid values, 0 NULL values
+TNPH: 18915 valid values, 0 NULL values
+NPL: 18915 valid values, 0 NULL values
+Read status: SUCCESS
+
+
+FILE: 4238338546_University_2505_3HM_Mudlog_LAS.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 1
+Minimum actual step: 1
+Maximum actual step: 1
+Rows: 14501
+Invalid rows: 0
+Values per row: 25
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 0
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: Not found
+Resistivity: Not found
+Density: Not found
+Neutron: Not found
+
+Neutron value range:
+Minimum: N/A
+Maximum: N/A
+
+ROP: 14501 valid values, 0 NULL values
+HW: 14501 valid values, 0 NULL values
+C1: 14501 valid values, 0 NULL values
+C2: 14501 valid values, 0 NULL values
+C3: 14501 valid values, 0 NULL values
+C4: 14501 valid values, 0 NULL values
+C5: 14501 valid values, 0 NULL values
+TG: 14501 valid values, 0 NULL values
+TSH: 14501 valid values, 0 NULL values
+POR: 14501 valid values, 0 NULL values
+FLRSN: 14501 valid values, 0 NULL values
+CUT: 14501 valid values, 0 NULL values
+FLR: 14501 valid values, 0 NULL values
+ANH: 14501 valid values, 0 NULL values
+CHT: 14501 valid values, 0 NULL values
+COA: 14501 valid values, 0 NULL values
+DOL: 14501 valid values, 0 NULL values
+LME: 14501 valid values, 0 NULL values
+SLT: 14501 valid values, 0 NULL values
+SND: 14501 valid values, 0 NULL values
+SHL: 14501 valid values, 0 NULL values
+SIL: 14501 valid values, 0 NULL values
+SHY: 14501 valid values, 0 NULL values
+CMT: 14501 valid values, 0 NULL values
+CLD: 14501 valid values, 0 NULL values
+Read status: SUCCESS
+
+
+FILE: 4238338546_University_2505_3HM_NMR250_DT2i.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.25
+Minimum actual step: 0.25
+Maximum actual step: 0.25
+Rows: 10066
+Invalid rows: 0
+Values per row: 21
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 117899
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR
+Resistivity: Not found
+Density: Not found
+Neutron: Not found
+
+Neutron value range:
+Minimum: N/A
+Maximum: N/A
+
+BIT: 4481 valid values, 5585 NULL values
+CAL: 4481 valid values, 5585 NULL values
+GR: 4450 valid values, 5616 NULL values
+MBVID: 4428 valid values, 5638 NULL values
+MBVMWD: 4428 valid values, 5638 NULL values
+MCBWD: 4428 valid values, 5638 NULL values
+MPHED: 4428 valid values, 5638 NULL values
+MPHSD: 4428 valid values, 5638 NULL values
+MSGTD: 4428 valid values, 5638 NULL values
+MSOD: 4428 valid values, 5638 NULL values
+MVGSD: 4428 valid values, 5638 NULL values
+MVOD: 4428 valid values, 5638 NULL values
+MPERMD: 4428 valid values, 5638 NULL values
+SWT: 4428 valid values, 5638 NULL values
+ZCOR: 4481 valid values, 5585 NULL values
+ZDNC: 4481 valid values, 5585 NULL values
+PE: 4481 valid values, 5585 NULL values
+CNC: 4481 valid values, 5585 NULL values
+RMLL: 4481 valid values, 5585 NULL values
+RD: 4481 valid values, 5585 NULL values
+RS: 4481 valid values, 5585 NULL values
+Read status: SUCCESS
+
+
+FILE: 4238338546_University_2505_3HM_PROCESSED-XMAC_DTC-DTS.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 14649
+Invalid rows: 0
+Values per row: 6
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 732
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR
+Resistivity: Not found
+Density: Not found
+Neutron: Not found
+
+Neutron value range:
+Minimum: N/A
+Maximum: N/A
+
+GR: 14428 valid values, 221 NULL values
+CAL: 14577 valid values, 72 NULL values
+DTC: 14523 valid values, 126 NULL values
+DTS: 14504 valid values, 145 NULL values
+SCRA: 14503 valid values, 146 NULL values
+TEN: 14627 valid values, 22 NULL values
+Read status: SUCCESS
+
+
+FILE: 4238338546_University_2505_3HM_PROCESSED-XMAC_DTC-DTS_R2.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 4842
+Invalid rows: 0
+Values per row: 6
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 798
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR
+Resistivity: Not found
+Density: Not found
+Neutron: Not found
+
+Neutron value range:
+Minimum: N/A
+Maximum: N/A
+
+CAL: 4723 valid values, 119 NULL values
+DTC: 4659 valid values, 183 NULL values
+DTS: 4796 valid values, 46 NULL values
+GR: 4699 valid values, 143 NULL values
+SCRA: 4659 valid values, 183 NULL values
+TEN: 4718 valid values, 124 NULL values
+Read status: SUCCESS
+
+
+FILE: 4238338546_University_2505_3HM_RUN2_LAS.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 4749
+Invalid rows: 0
+Values per row: 21
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 3247
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR
+Resistivity: Not found
+Density: Not found
+Neutron: Not found
+
+Neutron value range:
+Minimum: N/A
+Maximum: N/A
+
+CALX: 4579 valid values, 170 NULL values
+CNC: 4556 valid values, 193 NULL values
+CPPZC: 4556 valid values, 193 NULL values
+DT24A: 4636 valid values, 113 NULL values
+GR: 4543 valid values, 206 NULL values
+K: 4540 valid values, 209 NULL values
+KTH: 4540 valid values, 209 NULL values
+PE: 4576 valid values, 173 NULL values
+PORA: 4633 valid values, 116 NULL values
+PORZC: 4577 valid values, 172 NULL values
+RD: 4691 valid values, 58 NULL values
+RMLL: 4735 valid values, 14 NULL values
+RS: 4691 valid values, 58 NULL values
+TEN: 4742 valid values, 7 NULL values
+TH: 4540 valid values, 209 NULL values
+TT: 4633 valid values, 116 NULL values
+U: 4540 valid values, 209 NULL values
+WRM: 4510 valid values, 239 NULL values
+WTBH: 4510 valid values, 239 NULL values
+ZCOR: 4577 valid values, 172 NULL values
+ZDNC: 4577 valid values, 172 NULL values
+Read status: SUCCESS
+
+
+FILE: 4238338546_University_2505_3HM_TRACK 2_Mudlog_LAS.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 1
+Minimum actual step: 1
+Maximum actual step: 1
+Rows: 8301
+Invalid rows: 0
+Values per row: 18
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 0
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: Not found
+Resistivity: Not found
+Density: Not found
+Neutron: Not found
+
+Neutron value range:
+Minimum: N/A
+Maximum: N/A
+
+ROP: 8301 valid values, 0 NULL values
+HW: 8301 valid values, 0 NULL values
+C1: 8301 valid values, 0 NULL values
+C2: 8301 valid values, 0 NULL values
+C3: 8301 valid values, 0 NULL values
+C4: 8301 valid values, 0 NULL values
+C5: 8301 valid values, 0 NULL values
+TG: 8301 valid values, 0 NULL values
+TSH: 8301 valid values, 0 NULL values
+POR: 8301 valid values, 0 NULL values
+FLRSN: 8301 valid values, 0 NULL values
+CUT: 8301 valid values, 0 NULL values
+FLR: 8301 valid values, 0 NULL values
+LME: 8301 valid values, 0 NULL values
+SHL: 8301 valid values, 0 NULL values
+SHY: 8301 valid values, 0 NULL values
+CMT: 8301 valid values, 0 NULL values
+NOS: 8301 valid values, 0 NULL values
+Read status: SUCCESS
+
+
+FILE: 4246135292_373main.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Applied (sorted ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: -0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 13369
+Invalid rows: 0
+Values per row: 6
+Original depth ascending: False
+Conditioned depth ascending: True
+Sampling interval correct: False
+Duplicate depths: 0
+Total NULL values: 343
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: Not found
+Resistivity: Not found
+Density: Not found
+Neutron: Not found
+
+Neutron value range:
+Minimum: N/A
+Maximum: N/A
+
+SPRL: 13314 valid values, 55 NULL values
+DTP: 13314 valid values, 55 NULL values
+CLDC: 13292 valid values, 77 NULL values
+GRGC: 13223 valid values, 146 NULL values
+SMTU: 13360 valid values, 9 NULL values
+BIT: 13368 valid values, 1 NULL values
+Read status: SUCCESS
+
+
+FILE: 4246135292_MAIN.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+WRAP mode: NO
+Actual parsing mode: Non-wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 20101
+Invalid rows: 0
+Values per row: 24
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 151212
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: Not found
+Resistivity: Not found
+Density: Not found
+Neutron: Not found
+
+Neutron value range:
+Minimum: N/A
+Maximum: N/A
+
+AVOL: 13292 valid values, 6809 NULL values
+BIT: 0 valid values, 20101 NULL values
+CLDC: 19332 valid values, 769 NULL values
+DCOR: 13295 valid values, 6806 NULL values
+DEN: 13295 valid values, 6806 NULL values
+DPRD: 13295 valid values, 6806 NULL values
+DPRL: 13295 valid values, 6806 NULL values
+DPRS: 13295 valid values, 6806 NULL values
+DTP: 13314 valid values, 6787 NULL values
+FEFE: 13335 valid values, 6766 NULL values
+GRGC: 19949 valid values, 152 NULL values
+HVOL: 13292 valid values, 6809 NULL values
+MINV: 13241 valid values, 6860 NULL values
+MNRL: 13241 valid values, 6860 NULL values
+NPRD: 13277 valid values, 6824 NULL values
+NPRL: 19872 valid values, 229 NULL values
+NPRS: 13277 valid values, 6824 NULL values
+PDPE: 13295 valid values, 6806 NULL values
+RILD: 13325 valid values, 6776 NULL values
+RILM: 13342 valid values, 6759 NULL values
+SMTU: 19401 valid values, 700 NULL values
+SPCG: 13361 valid values, 6740 NULL values
+SPRL: 13314 valid values, 6787 NULL values
+NPRL: 13277 valid values, 6824 NULL values
+Read status: SUCCESS
+
+
+FILE: 4200345990_20140426_LAS(masmp).LAS
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Resistivity unit: Unknown or unsupported unit: OHM-M
+Neutron unit: Unknown or unsupported unit: 
+Density unit: Valid
+WRAP mode: YES
+Actual parsing mode: Wrapped
+Header STEP: 0.1
+Minimum actual step: 0.0999999999994543
+Maximum actual step: 0.100000000000364
+Rows: 79033
+Invalid rows: 0
+Values per row: 124
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 135500
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: Not found
+Resistivity: LLD
+Density: RHOB
+Neutron: NPHI
+
+Neutron value range:
+Minimum: -1.3739
+Maximum: 0.7396
+
+: 78080 valid values, 953 NULL values
+: 67515 valid values, 11518 NULL values
+ABHV: 78715 valid values, 318 NULL values
+AVTX: 78715 valid values, 318 NULL values
+BVTX: 78715 valid values, 318 NULL values
+CALI: 78125 valid values, 908 NULL values
+CKGR: 77925 valid values, 1108 NULL values
+CLLD: 78125 valid values, 908 NULL values
+CLLS: 78125 valid values, 908 NULL values
+CNHV: 78125 valid values, 908 NULL values
+CNLSC: 78125 valid values, 908 NULL values
+CNSSC: 78125 valid values, 908 NULL values
+CSGR: 77925 valid values, 1108 NULL values
+CTGR: 77925 valid values, 1108 NULL values
+CUGR: 77925 valid values, 1108 NULL values
+DGRV: 78125 valid values, 908 NULL values
+DLLA1ID: 78125 valid values, 908 NULL values
+DLLA1IS: 78125 valid values, 908 NULL values
+DLLA1VD: 78125 valid values, 908 NULL values
+DLLA1VS: 78125 valid values, 908 NULL values
+DLLDA0: 78125 valid values, 908 NULL values
+DLLDBPHI: 78125 valid values, 908 NULL values
+DLLDBPHV: 78125 valid values, 908 NULL values
+DLLDBQUI: 78125 valid values, 908 NULL values
+DLLDBQUV: 78125 valid values, 908 NULL values
+DLLDEOFF: 78125 valid values, 908 NULL values
+DLLDM1L: 78125 valid values, 908 NULL values
+DLLDM1U: 78125 valid values, 908 NULL values
+DLLDSOFF: 78125 valid values, 908 NULL values
+DLLM21DL: 78125 valid values, 908 NULL values
+DLLM21DU: 78125 valid values, 908 NULL values
+DLLM21SL: 78125 valid values, 908 NULL values
+DLLM21SU: 78125 valid values, 908 NULL values
+DLLM43DL: 78125 valid values, 908 NULL values
+DLLM43DU: 78125 valid values, 908 NULL values
+DLLSA0: 78125 valid values, 908 NULL values
+DLLSBCUR: 78125 valid values, 908 NULL values
+DLLSEOFF: 78125 valid values, 908 NULL values
+DLLSM1L: 78125 valid values, 908 NULL values
+DLLSM1U: 78125 valid values, 908 NULL values
+DLLSSOFF: 78125 valid values, 908 NULL values
+DLLSTAT: 78125 valid values, 908 NULL values
+DLLTEMP: 78125 valid values, 908 NULL values
+DLPCURR: 78125 valid values, 908 NULL values
+DLPGAIN: 78125 valid values, 908 NULL values
+DLPPHASE: 78125 valid values, 908 NULL values
+DLPSTAT: 78125 valid values, 908 NULL values
+DLPVOLT: 78125 valid values, 908 NULL values
+DPHD: 78093 valid values, 940 NULL values
+DPHI: 78093 valid values, 940 NULL values
+DPHL: 78093 valid values, 940 NULL values
+DPHS: 78093 valid values, 940 NULL values
+DRHO: 78093 valid values, 940 NULL values
+DT35: 78080 valid values, 953 NULL values
+DT57: 78080 valid values, 953 NULL values
+DTS1: 78125 valid values, 908 NULL values
+DTS2: 78125 valid values, 908 NULL values
+DTS3: 78125 valid values, 908 NULL values
+DTS4: 78125 valid values, 908 NULL values
+FFLS: 78125 valid values, 908 NULL values
+FFSS: 78125 valid values, 908 NULL values
+HTEN: 78125 valid values, 908 NULL values
+HVOLTA: 78125 valid values, 908 NULL values
+ITT: 78080 valid values, 953 NULL values
+ITTMK: 78080 valid values, 953 NULL values
+KGR: 77990 valid values, 1043 NULL values
+LDTTEMP: 78125 valid values, 908 NULL values
+LITH: 78125 valid values, 908 NULL values
+LL: 78125 valid values, 908 NULL values
+LLD: 78125 valid values, 908 NULL values
+LLS: 78125 valid values, 908 NULL values
+LSPD: 78125 valid values, 908 NULL values
+LTEN: 78124 valid values, 909 NULL values
+LU: 78125 valid values, 908 NULL values
+MAS57: 67515 valid values, 11518 NULL values
+MASGAIN: 78125 valid values, 908 NULL values
+MASLTFR: 78125 valid values, 908 NULL values
+MASMODE: 78125 valid values, 908 NULL values
+MASTEMP: 78125 valid values, 908 NULL values
+MASUTFR: 78125 valid values, 908 NULL values
+MINMK: 78125 valid values, 908 NULL values
+MSFCAL: 78125 valid values, 908 NULL values
+MSFCAL1: 78125 valid values, 908 NULL values
+MSFCAL2: 78125 valid values, 908 NULL values
+MSFL: 78125 valid values, 908 NULL values
+MSFTEMP: 78125 valid values, 908 NULL values
+NPHC: 78047 valid values, 986 NULL values
+NPHD: 78047 valid values, 986 NULL values
+NPHI: 78047 valid values, 986 NULL values
+NPHL: 78047 valid values, 986 NULL values
+NPHM: 78047 valid values, 986 NULL values
+NPHS: 78047 valid values, 986 NULL values
+NRAT: 78047 valid values, 986 NULL values
+PEF: 78093 valid values, 940 NULL values
+PXND: 78015 valid values, 1018 NULL values
+QLDT: 78093 valid values, 940 NULL values
+QLS: 78093 valid values, 940 NULL values
+QSS: 78093 valid values, 940 NULL values
+RHMA: 78015 valid values, 1018 NULL values
+RHOB: 78093 valid values, 940 NULL values
+SGR: 77990 valid values, 1043 NULL values
+SGRKAF: 77990 valid values, 1043 NULL values
+SGRSFAC1: 77990 valid values, 1043 NULL values
+SGRSLTIM: 77990 valid values, 1043 NULL values
+SGRSQUAL: 77990 valid values, 1043 NULL values
+SGRTAF: 77990 valid values, 1043 NULL values
+SGRUAF: 77990 valid values, 1043 NULL values
+SP: 78124 valid values, 909 NULL values
+SPHD: 78080 valid values, 953 NULL values
+SPHI: 78080 valid values, 953 NULL values
+SPHL: 78080 valid values, 953 NULL values
+SPHS: 78080 valid values, 953 NULL values
+SS1: 78125 valid values, 908 NULL values
+SS2: 78125 valid values, 908 NULL values
+TBHV: 78715 valid values, 318 NULL values
+TGR: 77990 valid values, 1043 NULL values
+TKRA: 77990 valid values, 1043 NULL values
+TTLTRF: 78125 valid values, 908 NULL values
+TTLTRN: 78125 valid values, 908 NULL values
+TTUTRF: 78125 valid values, 908 NULL values
+TTUTRN: 78125 valid values, 908 NULL values
+TURA: 77990 valid values, 1043 NULL values
+UGR: 77990 valid values, 1043 NULL values
+UKRA: 77990 valid values, 1043 NULL values
+Read status: SUCCESS
+
+
+FILE: 4200340122MAINCOR.las
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Applied (sorted ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Resistivity unit: Unknown or unsupported unit: 
+Density unit: Valid
+Neutron unit: Unknown or unsupported unit: Deci
+Gamma Ray unit: Valid
+WRAP mode: NO
+Actual parsing mode: Wrapped
+Header STEP: -0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 20645
+Invalid rows: 0
+Values per row: 25
+Original depth ascending: False
+Conditioned depth ascending: True
+Sampling interval correct: False
+Duplicate depths: 0
+Total NULL values: 7402
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GAPI
+Resistivity: RLLD
+Density: RHOB
+Neutron: NPHI
+
+Neutron value range:
+Minimum: -0.018
+Maximum: 1.041
+
+MSFF: 20419 valid values, 226 NULL values
+DT: 20419 valid values, 226 NULL values
+SPHI: 20367 valid values, 278 NULL values
+SPDL: 20367 valid values, 278 NULL values
+RLLD: 20331 valid values, 314 NULL values
+CLLD: 20329 valid values, 316 NULL values
+RLLS: 20331 valid values, 314 NULL values
+CALI: 20419 valid values, 226 NULL values
+RHOB: 20302 valid values, 343 NULL values
+DPHI: 20302 valid values, 343 NULL values
+DPDL: 20302 valid values, 343 NULL values
+DRHO: 20302 valid values, 343 NULL values
+PEF: 20418 valid values, 227 NULL values
+NPHI: 20418 valid values, 227 NULL values
+NPDL: 20418 valid values, 227 NULL values
+POTA: 20245 valid values, 400 NULL values
+URAN: 20245 valid values, 400 NULL values
+THOR: 20245 valid values, 400 NULL values
+GAPI: 20419 valid values, 226 NULL values
+GRS: 20245 valid values, 400 NULL values
+UPRA: 20272 valid values, 373 NULL values
+TPRA: 20272 valid values, 373 NULL values
+TURA: 20272 valid values, 373 NULL values
+TEN2: 20419 valid values, 226 NULL values
+XPRC: 20645 valid values, 0 NULL values
+Read status: SUCCESS
+
+
+FILE: 4200340122RCBL.LAS
+------------------------------
+DATA CONDITIONING:
+Depth sorting: Not needed (already ascending)
+Duplicate depths detected: 0
+Duplicate depth handling: Preserved (no automatic deletion)
+Missing value handling: LAS NULL values represented as null
+Resampling: Not applied (original depth samples preserved)
+Unit conversion: Not applied (original values preserved)
+
+Gamma Ray unit: Valid
+WRAP mode: YES
+Actual parsing mode: Wrapped
+Header STEP: 0.5
+Minimum actual step: 0.5
+Maximum actual step: 0.5
+Rows: 7820
+Invalid rows: 0
+Values per row: 28
+Original depth ascending: True
+Conditioned depth ascending: True
+Sampling interval correct: True
+Duplicate depths: 0
+Total NULL values: 1088
+
+NULL values by curve:
+Curve mapping:
+Gamma Ray: GR
+Resistivity: Not found
+Density: Not found
+Neutron: Not found
+
+Neutron value range:
+Minimum: N/A
+Maximum: N/A
+
+ATT3: 7782 valid values, 38 NULL values
+AMPAVG: 7780 valid values, 40 NULL values
+AMPMAX: 7780 valid values, 40 NULL values
+AMPMIN: 7780 valid values, 40 NULL values
+TTS8: 7780 valid values, 40 NULL values
+AMPS8: 7780 valid values, 40 NULL values
+TTS7: 7780 valid values, 40 NULL values
+AMPS7: 7780 valid values, 40 NULL values
+TTS6: 7780 valid values, 40 NULL values
+AMPS6: 7780 valid values, 40 NULL values
+TTS5: 7780 valid values, 40 NULL values
+AMPS5: 7780 valid values, 40 NULL values
+TTS4: 7780 valid values, 40 NULL values
+AMPS4: 7780 valid values, 40 NULL values
+TTS3: 7780 valid values, 40 NULL values
+AMPS3: 7780 valid values, 40 NULL values
+TTS2: 7780 valid values, 40 NULL values
+AMPS2: 7780 valid values, 40 NULL values
+TTS1: 7780 valid values, 40 NULL values
+AMPS1: 7780 valid values, 40 NULL values
+TT5FT: 7782 valid values, 38 NULL values
+AMP5FT: 7784 valid values, 36 NULL values
+TTCAL: 7780 valid values, 40 NULL values
+AMPCAL: 7780 valid values, 40 NULL values
+TT3FT: 7780 valid values, 40 NULL values
+AMP3FT: 7782 valid values, 38 NULL values
+AMP3FT: 7782 valid values, 38 NULL values
+GR: 7800 valid values, 20 NULL values
+Read status: SUCCESS
+
+
+================================
+BATCH TEST SUMMARY
+================================
+Total files: 50
+Successfully parsed: 49
+Failed: 1
+Elapsed time: 40.31 seconds
+
+Failed files:
+s_1e95aa3fbeb17f98a969ce83d5962c1c.las: Multiple Curve or ASCII sections are not supported.
